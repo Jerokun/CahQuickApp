@@ -69,7 +69,17 @@ export class CardService implements ICardCollection {
     }
   }
 
-  getBlackCards() {}
+  getBlackCard(blackCardId: number): IBlackCard {
+    console.log('blackCardId', blackCardId);
+    console.log(this.blackCards[blackCardId]);
+    return this.blackCards[blackCardId];
+  }
 
-  getWhiteCards() {}
+  getBlackCards() {
+    return this.cardCollection.blackCards;
+  }
+
+  getWhiteCards() {
+    return this.cardCollection.whiteCards;
+  }
 }
