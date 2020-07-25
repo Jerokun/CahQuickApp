@@ -7,6 +7,11 @@ import {
 import * as jsonData from '../services/data.json';
 import * as _ from 'lodash';
 
+export enum CardTypes {
+  blackCard = 'blackCard',
+  whiteCard = 'whiteCard'
+}
+
 @Injectable({
   providedIn: 'root',
 })
@@ -67,6 +72,9 @@ export class CardService implements ICardCollection {
       const blackCards = this.getBlackCards();
       const whiteCards = this.getWhiteCards();
     }
+  }
+
+  public getRandomCard(array: [], cardType: string) {
   }
 
   getBlackCard(blackCardId: number): IBlackCard {
