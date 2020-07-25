@@ -11,7 +11,9 @@ export class AppComponent implements OnInit {
   constructor(private cardService: CardService) {
   }
 
+  blackCard: IBlackCard;
+
   ngOnInit() {
-    this.cardService.getDeck('Base');
+    this.blackCard = this.cardService.getBlackCard(0);
   }
 }
