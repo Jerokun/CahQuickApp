@@ -1,3 +1,6 @@
+import { IBlackCard } from './black-card/IBlackCard';
+import { IDeck } from './IDeck';
+
 export interface ICardCollection {
   blackCards: IBlackCard[];
   whiteCards: string[];
@@ -32,16 +35,4 @@ export interface ICardCollection {
   Canadian: IDeck;
   misprint: IDeck;
   order: string[];
-}
-
-export interface IDeck {
-  name: string;
-  black: number[];
-  white: number[];
-  icon?: number | string;
-}
-
-export interface IBlackCard {
-  text: string;
-  pick: number;
 }

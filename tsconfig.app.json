@@ -7,7 +7,9 @@
   },
   "files": [
     "src/main.ts",
-    "src/polyfills.ts"
+    "src/polyfills.ts",
+    "./src/app/game/cards/IDeck.ts",
+    "./src/app/game/cards/IBlackCard.ts"
   ],
   "include": [
     "src/**/*.d.ts"

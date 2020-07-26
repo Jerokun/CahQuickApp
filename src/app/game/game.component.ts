@@ -1,15 +1,14 @@
 import { Component, OnInit, OnChanges } from '@angular/core';
 import { CardService } from '../services/card.service';
-import { IBlackCard } from '../interfaces/ICardCollection';
-import * as _ from 'lodash';
+import { IBlackCard } from './components/cards/black-card/IBlackCard';
 import { CdkDragDrop, moveItemInArray } from '@angular/cdk/drag-drop';
 
 @Component({
-  selector: 'app-lobby-page',
-  templateUrl: './lobby-page.component.html',
-  styleUrls: ['./lobby-page.component.scss'],
+  selector: 'app-game',
+  templateUrl: './game.component.html',
+  styleUrls: ['./game.component.scss']
 })
-export class LobbyPageComponent implements OnInit, OnChanges {
+export class GameComponent implements OnInit, OnChanges {
   constructor(private cardService: CardService) {}
 
   blackCard: IBlackCard;

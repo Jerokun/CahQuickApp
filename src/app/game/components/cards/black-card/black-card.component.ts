@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { IBlackCard } from '../../interfaces/ICardCollection';
+import { IBlackCard } from './IBlackCard';
 
 @Component({
   selector: 'app-black-card',

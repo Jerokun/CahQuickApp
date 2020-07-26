@@ -1,9 +1,9 @@
 import { Injectable } from '@angular/core';
 import {
   ICardCollection,
-  IDeck,
-  IBlackCard,
-} from '../interfaces/ICardCollection';
+} from '../game/components/cards/ICardCollection';
+import { IDeck } from "../game/components/cards/IDeck";
+import { IBlackCard } from "../game/components/cards/black-card/IBlackCard";
 import * as jsonData from '../services/data.json';
 import * as _ from 'lodash';
 
