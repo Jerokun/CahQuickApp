@@ -1,3 +1,14 @@
-<div *ngIf="game === false"><button mat-raised-button (click)="toggleGame()">Start game</button></div>
-<div *ngIf="game === true"><button mat-raised-button (click)="toggleGame()">End game</button></div>
-<div *ngIf="game"><app-game></app-game>></div>
+<div *ngIf="game === false" class="startholder">
+  <button mat-raised-button class="startbutton" (click)="toggleGame()">
+    Start game
+  </button>
+</div>
+<div *ngIf="game === true" class="endholder">
+  <button mat-raised-button class="endbutton" (click)="toggleGame()">
+    End game
+  </button>
+</div>
+
+<div>
+  <div *ngIf="game" class="game"><app-game></app-game>></div>
+</div>
