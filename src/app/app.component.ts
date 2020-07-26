@@ -1,6 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { IBlackCard, IDeck } from './interfaces/ICardCollection';
-import { CardService } from './services/card.service';
 
 @Component({
   selector: 'app-root',
@@ -8,12 +6,9 @@ import { CardService } from './services/card.service';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
-  constructor(private cardService: CardService) {
+  constructor() {
   }
 
-  blackCard: IBlackCard;
-
   ngOnInit() {
-    this.blackCard = this.cardService.getBlackCard(0);
   }
 }

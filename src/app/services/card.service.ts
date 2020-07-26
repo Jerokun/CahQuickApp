@@ -87,7 +87,7 @@ export class CardService implements ICardCollection {
     return this.cardCollection.blackCards;
   }
 
-  getWhiteCards() {
+  getWhiteCards(): string[] {
     return this.cardCollection.whiteCards;
   }
 }
