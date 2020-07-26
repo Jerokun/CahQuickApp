@@ -14,7 +14,7 @@ import { LobbyPageComponent } from './lobby-page/lobby-page.component';
     AppComponent,
     BlackCardComponent,
     WhiteCardComponent,
-    LobbyPageComponent
+    LobbyPageComponent,
   ],
   imports: [
     BrowserModule,

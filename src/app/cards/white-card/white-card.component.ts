@@ -9,6 +9,8 @@ export class WhiteCardComponent implements OnInit {
 
   constructor() { }
 
-  card: string[];
+  @Input() text: string;
+
+  ngOnInit() {}
 
 }

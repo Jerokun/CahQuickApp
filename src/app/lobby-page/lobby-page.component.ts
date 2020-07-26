@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CardService } from '../services/card.service';
 import { IBlackCard } from '../interfaces/ICardCollection';
+import * as _ from 'lodash';
 
 @Component({
   selector: 'app-lobby-page',
@@ -15,7 +16,9 @@ export class LobbyPageComponent implements OnInit {
   whiteCards: string[] = [];
   ngOnInit() {
     this.blackCard = this.cardService.getBlackCard(0);
-    // this.whiteCards = this.whiteCards.concat(this.cardService.getWhiteCards);
+    let whiteCards: string[];
+    whiteCards = _.assign(whiteCards, this.cardService.whiteCards);
+    this.whiteCards = whiteCards;
   }
 
 }
