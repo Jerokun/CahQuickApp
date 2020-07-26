@@ -13,7 +13,7 @@ export class LobbyPageComponent implements OnInit {
 
   ngOnInit() {}
 
-  startGame() {
+  toggleGame() {
     if (this.game === false) { this.game = true; }
     else { this.game = false; }
   }
