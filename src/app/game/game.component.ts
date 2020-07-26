@@ -26,7 +26,7 @@ export class GameComponent implements OnInit, OnChanges {
     console.log('this.whiteCards:', this.whiteCards);
   }
 
-  // TODO: https://material.angular.io/cdk/drag-drop/overview
+  // TODO: @ Mark => https://material.angular.io/cdk/drag-drop/overview + game.component.scss
   drop(event: CdkDragDrop<string[]>) {
     moveItemInArray(this.whiteCards, event.previousIndex, event.currentIndex);
   }
