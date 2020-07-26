@@ -17,6 +17,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CommonModule } from '@angular/common';
+import { MaterialModule } from './material/material.module';
 
 
 @NgModule({
@@ -28,11 +29,13 @@ import { CommonModule } from '@angular/common';
     GameComponent,
   ],
   imports: [
+    MaterialModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     BrowserModule,
     CommonModule,
     DragDropModule,
+    MaterialModule,
   ],
   providers: [CardService, DeckGeneratorService],
   bootstrap: [AppComponent]

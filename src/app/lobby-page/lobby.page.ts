@@ -11,10 +11,10 @@ export class LobbyPageComponent implements OnInit {
 
   game = false;
 
-  ngOnInit() {
-  }
+  ngOnInit() {}
 
   startGame() {
-    this.game = true;
+    if (this.game === false) { this.game = true; }
+    else { this.game = false; }
   }
 }
