@@ -96,23 +96,23 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
     position: relative;
     background-color: #fff;
     color: rgb(22, 22, 22);
-    animation-name: whitecardanim;
-    animation-duration: 4s;
+    // animation-name: whitecardanim;
+    // animation-duration: 4s;
 }
 
 
-/* The animation code */
-@keyframes whitecardanim {
-    from {background-color: red;}
-    to {background-color: yellow;}
-  }
+// /* The animation code */
+// @keyframes whitecardanim {
+//     from {background-color: red;}
+//     to {background-color: yellow;}
+//   }
 
-@keyframes whitecardanim {
-    from {position: relative;}
-    to {position: absolute;}
-    // to {top: 100px;}
-    // to {left: 50px;}
-  }
+// @keyframes whitecardanim {
+//     from {position: relative;}
+//     //to {position: absolute;}
+//     // to {top: 100px;}
+//     // to {left: 50px;}
+//   }
   
 
 
