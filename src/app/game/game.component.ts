@@ -6,7 +6,8 @@ import { CdkDragDrop, moveItemInArray } from '@angular/cdk/drag-drop';
 @Component({
   selector: 'app-game',
   templateUrl: './game.component.html',
-  styleUrls: ['./game.component.scss']
+  styleUrls: ['./game.component.scss'],
+  providers: [CardService],
 })
 export class GameComponent implements OnInit, OnChanges {
   constructor(private cardService: CardService) {}
