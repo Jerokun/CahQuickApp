@@ -1,10 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import * as _ from 'lodash';
 
-export interface NgStyle {
-  [klass: string]: any;
-}
-
 @Component({
   selector: 'app-lobby-page',
   templateUrl: './lobby-page.component.html',
@@ -24,12 +20,5 @@ export class LobbyPageComponent implements OnInit {
     } else {
       this.game = false;
     }
-  }
-
-  getButtonGroupClasses() {
-    const buttonGroupClasses = {
-      buttongroupclasses: this.isButtonGroupClasses,
-    };
-    return buttonGroupClasses;
   }
 }

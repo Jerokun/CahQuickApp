@@ -8,8 +8,8 @@
   "files": [
     "src/main.ts",
     "src/polyfills.ts",
-    "./src/app/game/cards/IDeck.ts",
-    "./src/app/game/cards/IBlackCard.ts"
+    "./src/app/game/components/cards/IDeck.ts",
+    "./src/app/game/components/cards/black-card/IBlackCard.ts"
   ],
   "include": [
     "src/**/*.d.ts"

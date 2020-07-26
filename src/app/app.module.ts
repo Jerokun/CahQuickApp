@@ -11,6 +11,7 @@ import { GameComponent } from './game/game.component';
 import { BlackCardComponent } from './game/components/cards/black-card/black-card.component';
 import { WhiteCardComponent } from './game/components/cards/white-card/white-card.component';
 import { CardService } from './services/card.service';
+import { CardDataService } from './services/card-data.service';
 import { DeckGeneratorService } from './services/deck-generator.service';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -37,7 +38,8 @@ import { MaterialModule } from './material/material.module';
     DragDropModule,
     MaterialModule,
   ],
-  providers: [CardService, DeckGeneratorService],
+  exports: [],
+  providers: [CardService, DeckGeneratorService, CardDataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

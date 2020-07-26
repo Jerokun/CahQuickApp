@@ -2,6 +2,9 @@ import { Injectable } from '@angular/core';
 import { CardService } from './card.service';
 import { IDeck } from '../game/components/cards/IDeck';
 import { IBlackCard } from '../game/components/cards/black-card/IBlackCard';
+import { CardDataService } from './card-data.service';
+
+import _, { Dictionary } from 'lodash';
 
 export interface WhiteCards {
   [id: number]: string[];
@@ -13,18 +16,49 @@ export interface BlackCards {
 export type Deck = Record<string, IDeck>;
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class DeckGeneratorService {
 
-  constructor(private cardService: CardService) { }
+  blackDeck: IBlackCard[] = [];
+  whiteDeck: string[] = [];
 
-  buildDeck() {
+  constructor(private cardDataService: CardDataService) {}
+
+  public getWhiteDeck() {
+    const whiteCards: string[] = this.cardDataService.whiteCards;
+    return whiteCards;
   }
 
-  getDeck() {
+  public getBlackDeck() {
+    const blackCards: IBlackCard[] = this.cardDataService.blackCards;
+    return blackCards;
   }
 
-  shuffle() {
+  public setBlackDeck(): IBlackCard[] {
+    return this.blackDeck;
+  }
+
+  public setWhiteDeck(): string[] {
+    return this.whiteDeck;
+  }
+
+  buildBlackDeck() {
+  }
+
+  buildWhiteDeck() {
+  }
+
+  public getWhiteCards(indexNumbers: number[]): string[] {
+    let deck: string[] = [];
+    indexNumbers.forEach((e) => {
+      deck = deck.concat(this.getWhiteCardByIndex(e));
+    });
+    return deck;
+  }
+
+  getWhiteCardByIndex(index: number): string {
+    const whiteCard = this.cardDataService.whiteCards[index];
+    return whiteCard;
   }
 }

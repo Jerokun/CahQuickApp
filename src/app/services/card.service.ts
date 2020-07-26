@@ -1,11 +1,10 @@
-import { Injectable } from '@angular/core';
-import {
-  ICardCollection,
-} from '../game/components/cards/ICardCollection';
-import { IDeck } from "../game/components/cards/IDeck";
-import { IBlackCard } from "../game/components/cards/black-card/IBlackCard";
+import { Injectable, OnInit } from '@angular/core';
+import { ICardCollection } from '../game/components/cards/ICardCollection';
+import { IDeck } from '../game/components/cards/IDeck';
+import { IBlackCard } from '../game/components/cards/black-card/IBlackCard';
 import * as jsonData from '../services/data.json';
 import * as _ from 'lodash';
+import { DeckGeneratorService } from './deck-generator.service';
 
 export enum CardTypes {
   blackCard = 'blackCard',
@@ -15,84 +14,44 @@ export enum CardTypes {
 @Injectable({
   providedIn: 'root',
 })
-export class CardService implements ICardCollection {
-  constructor() {
-    this.getCardCollection();
+export class CardService {
+
+  constructor(private deckGeneratorService: DeckGeneratorService) {
+    this.deckGeneratorService.getBlackDeck();
+    this.deckGeneratorService.getWhiteDeck();
   }
 
-  cardCollection: ICardCollection;
-  decks: IDeck[];
+  whiteCards: string[];
+  blackCards: IBlackCard[];
+  hand: string[];
+  blackCard: IBlackCard;
 
-  // Raw json elements ----------------
-  blackCards: IBlackCard[] = jsonData.blackCards;
-  whiteCards: string[] = jsonData.whiteCards;
-  Base: IDeck = jsonData.Base;
-  CAHe1: IDeck = jsonData.CAHe1;
-  CAHe2: IDeck = jsonData.CAHe2;
-  CAHe3: IDeck = jsonData.CAHe3;
-  CAHe4: IDeck = jsonData.CAHe4;
-  CAHe5: IDeck = jsonData.CAHe5;
-  CAHe6: IDeck = jsonData.CAHe6;
-  greenbox: IDeck = jsonData.greenbox;
-  The90s: IDeck = jsonData.The90s;
-  Box: IDeck = jsonData.Box;
-  fantasy: IDeck = jsonData.fantasy;
-  food: IDeck = jsonData.food;
-  science: IDeck = jsonData.science;
-  www: IDeck = jsonData.www;
-  hillary: IDeck = jsonData.hillary;
-  trumpvote: IDeck = jsonData.trumpvote;
-  trumpbag: IDeck = jsonData.trumpbag;
-  xmas2012: IDeck = jsonData.xmas2012;
-  xmas2013: IDeck = jsonData.xmas2013;
-  PAXE2013: IDeck = jsonData.PAXE2013;
-  PAXP2013: IDeck = jsonData.PAXP2013;
-  PAXE2014: IDeck = jsonData.PAXE2014;
-  PAXEP2014: IDeck = jsonData.PAXEP2014;
-  PAXPP2014: IDeck = jsonData.PAXPP2014;
-  PAX2015: IDeck = jsonData.PAX2015;
-  HOCAH: IDeck = jsonData.HOCAH;
-  reject: IDeck = jsonData.reject;
-  reject2: IDeck = jsonData.reject2;
-  Canadian: IDeck = jsonData.Canadian;
-  misprint: IDeck = jsonData.misprint;
-  order: string[] = jsonData.order;
-  // ----------------------------------
-
-  public getCardCollection(): ICardCollection {
-    return (this.cardCollection = jsonData);
+  getDecks() {
+    this.whiteCards = this.deckGeneratorService.getWhiteDeck();
+    console.log('this.whiteCards:', this.whiteCards);
+    this.blackCards = this.deckGeneratorService.getBlackDeck();
+    console.log('this.blackCards:', this.blackCards);
   }
 
-  public getDeck(name: string) {
-    console.log('name', name);
-    console.log('cardCollection', this.order);
-    if (_.find(this.order, name)) {
-      console.log('name', name);
-      console.log('cardCollection', this.order);
-      const blackCards = this.getBlackCards();
-      const whiteCards = this.getWhiteCards();
-    }
+  public drawRandomBlackCard(): IBlackCard {
+    let card: IBlackCard;
+    const min = 0;
+    const max = this.blackCards.length;
+    const randomNumber = _.round(Math.random() * (max - min) + min);
+    console.log('randomNumber', randomNumber);
+    return card = this.blackCards[randomNumber];
   }
 
-  public getRandomCard(array: [], cardType: string) {}
+  public newHand() {
+    let whiteCards: string[] = []
+    whiteCards = whiteCards.concat(this.whiteCards[0]);
+    whiteCards = whiteCards.concat(this.whiteCards[1]);
+    whiteCards = whiteCards.concat(this.whiteCards[2]);
+    whiteCards = whiteCards.concat(this.whiteCards[3]);
+    whiteCards = whiteCards.concat(this.whiteCards[4]);
+    whiteCards = whiteCards.concat(this.whiteCards[5]);
+    console.log('whiteCards:', whiteCards);
 
-  getBlackCard(blackCardId: number): IBlackCard {
-    console.log('blackCardId', blackCardId);
-    console.log(this.blackCards[blackCardId]);
-    return this.blackCards[blackCardId];
-  }
-
-  getBlackCards() {
-    return this.cardCollection.blackCards;
-  }
-
-  getWhiteCards(): string[] {
-    const whiteCards = this.whiteCards;
-    let hand: string[] = [];
-    for (let card = 0; card < 5; card++) {
-      console.log('add ' + whiteCards[card]);
-      hand = hand.concat(whiteCards[card]);
-    }
-    return hand;
+    return whiteCards;
   }
 }

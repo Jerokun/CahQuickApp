@@ -16,12 +16,14 @@ export class GameComponent implements OnInit, OnChanges {
 
   ngOnChanges() {
     console.log('changes', this.whiteCards);
-    return this.whiteCards;
   }
 
   ngOnInit() {
-    this.blackCard = this.cardService.getBlackCard(0);
-    this.whiteCards = this.cardService.getWhiteCards();
+    this.cardService.getDecks();
+    this.blackCard = this.cardService.drawRandomBlackCard();
+    this.whiteCards = this.cardService.newHand();
+    console.log('this.blackCard:', this.blackCard);
+    console.log('this.whiteCards:', this.whiteCards);
   }
 
   // TODO: https://material.angular.io/cdk/drag-drop/overview
