@@ -9,6 +9,8 @@ export interface BlackCards {
   [id: number]: IBlackCard;
 }
 
+export type Deck = Record<string, IDeck>;
+
 @Injectable({
   providedIn: 'root'
 })
@@ -16,11 +18,12 @@ export class DeckGeneratorService {
 
   constructor(private cardService: CardService) { }
 
-  getDeck(){
-    type Deck = Record<string, IDeck>;
+  buildDeck() {
+  }
+
+  getDeck() {
   }
 
   shuffle() {
-
   }
 }

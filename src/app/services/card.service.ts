@@ -89,7 +89,7 @@ export class CardService implements ICardCollection {
   getWhiteCards(): string[] {
     const whiteCards = this.whiteCards;
     let hand: string[] = [];
-    for (let card = 0; card < 4; card++) {
+    for (let card = 0; card < 5; card++) {
       console.log('add ' + whiteCards[card]);
       hand = hand.concat(whiteCards[card]);
     }

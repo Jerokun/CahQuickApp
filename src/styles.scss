@@ -34,6 +34,8 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
 .card{
     background-color: rgb(22, 22, 22);
+    width: 100rem;
+    height: 20rem;
 }
 
 // display: flex;
@@ -71,8 +73,8 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
     display: inline-block!important;
   border-radius: 1em;
   //border: 1px solid #eee;
-  //height: 40px;
-  height: 10em;
+  width: 16rem;
+  height: 10rem;
   margin: 0 8px 16px;
   padding: 16px;
 //   padding-left: -20px;

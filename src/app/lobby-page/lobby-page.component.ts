@@ -25,7 +25,7 @@ export class LobbyPageComponent implements OnInit, OnChanges {
     this.whiteCards = this.cardService.getWhiteCards();
   }
 
-  // Check: https://material.angular.io/cdk/drag-drop/overview
+  // TODO: https://material.angular.io/cdk/drag-drop/overview
   drop(event: CdkDragDrop<string[]>) {
     moveItemInArray(this.whiteCards, event.previousIndex, event.currentIndex);
   }
