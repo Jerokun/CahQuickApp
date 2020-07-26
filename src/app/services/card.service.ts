@@ -9,7 +9,7 @@ import * as _ from 'lodash';
 
 export enum CardTypes {
   blackCard = 'blackCard',
-  whiteCard = 'whiteCard'
+  whiteCard = 'whiteCard',
 }
 
 @Injectable({
@@ -60,13 +60,13 @@ export class CardService implements ICardCollection {
   // ----------------------------------
 
   public getCardCollection(): ICardCollection {
-    return this.cardCollection = jsonData;
+    return (this.cardCollection = jsonData);
   }
 
   public getDeck(name: string) {
     console.log('name', name);
     console.log('cardCollection', this.order);
-    if ( _.find(this.order, name) ) {
+    if (_.find(this.order, name)) {
       console.log('name', name);
       console.log('cardCollection', this.order);
       const blackCards = this.getBlackCards();
@@ -74,8 +74,7 @@ export class CardService implements ICardCollection {
     }
   }
 
-  public getRandomCard(array: [], cardType: string) {
-  }
+  public getRandomCard(array: [], cardType: string) {}
 
   getBlackCard(blackCardId: number): IBlackCard {
     console.log('blackCardId', blackCardId);
@@ -88,6 +87,12 @@ export class CardService implements ICardCollection {
   }
 
   getWhiteCards(): string[] {
-    return this.cardCollection.whiteCards;
+    const whiteCards = this.whiteCards;
+    let hand: string[] = [];
+    for (let card = 0; card < 4; card++) {
+      console.log('add ' + whiteCards[card]);
+      hand = hand.concat(whiteCards[card]);
+    }
+    return hand;
   }
 }
