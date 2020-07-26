@@ -22,9 +22,7 @@ export class LobbyPageComponent implements OnInit, OnChanges {
 
   ngOnInit() {
     this.blackCard = this.cardService.getBlackCard(0);
-    let whiteCards: string[];
-    whiteCards = _.assign(whiteCards, this.cardService.whiteCards);
-    this.whiteCards = whiteCards;
+    this.whiteCards = this.cardService.whiteCards;
   }
 
 }
