@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnChanges } from '@angular/core';
 import { CardService } from '../services/card.service';
 import { IBlackCard } from '../interfaces/ICardCollection';
 import * as _ from 'lodash';
@@ -8,12 +8,18 @@ import * as _ from 'lodash';
   templateUrl: './lobby-page.component.html',
   styleUrls: ['./lobby-page.component.scss']
 })
-export class LobbyPageComponent implements OnInit {
+export class LobbyPageComponent implements OnInit, OnChanges {
 
   constructor(private cardService: CardService) { }
 
   blackCard: IBlackCard;
   whiteCards: string[] = [];
+
+  ngOnChanges() {
+    console.log('changes', this.whiteCards);
+    return this.whiteCards;
+  }
+
   ngOnInit() {
     this.blackCard = this.cardService.getBlackCard(0);
     let whiteCards: string[];

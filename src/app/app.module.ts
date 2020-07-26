@@ -8,6 +8,7 @@ import { BlackCardComponent } from './cards/black-card/black-card.component';
 import { WhiteCardComponent } from './cards/white-card/white-card.component';
 import { CardService } from './services/card.service';
 import { LobbyPageComponent } from './lobby-page/lobby-page.component';
+import { CommonModule } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { LobbyPageComponent } from './lobby-page/lobby-page.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    CommonModule
   ],
   providers: [CardService],
   bootstrap: [AppComponent]
