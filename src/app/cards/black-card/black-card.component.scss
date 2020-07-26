@@ -3,11 +3,24 @@
     background-color: rgb(22, 22, 22);
 }
 
+// display: flex;
+// justify-content: center;
+// align-items: center!important;
+// text-align: center!important;
+// display: block;
+// position: relative;
+
 .card-container{
+    padding:20px 0 10px 0;
+    text-align: center!important;
     display: flex;
     justify-content: center;
-    align-items: center!important;
-    text-align: center!important;
+    align-items: center;
+
+}
+
+.blackCardContainer{
+
 }
 
 #blackCard{
@@ -21,11 +34,12 @@
 .mat-card-title {
     font-family: Arial, Helvetica, sans-serif;;
     font-weight: 700;
-    line-height: 1.3em;
+    line-height: 1.1em;
     font-size: 2em;
   }
 
 .custom-card {
+    display: inline-block!important;
   border-radius: 1em;
   //border: 1px solid #eee;
   //height: 40px;
@@ -33,12 +47,15 @@
   width: 13em;
   margin: 0 8px 16px;
   padding: 16px;
+  padding-left: -20px;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   transition: all 0.2s ease-in-out;
   line-height: 24px;
+  box-shadow: 10px 5px 5px rgba(0, 0, 0, .2); ;
+
 }
 
 .black-card{
@@ -47,9 +64,28 @@
 }
 
 .white-card{
+    position: relative;
     background-color: #fff;
     color: rgb(22, 22, 22);
+    animation-name: whitecardanim;
+    animation-duration: 4s;
 }
+
+
+// /* The animation code */
+// @keyframes whitecardanim {
+//     from {background-color: red;}
+//     to {background-color: yellow;}
+//   }
+
+// @keyframes whitecardanim {
+//     from {position: relative;}
+//     to {position: absolute;}
+//     to {top: 100px;}
+//     to {left: 50px;}
+//   }
+  
+
 
 
 .card-container .card:not(:last-child) {
