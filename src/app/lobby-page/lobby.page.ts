@@ -9,7 +9,7 @@ import * as _ from 'lodash';
 export class LobbyPageComponent implements OnInit {
   constructor() {}
 
-  game = true;
+  game = false;
 
   ngOnInit() {
   }
