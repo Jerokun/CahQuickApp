@@ -1,9 +1,28 @@
-<app-black-card
-  [text]="blackCard.text"
-  [pick]="blackCard.pick"
-></app-black-card>
+<div class="container">
+  <div class="grid-row">
+    <app-black-card class="grid-item" [text]="blackCard.text" [pick]="blackCard.pick">
+      <div class="grid-item-content">DOE IETS</div>
+    </app-black-card>
+  </div>
+</div>
 
-<div
+<div class="container">
+  <div class="grid-row">
+
+
+    <app-white-card *ngFor="let text of whiteCards" [text]="text" class="grid-item">
+      <div class="grid-item-content"></div>
+    </app-white-card>
+    <app-white-card *ngFor="let text of whiteCards" [text]="text" class="grid-item">
+      <div class="grid-item-content "></div>
+    </app-white-card>
+
+
+  </div>
+
+</div>
+
+<!-- <div
   cdkDropList
   cdkDropListOrientation="horizontal"
   class="example-list"
@@ -17,4 +36,4 @@
     cdkDrag
   >
   </app-white-card>
-</div>
+</div> -->
