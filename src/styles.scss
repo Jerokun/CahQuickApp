@@ -84,8 +84,6 @@ body {
   padding: 5px;
   box-sizing: border-box;
   display: inline-block;
-  width: calc((100% - 40px) / 3);
-  box-sizing: border-box;
 }
 
 .grid-item::after {

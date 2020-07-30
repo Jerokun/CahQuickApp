@@ -5,6 +5,7 @@
 .white-card:hover{
     bottom: 30px;
 }
-.white-card:active{
-    
+.white-card:focus{
+    background-color: tomato;
+    color: #fff;
 }
