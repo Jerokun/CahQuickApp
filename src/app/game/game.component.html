@@ -5,22 +5,6 @@
   </div>
 </div>
 
-<app-hand>
-  [whiteCards]="whiteCards"
-</app-hand>
-
-<!-- <div
-  cdkDropList
-  cdkDropListOrientation="horizontal"
-  class="example-list"
-  (cdkDropListDropped)="drop($event)"
->
-  <app-white-card
-    cdkDropList
-    *ngFor="let text of whiteCards"
-    [text]="text"
-    class="example-box"
-    cdkDrag
-  >
-  </app-white-card>
-</div> -->
+<app-hand
+[cards]="whiteCards"
+></app-hand>

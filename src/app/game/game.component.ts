@@ -1,7 +1,6 @@
 import { Component, OnInit, OnChanges } from '@angular/core';
 import { CardService } from '../services/card.service';
 import { IBlackCard } from './components/cards/black-card/IBlackCard';
-import { CdkDragDrop, moveItemInArray } from '@angular/cdk/drag-drop';
 
 @Component({
   selector: 'app-game',
@@ -12,8 +11,8 @@ import { CdkDragDrop, moveItemInArray } from '@angular/cdk/drag-drop';
 export class GameComponent implements OnInit, OnChanges {
   constructor(private cardService: CardService) {}
 
-  blackCard: IBlackCard;
-  whiteCards: string[] = [];
+  public blackCard: IBlackCard;
+  public whiteCards: string[] = [];
 
   ngOnChanges() {
     console.log('changes', this.whiteCards);
@@ -25,10 +24,5 @@ export class GameComponent implements OnInit, OnChanges {
     this.whiteCards = this.cardService.newHand();
     console.log('this.blackCard:', this.blackCard);
     console.log('this.whiteCards:', this.whiteCards);
-  }
-
-  // TODO: @ Mark => https://material.angular.io/cdk/drag-drop/overview + game.component.scss
-  drop(event: CdkDragDrop<string[]>) {
-    moveItemInArray(this.whiteCards, event.previousIndex, event.currentIndex);
   }
 }
