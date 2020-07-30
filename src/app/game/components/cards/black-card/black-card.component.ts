@@ -4,7 +4,7 @@ import { IBlackCard } from './IBlackCard';
 @Component({
   selector: 'app-black-card',
   templateUrl: './black-card.component.html',
-  styleUrls: ['./black-card.component.scss']
+  styleUrls: ['./black-card.component.scss', '../../../game.component.scss']
 })
 export class BlackCardComponent implements OnInit, IBlackCard {
 
