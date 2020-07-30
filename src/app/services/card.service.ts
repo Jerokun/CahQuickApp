@@ -43,13 +43,12 @@ export class CardService {
   }
 
   public newHand() {
-    let whiteCards: string[] = []
-    whiteCards = whiteCards.concat(this.whiteCards[0]);
-    whiteCards = whiteCards.concat(this.whiteCards[1]);
-    whiteCards = whiteCards.concat(this.whiteCards[2]);
-    whiteCards = whiteCards.concat(this.whiteCards[3]);
-    whiteCards = whiteCards.concat(this.whiteCards[4]);
-    whiteCards = whiteCards.concat(this.whiteCards[5]);
+    let whiteCards: string[] = [];
+
+    while (whiteCards.length <= 10) {
+      const randomNumber = _.round(Math.random() * (this.whiteCards.length));
+      whiteCards = whiteCards.concat(this.whiteCards[randomNumber]);
+    }
     console.log('whiteCards:', whiteCards);
 
     return whiteCards;
