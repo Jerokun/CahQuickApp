@@ -1,0 +1,17 @@
+.custom-card {
+  position: relative;
+  border-radius: 15px;
+  width: 100%;
+  height: 100%;
+  line-height: 24px;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+.mat-card-title {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  line-height: 20px;
+  font-size: 16px;
+  overflow-wrap: anywhere;
+  padding: 5%;
+}

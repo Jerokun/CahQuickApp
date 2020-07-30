@@ -45,8 +45,9 @@ export class CardService {
   public newHand() {
     let whiteCards: string[] = [];
 
-    while (whiteCards.length <= 10) {
+    while (whiteCards.length <= 9) {
       const randomNumber = _.round(Math.random() * (this.whiteCards.length));
+      console.log('randomWhitecard: ', randomNumber);
       whiteCards = whiteCards.concat(this.whiteCards[randomNumber]);
     }
     console.log('whiteCards:', whiteCards);
