@@ -5,12 +5,9 @@
   </div>
 </div>
 
-<div class="container">
-  <div class="grid-row">
-    <app-white-card *ngFor="let text of whiteCards" [text]="text" class="grid-item">
-    </app-white-card>
-  </div>
-</div>
+<app-hand>
+  [whiteCards]="whiteCards"
+</app-hand>
 
 <!-- <div
   cdkDropList
