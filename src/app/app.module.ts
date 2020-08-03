@@ -20,6 +20,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CommonModule } from '@angular/common';
 import { MaterialModule } from './material/material.module';
 import { HandComponent } from './game/hand/hand.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 
 @NgModule({
@@ -39,6 +40,7 @@ import { HandComponent } from './game/hand/hand.component';
     CommonModule,
     DragDropModule,
     MaterialModule,
+    FontAwesomeModule,
   ],
   exports: [],
   providers: [CardService, DeckGeneratorService, CardDataService],
