@@ -10,6 +10,7 @@ export class LobbyPageComponent implements OnInit {
   constructor() {}
 
   game = false;
+  rules = false;
   isButtonGroupClasses: true;
 
   ngOnInit() {}
@@ -21,6 +22,17 @@ export class LobbyPageComponent implements OnInit {
       this.game = false;
     }
   }
+  toggleRules(event) {
+    if (this.rules === false) {
+      event.target.classList.add('showrules');
+      this.rules = true;
+    } else {
+      event.target.classList.remove('showrules');
+      this.game = false;
+    }    
+
+  }
+
 }
 
 // import { Component, OnInit, OnChanges } from '@angular/core';

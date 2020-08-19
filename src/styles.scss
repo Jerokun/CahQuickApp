@@ -1,44 +1,49 @@
 // Custom Theming for Angular Material
 // For more information: https://material.angular.io/guide/theming
-@import "~@angular/material/theming";
+//@import "~@angular/material/theming";
 // Plus imports for other components in your app.
 
 // Include the common styles for Angular Material. We include this here so that you only
 // have to load a single css file for Angular Material in your app.
 // Be sure that you only ever include this mixin once!
-@include mat-core();
+//@include mat-core();
 
 // Define the palettes for your theme using the Material Design palettes available in palette.scss
 // (imported above). For each palette, you can optionally specify a default, lighter, and darker
 // hue. Available color palettes: https://material.io/design/color/
-$CahQuickApp-primary: mat-palette($mat-indigo);
-$CahQuickApp-accent: mat-palette($mat-pink, A200, A100, A400);
+
+// $CahQuickApp-primary: mat-palette($mat-indigo);
+// $CahQuickApp-accent: mat-palette($mat-pink, A200, A100, A400);
 
 // The warn palette is optional (defaults to red).
-$CahQuickApp-warn: mat-palette($mat-red);
+
+// $CahQuickApp-warn: mat-palette($mat-red);
 
 // Create the theme object (a Sass map containing all of the palettes).
-$CahQuickApp-theme: mat-light-theme(
-  $CahQuickApp-primary,
-  $CahQuickApp-accent,
-  $CahQuickApp-warn
-);
+
+// $CahQuickApp-theme: mat-light-theme(
+//   $CahQuickApp-primary,
+//   $CahQuickApp-accent,
+//   $CahQuickApp-warn
+// );
 
 // Include theme styles for core and each component used in your app.
 // Alternatively, you can import and @include the theme mixins for each component
 // that you are using.
-@include angular-material-theme($CahQuickApp-theme);
+//@include angular-material-theme($CahQuickApp-theme);
 
 /* You can add global styles to this file, and also import other style files */
 
 html,
 body {
   height: 100%;
-  background-color: darken($color: #757575, $amount: 0);
-}
-body {
+  width: 100%;
+  background-color:#303030;
   margin: 0;
-  font-family: Roboto, "Helvetica Neue", sans-serif;
+  font-family: "Helvetica Neue", sans-serif!important;
+  font-size: 16px!important;
+  font-weight: 700!important;
+  overflow: hidden;
 }
 *{
   box-sizing: border-box;
@@ -61,11 +66,123 @@ body {
   display: -moz-box;
   display: -ms-flexbox;
   display: -webkit-flex;
-  display: flex;  
   flex-flow: row wrap;
   justify-content: center;
   align-items: center;
 }
+.grid-item{
+  flex-basis: 10%;
+  width: 10%;
+}
+
+
+
+.lobby{
+  position: relative;
+  width: 80%;
+  height: 100%;
+  margin:auto;
+}
+.blackbg{
+  background-color: black;
+  width: 100%;
+  height: 100%;
+}
+.title, .subtitle{
+  font-size: 3rem;
+  line-height: 3rem;
+  font-weight: 700;
+  width: 100%;
+  color: #fff;
+  flex-basis: 100%;
+  padding: 5px;
+  padding-top: 3rem;
+}
+.subtitle{
+  font-size: 1rem;
+  line-height: 1.3rem;
+  margin: 0;
+  width: auto;
+  padding:1rem 4rem 1rem 0rem;
+}
+.lobby-item{
+  flex-basis: 25%;
+  width: 25%;
+
+}
+.card-button {
+  position: relative;
+  height: 0;
+  padding: 3rem 0 0 0;
+  border-radius: 12px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+  margin: 5px;
+  background: white;
+}
+.button-inner {
+  display: flex;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  padding: 5px;
+  cursor: pointer;
+  text-align: center;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  outline: inherit;
+  align-items: center;
+  justify-content: center;
+}
+
+.start{
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 10000;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.9);
+  padding: 0 10%;
+}
+.showstart{
+  top: 0;
+}
+.join{
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 10000;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.9);
+  padding: 0 10%;
+}
+.showjoin{
+  top: 0;
+}
+.rules{
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 10000;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.9);
+  padding: 0 10%;
+  overflow-y: scroll;
+}
+.rules h2{
+  color:white;
+  font-size: 1.2rem;  
+}
+.rules p{
+  color:white;
+  font-weight: 500;
+  padding: 5px;
+}
+.showrules{
+  top: 0;
+}
+
 
 // .grid-item {
 //   display: flex;
@@ -93,15 +210,33 @@ body {
 //   width: 0;
 //   padding-bottom: calc(9/16 * 100%);
 // }
-.grid-item{
-  flex-basis: 10%;
-  width: 10%;
-}
 
+
+button {
+  // display: inline-block;
+  // border: none;
+  // padding: 1rem 2rem;
+  // margin: 0;
+  // padding: 0;
+  // text-decoration: none;
+  // background: #0069ed;
+  // color: #ffffff;
+  // font-family: sans-serif;
+  // font-size: 1rem;
+  // cursor: pointer;
+  // text-align: center;
+  // -webkit-appearance: none;
+  // -moz-appearance: none;
+  // outline: inherit;
+}
 @media (max-width: 1200px) {
   .grid-item {
     flex-basis: 20%;
     width: 20%;
+  }
+  .cardbutton{
+    flex-basis: 40%;
+    width: 40%;
   }
 }
 
@@ -110,6 +245,11 @@ body {
     flex-basis: 25%;
     width: 25%;
   }
+  .lobby-item{
+    flex-basis: 50%;
+    width: 50%;
+  }
+
 }
 
 @media (max-width: 600px) {
@@ -117,15 +257,31 @@ body {
     flex-basis: 33.33%;
     width: 33.33%;
   }
+  .lobby-item{
+    flex-basis: 100%;
+    width: 100%;
+  }
+  .title {
+
+  }
   .mat-card-title {
     font-size: 14px;
   }
+  .cardbutton{
+    flex-basis: 15rem;
+    width: 15rem;
+  }
+  
 }
 
 @media (max-width: 320px) {
   .grid-item {
     flex-basis: 50%;
     width: 50%;
+  }
+  .lobby-item{
+    flex-basis: 100%;
+    width: 100%;
   }
   .mat-card-title {
     font-size: 14px;
