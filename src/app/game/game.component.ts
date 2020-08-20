@@ -13,6 +13,7 @@ export class GameComponent implements OnInit, OnChanges {
 
   public blackCard: IBlackCard;
   public whiteCards: string[] = [];
+  
 
   ngOnChanges() {
     console.log('changes', this.whiteCards);

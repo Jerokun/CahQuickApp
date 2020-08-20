@@ -11,7 +11,18 @@ export class LobbyPageComponent implements OnInit {
 
   game = false;
   rules = false;
+  start = false;
+  join = false;
+  room = false;
+  private = true;
   isButtonGroupClasses: true;
+
+  public players = ['Windstorm', 'Bombasto', 'Magneta', 'Tornado'];
+  addPlayer(newPlayer: string) {
+    if (newPlayer) {
+      this.players.push(newPlayer);
+    }
+  }
 
   ngOnInit() {}
 
@@ -22,18 +33,9 @@ export class LobbyPageComponent implements OnInit {
       this.game = false;
     }
   }
-  toggleRules(event) {
-    if (this.rules === false) {
-      event.target.classList.add('showrules');
-      this.rules = true;
-    } else {
-      event.target.classList.remove('showrules');
-      this.game = false;
-    }    
-
-  }
 
 }
+
 
 // import { Component, OnInit, OnChanges } from '@angular/core';
 // import * as _ from 'lodash';
