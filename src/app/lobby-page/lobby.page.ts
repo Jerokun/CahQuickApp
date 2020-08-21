@@ -14,7 +14,10 @@ export class LobbyPageComponent implements OnInit {
   start = false;
   join = false;
   room = false;
+  sure = false;
   private = true;
+  menu = false;
+  pmenu = false;
   isButtonGroupClasses: true;
 
   public players = ['Windstorm', 'Bombasto', 'Magneta', 'Tornado'];
@@ -24,7 +27,17 @@ export class LobbyPageComponent implements OnInit {
     }
   }
 
+  public roomcode = Math.random().toString(36).substr(2, 4);
+  // addroomcode(newroomcode: string) {
+  //   if (newroomcode) {
+  //     this.roomcode.push(newroomcode);
+  //   }
+  // }
+
   ngOnInit() {}
+
+  
+
 
   toggleGame() {
     if (this.game === false) {
