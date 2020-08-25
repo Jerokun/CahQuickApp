@@ -53,23 +53,16 @@ body {
 *, *:before, *:after {
   box-sizing: inherit;
 }
- /* width */
  ::-webkit-scrollbar {
   width: .3rem;
   padding: .1rem;
 }
-
-/* Track */
 ::-webkit-scrollbar-track {
   background: 0;
 }
-
-/* Handle */
 ::-webkit-scrollbar-thumb {
   background: white;
 }
-
-/* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: tomato;
 } 
@@ -140,6 +133,17 @@ li.players:before {
   margin: 0 auto;
   padding: 5px;
 }
+.container100{
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  overflow-y: scroll;
+}
+
 .flex-row{
   display: flex;
   display: -webkit-box;
@@ -298,51 +302,68 @@ input{
 }
 
 
-
-.togglemenu{
+.transpbg{
+  position: fixed;
+  top: -100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  background-color:  rgba(0, 0, 0, 0.8);
+  opacity: 0;
+}
+.showtranspbg{
+ top: 0;
+ opacity: 1;
+}
+.togglemenu, .togglepmenu{
   position: fixed;
   top: 0;
   right: 0;
   z-index: 4;
-  width: 3rem;
-  height: 3rem;
+  width: 4rem;
+  height: 4rem;
   background: black;
   text-align: center;
 }
-.togglemenu i{
-  line-height: 3rem;
+.togglepmenu{
+top: 4rem;
+}
+.togglemenu i, .togglepmenu i{
+  line-height: 4rem;
 }
 .menu{
   box-sizing: border-box;
   position: absolute;
-  top: 100%;
+  top: -100%;
   left: 0;
   z-index: 3;
   width: 100%;
-  height: 400px;
+  height: auto;
   background: black;
   padding: 0 10%;
   overflow: hidden;
   opacity: 0;
+  padding-bottom: 40px;
 }
 .showmenu{
   top: 0;
   opacity: 1;
 }
-.playermenu{
+.pmenu{
   box-sizing: border-box;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  z-index: 10000;
-  width: 100%;
+  position: fixed;
+  top: 0;
+  right: -100%;
+  z-index: 2;
   height: 100%;
   background: black;
-  padding: 0 10%;
+  padding: 0 1rem;
+  padding-top: 8rem;
   overflow-y: hidden;
 }
-.showplayermenu{
-  left: 50px;
+.showpmenu{
+  right: 0;
 }
 .c1{
   color: tomato
