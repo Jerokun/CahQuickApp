@@ -2,7 +2,7 @@
   <div class="card-inner">
     <div class="mat-card-title">{{text}}</div>
     <div class="confirmcard" [ngClass]="selected ? 'showconfirmcard' : 'confirmcard'">
-      Play this card?<button class="card-button" (click)="confirmed()"  (click)="selected = false" >Confirm</button><button class="card-button">Cancel</button>
+      Play this card?<button class="card-button" (click)="confirm()"  (click)="selected = false" >Confirm</button><button class="card-button">Cancel</button>
     </div>
   </div>
 </div>
