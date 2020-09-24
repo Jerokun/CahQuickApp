@@ -9,6 +9,6 @@ namespace CahBackend.Models
     public class Game
     {
         public ApplicationUser[] Users { get; set; }
-        public GameDeck GameDeck { get;set; }
+        public Cards GameDeck { get;set; }
     }
 }
