@@ -1,7 +1,16 @@
-<div id="whiteCard" class="card white-card">
-  <div class="card-inner">
-  <div class="mat-card-title">
-    {{ text }}
+<div id="whiteCard" class="card white-card" [ngClass]="selected ? 'cardselected' : ''" (click)="selected = !selected" [ngClass]="confirmed ? 'confirm' : ''" >
+    <div class="card-inner">
+      <div class="mat-card-title">
+          {{ text }}
+        </div>
+      <div class="confirmcard" [ngClass]="selected ? 'showconfirmcard' : 'confirmcard'">
+          Play this card?
+        <button class="card-button" (click)="confirm()"  (click)="selected = false" >
+            Confirm
+          </button>
+        <button class="card-button">
+            Cancel
+          </button>
+    </div>
   </div>
-</div>
 </div>

@@ -11,6 +11,9 @@ export class HandComponent implements OnInit, OnChanges {
 
   constructor() { }
 
+  hand = true;
+  
+
   ngOnInit(): void {
     console.log('handCards', this.cards);
   }

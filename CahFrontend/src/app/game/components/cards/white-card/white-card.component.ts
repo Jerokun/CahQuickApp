@@ -9,6 +9,9 @@ export class WhiteCardComponent implements OnInit {
 
   constructor() { }
 
+  confirmed = false;
+  selected = false;
+
   @Input() text: string;
 
   ngOnInit() {}

@@ -301,9 +301,86 @@ input{
   opacity: 1;
 }
 
+.white-card{
+    background: white;
+}
+
+.white-card {
+background: #fff;
+color: rgb(22, 22, 22);
+bottom: 0px;
+}
+.confirmcard {
+position: absolute;
+opacity: 0;
+transform: rotateY(180deg);
+box-sizing: border-box;
+top: 0;
+left: 100%;
+right: 0;
+bottom: 0;
+text-align: center;
+color: white;
+padding: 10px;
+background-color: rgba(0, 0, 0, 0.8);
+overflow: hidden;
+}
+.showconfirmcard{
+opacity: 1;
+left: 0;
+}
+.confirmcard .card-button{
+    box-shadow: rgba(0, 0, 0, 0);
+margin-top: 10px;
+}
+.confirm{
+background: gold;
+opacity: 0;
+bottom: 0;
+}
+.cardselected{
+transform: rotateY(180deg);
+background: tomato;
+}
+.one{
+background: gold;
+}
+.two{
+background: teal;
+}
+.three{
+background: tomato;
+}
+.commitstatus{
+    top: 45%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    text-align: center;
+    color: black;
+    position: absolute;
+}
+.hand{
+margin: 0 auto;
+padding: 5px;
+position: fixed;
+top: 100%;
+left: 0;
+width: 100%;
+height: 100%;
+z-index: 3;
+background-color: rgba(0, 0, 0, 0.8);
+opacity: 0;
+overflow-y: scroll;
+padding-bottom: 4rem;
+}
+.showhand{
+    top: 0;
+    opacity: 1;
+}
 
 .transpbg{
-  position: fixed;
+    position: fixed;
   top: -100%;
   left: 0;
   width: 100%;
@@ -316,7 +393,7 @@ input{
  top: 0;
  opacity: 1;
 }
-.togglemenu, .togglepmenu{
+.togglemenu, .togglepmenu,.togglehand{
   position: fixed;
   top: 0;
   right: 0;
@@ -326,10 +403,16 @@ input{
   background: black;
   text-align: center;
 }
+.togglemenu{
+    top: 0;
+}
+.togglemenu{
+    top:0;
+}
 .togglepmenu{
 top: 4rem;
 }
-.togglemenu i, .togglepmenu i{
+.togglemenu i, .togglepmenu i,.togglehand i{
   line-height: 4rem;
 }
 .menu{
