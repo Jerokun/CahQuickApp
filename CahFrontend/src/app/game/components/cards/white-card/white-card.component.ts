@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { exception } from 'console';
 
 @Component({
   selector: 'app-white-card',
@@ -6,16 +7,16 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./white-card.component.scss', '../../../game.component.scss'],
 })
 export class WhiteCardComponent implements OnInit {
-
-  constructor() { }
+  constructor() {}
 
   confirmed = false;
-  selected = false;
+  selected = false;
 
   @Input() text: string;
 
   ngOnInit() {}
 
-  confirm() {}
-
+  confirm(): void {
+    return new exception('Not yet implemented');
+  }
 }
