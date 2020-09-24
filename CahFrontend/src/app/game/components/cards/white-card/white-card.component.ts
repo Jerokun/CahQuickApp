@@ -1,5 +1,4 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { exception } from 'console';
 
 @Component({
   selector: 'app-white-card',
@@ -17,6 +16,6 @@ export class WhiteCardComponent implements OnInit {
   ngOnInit() {}
 
   confirm(): void {
-    return new exception('Not yet implemented');
+    throw Error('Not yet implemented');
   }
 }
