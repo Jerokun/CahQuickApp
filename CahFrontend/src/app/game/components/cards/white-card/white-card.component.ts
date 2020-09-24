@@ -16,4 +16,6 @@ export class WhiteCardComponent implements OnInit {
 
   ngOnInit() {}
 
+  confirm() {}
+
 }

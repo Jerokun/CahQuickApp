@@ -14,6 +14,9 @@ import { CardService } from './services/card.service';
 import { CardDataService } from './services/card-data.service';
 import { DeckGeneratorService } from './services/deck-generator.service';
 
+// SignalR
+import { SignalRService } from './services/signal-r.service';
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -21,6 +24,7 @@ import { CommonModule } from '@angular/common';
 import { MaterialModule } from './material/material.module';
 import { HandComponent } from './game/hand/hand.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -33,6 +37,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     HandComponent,
   ],
   imports: [
+    HttpClientModule,
     MaterialModule,
     AppRoutingModule,
     BrowserAnimationsModule,
@@ -43,7 +48,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     FontAwesomeModule,
   ],
   exports: [],
-  providers: [CardService, DeckGeneratorService, CardDataService],
+  providers: [CardService, DeckGeneratorService, CardDataService, SignalRService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -14,10 +14,10 @@ namespace CahBackend.Controllers
     [Authorize]
     [ApiController]
     [Route("api/[controller]")]
-    public class GameController : ControllerBase
+    public class GameHubController : ControllerBase
     {
         private IHubContext<GameHub> _hub;
-        public GameController(IHubContext<GameHub> hub)
+        public GameHubController(IHubContext<GameHub> hub)
         {
             _hub = hub;
         }

@@ -1,5 +1,6 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import { WebSocketService } from './web-socket.service';
+import { SignalRService } from './services/signal-r.service';
 
 @Component({
   selector: 'app-root',
@@ -9,11 +10,18 @@ import { WebSocketService } from './web-socket.service';
 export class AppComponent implements OnInit {
   title = 'socket-io-example';
 
-  constructor(private webSocketService: WebSocketService) {}
+  constructor(public signalRService: SignalRService, private http: HttpClient) {}
 
   ngOnInit() {
-    this.webSocketService.listen('test event').subscribe((data) => {
-      console.log(data);
-    })
+    this.signalRService.startConnection();
+    this.signalRService.addTransferChartDataListener();
+    this.startHttpRequest();
+  }
+
+  private startHttpRequest = () => {
+    this.http.get('https://localhost:5001/api/chart')
+      .subscribe(res => {
+        console.log(res);
+      });
   }
 }

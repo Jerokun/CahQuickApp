@@ -1,9 +1,5 @@
-﻿using CahBackend.Models.Enums;
-using Microsoft.AspNetCore.SignalR;
-using System;
+﻿using Microsoft.AspNetCore.SignalR;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace CahBackend.Models.Hubs
 {
@@ -11,7 +7,7 @@ namespace CahBackend.Models.Hubs
     {
         public List<Deck.WhiteCard> WhiteCards { get; set; }
         public List<Deck.BlackCard> BlackCards { get; set; }
-        public List<Deck.Cards> HistoryCards { get; set; }
-        public GameStatesEnum CurrentGameState { get; set; }
+        public List<Deck.HistoryCards> HistoryCards { get; set; }
+        public Enums.GameStatesEnum CurrentGameState { get; set; }
     }
 }

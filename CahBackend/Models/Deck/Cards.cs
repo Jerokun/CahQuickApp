@@ -8,7 +8,8 @@ namespace CahBackend.Models.Deck
 {
     public class Cards
     {
-        public BlackCard[] BlackCards { get; set; }
-        public WhiteCard[] WhiteCards { get; set; }
+        public List<BlackCard> BlackCards { get; set; }
+        public List<WhiteCard> WhiteCards { get; set; }
+        public HistoryCards HistoryCards { get; set; }
     }
 }
