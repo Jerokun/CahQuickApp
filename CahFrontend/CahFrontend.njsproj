@@ -25,7 +25,6 @@
     <Content Include="package-lock.json" />
     <Content Include="package.json" />
     <Content Include="README.md" />
-    <Content Include="socket-io-server.js" />
     <Content Include="src\app\app.component.html" />
     <Content Include="src\app\app.component.scss" />
     <Content Include="src\app\game\components\cards\black-card\black-card.component.html" />
@@ -71,8 +70,8 @@
     <TypeScriptCompile Include="src\app\services\card-data.service.ts" />
     <TypeScriptCompile Include="src\app\services\card.service.ts" />
     <TypeScriptCompile Include="src\app\services\deck-generator.service.ts" />
-    <TypeScriptCompile Include="src\app\web-socket.service.spec.ts" />
-    <TypeScriptCompile Include="src\app\web-socket.service.ts" />
+    <TypeScriptCompile Include="src\app\services\signal-r.service.spec.ts" />
+    <TypeScriptCompile Include="src\app\services\signal-r.service.ts" />
     <TypeScriptCompile Include="src\environments\environment.prod.ts" />
     <TypeScriptCompile Include="src\environments\environment.ts" />
     <TypeScriptCompile Include="src\main.ts" />
