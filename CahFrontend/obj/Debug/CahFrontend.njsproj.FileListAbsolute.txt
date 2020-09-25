@@ -1,3 +1,0 @@
-C:\Custom\repos\cahquickFE\CahApp\CahFrontend\obj\Debug\CahFrontend.njsprojAssemblyReference.cache
-C:\Custom\repos\cahquickFE\CahApp\CahFrontend\obj\Debug\CahFrontend.njsproj.CoreCompileInputs.cache
-C:\Custom\repos\cahquickFE\CahApp\CahFrontend\bin\Microsoft.NodejsTools.WebRole.dll

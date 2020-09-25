@@ -12,6 +12,8 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using CahBackend.Models.Hubs;
+using CahBackend.Models.Users;
+using System.Text.Json;
 
 namespace CahBackend
 {
@@ -30,24 +32,37 @@ namespace CahBackend
             services.AddCors(options =>
             {
                 options.AddPolicy("CorsPolicy", builder => builder
-                .WithOrigins("http://localhost:4200")
+                .WithOrigins("http://localhost:5000", "http://localhost:5001", "http://localhost:4200")
                 .AllowAnyMethod()
                 .AllowAnyHeader()
-                .AllowCredentials());
+                .AllowAnyOrigin());
             });
 
-            services.AddSignalR();
+            services.AddSignalR()
+                .AddJsonProtocol(options =>
+                {
+                    options.PayloadSerializerOptions.PropertyNamingPolicy = JsonNamingPolicy.CamelCase;
+                });
+
             services.AddControllers();
 
             services.AddDbContext<ApplicationDbContext>(options =>
                 options.UseSqlServer(
                     Configuration.GetConnectionString("DefaultConnection")));
 
-            services.AddDefaultIdentity<ApplicationUser>(options => options.SignIn.RequireConfirmedAccount = true)
+            services.AddDefaultIdentity<ApplicationUser>(options => options.SignIn.RequireConfirmedAccount = false)
                 .AddEntityFrameworkStores<ApplicationDbContext>();
 
-            services.AddIdentityServer()
-                .AddApiAuthorization<ApplicationUser, ApplicationDbContext>();
+            // services.AddIdentity<User, IdentityRole>(options =>
+            // {
+            //     options.Password.RequireDigit = false;
+            //    options.Password.RequireLowercase = false;
+            //    options.Password.RequireNonAlphanumeric = false;
+            //    options.Password.RequireUppercase = false;
+            //    options.Password.RequiredLength = 6;
+            // })
+            //    .AddEntityFrameworkStores<DbContext>()
+            //    .AddDefaultTokenProviders();
 
             services.AddAuthentication()
                 .AddIdentityServerJwt();
@@ -62,6 +77,8 @@ namespace CahBackend
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
+            app.UseCors("CorsPolicy");
+
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
@@ -82,13 +99,11 @@ namespace CahBackend
             }
 
             app.UseRouting();
-            app.UseCors("CorsPolicy");
             app.UseAuthorization();
 
             app.UseRouting();
 
             app.UseAuthentication();
-            app.UseIdentityServer();
             app.UseAuthorization();
             app.UseEndpoints(endpoints =>
             {
@@ -102,6 +117,7 @@ namespace CahBackend
                 // see https://go.microsoft.com/fwlink/?linkid=864501
 
                 spa.Options.SourcePath = "ClientApp";
+                spa.UseProxyToSpaDevelopmentServer("http://localhost:4200");
 
                 if (env.IsDevelopment())
                 {
