@@ -11,10 +11,11 @@ import { IBlackCard } from './components/cards/black-card/IBlackCard';
 export class GameComponent implements OnInit, OnChanges {
   constructor(private cardService: CardService) {}
 
+  stackcards = false;
+
   public blackCard: IBlackCard;
   public whiteCards: string[] = [];
   
-
   ngOnChanges() {
     console.log('changes', this.whiteCards);
   }
@@ -25,5 +26,28 @@ export class GameComponent implements OnInit, OnChanges {
     this.whiteCards = this.cardService.newHand();
     console.log('this.blackCard:', this.blackCard);
     console.log('this.whiteCards:', this.whiteCards);
+
   }
 }
+  
+//   ngOnChanges() {
+//     console.log('changes', this.whiteCards);
+//   }
+
+//   ngOnInit() {
+//     this.cardService.getDecks();
+    
+//     this.drawBlackCard();
+
+//     this.whiteCards = this.cardService.newHand();
+//     console.log('this.blackCard:', this.blackCard);
+//     console.log('this.whiteCards:', this.whiteCards);
+//   }
+//   drawBlackCard() {
+//     const _blackCard = this.cardService.drawRandomBlackCard();
+//     _blackCard.text = _blackCard.text.replaceAll("_", "_____");
+//     _blackCard.text = _blackCard.text.replaceAll("<br>", " ");
+//     this.blackCard = _blackCard;
+//   }
+
+// }
