@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import * as _ from 'lodash';
 import * as far from '@fortawesome/free-regular-svg-icons';
+import * as fas from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-lobby-page',
@@ -10,7 +11,6 @@ import * as far from '@fortawesome/free-regular-svg-icons';
 export class LobbyPageComponent implements OnInit {
   constructor() {}
 
-  
   game = false;
   rules = false;
   start = false;
@@ -23,6 +23,7 @@ export class LobbyPageComponent implements OnInit {
   isButtonGroupClasses: true;
 
   public far = far;
+  public fas = fas;
 
   public players = ['Windstorm', 'Bombasto', 'Magneta', 'Tornado'];
   addPlayer(newPlayer: string) {
