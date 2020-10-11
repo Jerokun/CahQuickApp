@@ -10,8 +10,6 @@ C:\Custom\repos\cahquickFE\CahApp\CahBackend\bin\Debug\netcoreapp3.1\CahBackend.
 C:\Custom\repos\cahquickFE\CahApp\CahBackend\obj\Debug\netcoreapp3.1\CahBackend.csprojAssemblyReference.cache
 C:\Custom\repos\cahquickFE\CahApp\CahBackend\obj\Debug\netcoreapp3.1\CahBackend.AssemblyInfoInputs.cache
 C:\Custom\repos\cahquickFE\CahApp\CahBackend\obj\Debug\netcoreapp3.1\CahBackend.AssemblyInfo.cs
-C:\Custom\repos\cahquickFE\CahApp\CahBackend\obj\Debug\netcoreapp3.1\CahBackend.csproj.CoreCompileInputs.cache
-C:\Custom\repos\cahquickFE\CahApp\CahBackend\obj\Debug\netcoreapp3.1\CahBackend.MvcApplicationPartsAssemblyInfo.cache
 C:\Custom\repos\cahquickFE\CahApp\CahBackend\obj\Debug\netcoreapp3.1\CahBackend.RazorTargetAssemblyInfo.cache
 C:\Custom\repos\cahquickFE\CahApp\CahBackend\obj\Debug\netcoreapp3.1\staticwebassets\CahBackend.StaticWebAssets.Manifest.cache
 C:\Custom\repos\cahquickFE\CahApp\CahBackend\obj\Debug\netcoreapp3.1\staticwebassets\CahBackend.StaticWebAssets.xml
