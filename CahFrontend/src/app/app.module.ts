@@ -12,6 +12,7 @@ import { CardService } from './services/card.service';
 import { CardDataService } from './services/card-data.service';
 import { ChatboxComponent } from './chat/chatbox/chatbox.component';
 import { FormsModule } from '@angular/forms';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { FormsModule } from '@angular/forms';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    FontAwesomeModule,
   ],
   providers: [CardService, CardDataService],
   bootstrap: [AppComponent]
