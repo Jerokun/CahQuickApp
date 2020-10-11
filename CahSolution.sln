@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30413.136
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CahBackend", "CahBackend\CahBackend.csproj", "{A979BA57-CA07-4DFF-BF4A-F26B0E9DC742}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CahBackend", "CahBackend\CahBackend.csproj", "{A979BA57-CA07-4DFF-BF4A-F26B0E9DC742}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Backend", "Backend", "{BE539B54-39FA-48C4-B68E-20167680FDCF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -18,6 +20,9 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{A979BA57-CA07-4DFF-BF4A-F26B0E9DC742} = {BE539B54-39FA-48C4-B68E-20167680FDCF}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {5456445F-2479-4874-B9FA-865A3D39F5E9}

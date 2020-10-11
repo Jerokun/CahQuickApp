@@ -2,7 +2,6 @@ import { Injectable, OnInit } from '@angular/core';
 import { ICardCollection } from '../game/components/cards/ICardCollection';
 import { IDeck } from '../game/components/cards/IDeck';
 import { IBlackCard } from '../game/components/cards/black-card/IBlackCard';
-import * as jsonData from '../services/data.json';
 import * as _ from 'lodash';
 import { DeckGeneratorService } from './deck-generator.service';
 
@@ -26,7 +25,7 @@ export class CardService {
   hand: string[];
   blackCard: IBlackCard;
 
-  getDecks() {
+  getDecks(): void {
     this.whiteCards = this.deckGeneratorService.getWhiteDeck();
     console.log('this.whiteCards:', this.whiteCards);
     this.blackCards = this.deckGeneratorService.getBlackDeck();
@@ -42,7 +41,7 @@ export class CardService {
     return card = this.blackCards[randomNumber];
   }
 
-  public newHand() {
+  public newHand(): any {
     let whiteCards: string[] = [];
 
     while (whiteCards.length <= 9) {

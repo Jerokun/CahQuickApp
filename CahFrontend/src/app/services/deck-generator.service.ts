@@ -25,12 +25,12 @@ export class DeckGeneratorService {
 
   constructor(private cardDataService: CardDataService) {}
 
-  public getWhiteDeck() {
+  public getWhiteDeck(): any {
     const whiteCards: string[] = this.cardDataService.whiteCards;
     return whiteCards;
   }
 
-  public getBlackDeck() {
+  public getBlackDeck(): IBlackCard[] {
     const blackCards: IBlackCard[] = this.cardDataService.blackCards;
     return blackCards;
   }
@@ -43,10 +43,10 @@ export class DeckGeneratorService {
     return this.whiteDeck;
   }
 
-  buildBlackDeck() {
+  buildBlackDeck(): void {
   }
 
-  buildWhiteDeck() {
+  buildWhiteDeck(): void {
   }
 
   public getWhiteCards(indexNumbers: number[]): string[] {
