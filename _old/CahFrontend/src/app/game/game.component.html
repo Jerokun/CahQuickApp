@@ -1,0 +1,35 @@
+<div class="container">
+  <div class="flex-row left padding">
+    <app-black-card [text]="blackCard.text" [pick]="blackCard.pick" class="flex-item-10"></app-black-card>
+
+
+    <div class="flex-item-10">
+      <div id="whiteCard" class="card white-card">
+        <div class="card-inner"><i class="fas fa-hourglass-half commitstatus"></i>
+          <div class="mat-card-title">waiting on player...</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="flex-item-10">
+      <div id="whiteCard" class="card white-card">
+        <div class="card-inner"><i class="fas fa-hourglass-half commitstatus"></i>
+          <div class="mat-card-title">waiting on player...</div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- <div class="flex-item-10 cardstack" [ngClass]="stackcards? 'showcardstack' : 'cardstack'" (click)="stackcards= !stackcards">
+      <div id="whiteCard" class="card white-card">
+        <div class="card-inner"><i class="fas fa-hourglass-half commitstatus"></i>
+          <div class="mat-card-title">waiting on player...</div>
+        </div>
+      </div>
+    </div> -->
+
+
+
+  </div>
+  <app-hand [cards]="whiteCards"></app-hand>
+
