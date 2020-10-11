@@ -10,6 +10,7 @@ import { GameComponent } from './game/game.component';
 import { HandComponent } from './game/hand/hand.component';
 import { CardService } from './services/card.service';
 import { CardDataService } from './services/card-data.service';
+import { ChatboxComponent } from './chat/chatbox/chatbox.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { CardDataService } from './services/card-data.service';
     WhiteCardComponent,
     GameComponent,
     HandComponent,
+    ChatboxComponent,
   ],
   imports: [
     BrowserModule,
