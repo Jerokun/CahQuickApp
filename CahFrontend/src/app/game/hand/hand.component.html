@@ -1,7 +1,0 @@
-<div class="hand" [ngClass]="hand ? 'showhand' : 'hand'">
-  <div class="flex-row">
-    <app-white-card *ngFor="let txt of cards" [text]="txt" class="flex-item-10"></app-white-card>
-  </div>
-</div>
-<div class="togglehand"  (click)="hand = !hand"><i [ngClass]="hand ? 'fas fa-chevron-down' : 'fas fa-chevron-up'"></i>
-</div>
