@@ -1,9 +1,6 @@
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Identity;
-using Microsoft.AspNetCore.Identity.UI;
-using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.SpaServices.AngularCli;
 using Microsoft.EntityFrameworkCore;
 using CahBackend.Data;
@@ -29,14 +26,15 @@ namespace CahBackend
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddCors(options =>
-            {
-                options.AddPolicy("CorsPolicy", builder => builder
-                .WithOrigins("http://localhost:5000", "http://localhost:5001", "http://localhost:4200")
-                .AllowAnyMethod()
-                .AllowAnyHeader()
-                .AllowAnyOrigin());
-            });
+            //services.AddCors(options =>
+            //{
+            //  options.AddPolicy("CorsPolicy", builder => builder
+            //    .WithOrigins("http://localhost:4200")
+            //    .SetIsOriginAllowed((host) => true)
+            //    .AllowAnyMethod()
+            //    .AllowAnyHeader()
+            //    .AllowCredentials());
+            //});
 
             services.AddSignalR()
                 .AddJsonProtocol(options =>
@@ -99,12 +97,11 @@ namespace CahBackend
             }
 
             app.UseRouting();
+            //app.UseCors("CorsPolicy");
             app.UseAuthorization();
-
-            app.UseRouting();
 
             app.UseAuthentication();
-            app.UseAuthorization();
+            app.UseIdentityServer();
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
