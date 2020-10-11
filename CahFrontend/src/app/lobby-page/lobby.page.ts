@@ -1,7 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import * as _ from 'lodash';
-import * as far from '@fortawesome/free-regular-svg-icons';
-import * as fas from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-lobby-page',
@@ -21,9 +19,6 @@ export class LobbyPageComponent implements OnInit {
   menu = false;
   pmenu = false;
   isButtonGroupClasses: true;
-
-  public far = far;
-  public fas = fas;
 
   public players = ['Windstorm', 'Bombasto', 'Magneta', 'Tornado'];
   addPlayer(newPlayer: string) {
@@ -48,9 +43,7 @@ export class LobbyPageComponent implements OnInit {
       this.game = false;
     }
   }
-
 }
-
 
 // import { Component, OnInit, OnChanges } from '@angular/core';
 // import * as _ from 'lodash';
@@ -67,7 +60,6 @@ export class LobbyPageComponent implements OnInit {
 //   game = false;
 //   isButtonGroupClasses: true;
 //   public roomCode: string[] = [];
-  
 
 //   ngOnChanges() {
 //     console.log('changes', this.roomCode);
@@ -84,7 +76,7 @@ export class LobbyPageComponent implements OnInit {
 //       return result;
 //     }
 //     this.roomCode = this.result();
-//     console.log('this.roomCode', this.roomCode);   
+//     console.log('this.roomCode', this.roomCode);
 
 //   }
 
@@ -96,5 +88,3 @@ export class LobbyPageComponent implements OnInit {
 //     }
 //   }
 // }
-
-
