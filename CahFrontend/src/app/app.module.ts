@@ -11,6 +11,7 @@ import { HandComponent } from './game/hand/hand.component';
 import { CardService } from './services/card.service';
 import { CardDataService } from './services/card-data.service';
 import { ChatboxComponent } from './chat/chatbox/chatbox.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { ChatboxComponent } from './chat/chatbox/chatbox.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    FormsModule,
   ],
   providers: [CardService, CardDataService],
   bootstrap: [AppComponent]
