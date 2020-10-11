@@ -1,9 +1,6 @@
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Identity;
-using Microsoft.AspNetCore.Identity.UI;
-using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.SpaServices.AngularCli;
 using Microsoft.EntityFrameworkCore;
 using CahBackend.Data;
@@ -31,6 +28,7 @@ namespace CahBackend
             {
                 options.AddPolicy("CorsPolicy", builder => builder
                 .WithOrigins("http://localhost:4200")
+                .SetIsOriginAllowed((host) => true)
                 .AllowAnyMethod()
                 .AllowAnyHeader()
                 .AllowCredentials());
@@ -85,11 +83,8 @@ namespace CahBackend
             app.UseCors("CorsPolicy");
             app.UseAuthorization();
 
-            app.UseRouting();
-
             app.UseAuthentication();
             app.UseIdentityServer();
-            app.UseAuthorization();
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();

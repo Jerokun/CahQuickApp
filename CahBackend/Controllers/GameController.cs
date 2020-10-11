@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using CahBackend.Data.Storage;
 using CahBackend.Models.Hubs;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.SignalR;
@@ -12,8 +13,10 @@ using Microsoft.AspNetCore.SignalR;
 namespace CahBackend.Controllers
 {
     [Authorize]
+    [AllowAnonymous]
+    [EnableCors]
     [ApiController]
-    [Route("api/[controller]")]
+    [Route("gamehub")]
     public class GameHubController : ControllerBase
     {
         private IHubContext<GameHub> _hub;
