@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-16"?>
-<DevTrackerData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" SolutionTotalEditTime="PT3H47M8.4993138S" SolutionTotalViewTime="PT2H30M20.168754S" SolutionTotalDebugTime="PT17.7440247S">
+<DevTrackerData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" SolutionTotalEditTime="PT3H52M6.323552S" SolutionTotalViewTime="PT2H42M30.6568374S" SolutionTotalDebugTime="PT19.0181511S">
   <FileVersion>
     <Major>1</Major>
     <Minor>0</Minor>
@@ -18,29 +18,94 @@
   </ProjectsCreatedDateList>
   <SessionTimeList />
   <LastSessionTimeList>
-    <DevTrackerDataItem ViewActiveTime="PT4.2432624S" EditActiveTime="PT2M30.5152406S">
-      <ModifiedDate>2020-10-11T19:36:03.3612921+02:00</ModifiedDate>
+    <DevTrackerDataItem ViewActiveTime="PT2M33.0251696S" EditActiveTime="PT3.1106336S">
+      <ModifiedDate>2020-10-11T20:33:17.1604181+02:00</ModifiedDate>
+      <ModifiedBy>Jero</ModifiedBy>
+      <EditedCount>1</EditedCount>
+      <ViewedCount>1</ViewedCount>
+      <Item>C:\Custom\repos\cahquickFE\CahApp\CahBackend\.gitignore</Item>
+      <ItemType>ProjectItem</ItemType>
+      <ProjectName>C:\Custom\repos\cahquickFE\CahApp\CahBackend\CahBackend.csproj</ProjectName>
+      <CreatedDate>2020-10-11T20:33:07.5163016+02:00</CreatedDate>
+      <ViewedBy>Jero</ViewedBy>
+    </DevTrackerDataItem>
+    <DevTrackerDataItem ViewActiveTime="PT38.8686921S" EditActiveTime="PT51.9819594S">
+      <ModifiedDate>2020-10-11T19:51:55.6566614+02:00</ModifiedDate>
+      <ModifiedBy>Jero</ModifiedBy>
+      <EditedCount>1</EditedCount>
+      <ViewedCount>1</ViewedCount>
+      <Item>C:\Custom\repos\cahquickFE\CahApp\CahBackend\Controllers\ChatController.cs</Item>
+      <ItemType>ProjectItem</ItemType>
+      <ProjectName>C:\Custom\repos\cahquickFE\CahApp\CahBackend\CahBackend.csproj</ProjectName>
+      <CreatedDate>2020-10-11T19:50:17.025478+02:00</CreatedDate>
+      <ViewedBy>Jero</ViewedBy>
+    </DevTrackerDataItem>
+    <DevTrackerDataItem ViewActiveTime="PT1M35.1374903S" EditActiveTime="PT4.8473717S">
+      <ModifiedDate>2020-10-11T20:35:10.4608603+02:00</ModifiedDate>
       <ModifiedBy>Jero</ModifiedBy>
       <EditedCount>1</EditedCount>
       <ViewedCount>1</ViewedCount>
       <Item>C:\Custom\repos\cahquickFE\CahApp\CahBackend\Hubs\ChatHub.cs</Item>
       <ItemType>ProjectItem</ItemType>
       <ProjectName>C:\Custom\repos\cahquickFE\CahApp\CahBackend\CahBackend.csproj</ProjectName>
-      <CreatedDate>2020-10-11T19:33:16.0294916+02:00</CreatedDate>
+      <CreatedDate>2020-10-11T19:40:05.8332638+02:00</CreatedDate>
       <ViewedBy>Jero</ViewedBy>
     </DevTrackerDataItem>
-    <DevTrackerDataItem ViewActiveTime="PT2M29.4087207S" EditActiveTime="PT0S">
+    <DevTrackerDataItem ViewActiveTime="PT1.2741264S" EditActiveTime="PT0S">
       <ModifiedDate>0001-01-01T00:00:00</ModifiedDate>
       <EditedCount>0</EditedCount>
       <ViewedCount>1</ViewedCount>
-      <Item>C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Microsoft\VisualStudio\v16.0\Node.js Tools\Microsoft.NodejsToolsV2.targets</Item>
-      <ItemType>ProjectItem</ItemType>
+      <Item>Debug Mode</Item>
+      <ItemType>DebugModeItem</ItemType>
       <ProjectName />
-      <CreatedDate>2020-10-11T19:30:35.1676406+02:00</CreatedDate>
+      <CreatedDate>2020-10-11T20:12:09.7289825+02:00</CreatedDate>
+      <ViewedBy>Jero</ViewedBy>
+    </DevTrackerDataItem>
+    <DevTrackerDataItem ViewActiveTime="PT1M12.8842961S" EditActiveTime="PT1.1753741S">
+      <ModifiedDate>2020-10-11T19:49:43.1035025+02:00</ModifiedDate>
+      <ModifiedBy>Jero</ModifiedBy>
+      <EditedCount>1</EditedCount>
+      <ViewedCount>1</ViewedCount>
+      <Item>C:\Custom\repos\cahquickFE\CahApp\CahBackend\ReqDto\MessageDto.cs</Item>
+      <ItemType>ProjectItem</ItemType>
+      <ProjectName>C:\Custom\repos\cahquickFE\CahApp\CahBackend\CahBackend.csproj</ProjectName>
+      <CreatedDate>2020-10-11T19:49:33.3635428+02:00</CreatedDate>
+      <ViewedBy>Jero</ViewedBy>
+    </DevTrackerDataItem>
+    <DevTrackerDataItem ViewActiveTime="PT8.910664S" EditActiveTime="PT0S">
+      <ModifiedDate>0001-01-01T00:00:00</ModifiedDate>
+      <EditedCount>0</EditedCount>
+      <ViewedCount>1</ViewedCount>
+      <Item>C:\Custom\repos\cahquickFE\CahApp\CahBackend\Program.cs</Item>
+      <ItemType>ProjectItem</ItemType>
+      <ProjectName>C:\Custom\repos\cahquickFE\CahApp\CahBackend\CahBackend.csproj</ProjectName>
+      <CreatedDate>2020-10-11T20:11:14.0203582+02:00</CreatedDate>
+      <ViewedBy>Jero</ViewedBy>
+    </DevTrackerDataItem>
+    <DevTrackerDataItem ViewActiveTime="PT6M1.6667756S" EditActiveTime="PT3M56.7088994S">
+      <ModifiedDate>2020-10-11T20:11:28.1162633+02:00</ModifiedDate>
+      <ModifiedBy>Jero</ModifiedBy>
+      <EditedCount>1</EditedCount>
+      <ViewedCount>1</ViewedCount>
+      <Item>C:\Custom\repos\cahquickFE\CahApp\CahBackend\Startup.cs</Item>
+      <ItemType>ProjectItem</ItemType>
+      <ProjectName>C:\Custom\repos\cahquickFE\CahApp\CahBackend\CahBackend.csproj</ProjectName>
+      <CreatedDate>2020-10-11T19:40:30.2208812+02:00</CreatedDate>
       <ViewedBy>Jero</ViewedBy>
     </DevTrackerDataItem>
   </LastSessionTimeList>
   <TotalTimeList>
+    <DevTrackerDataItem ViewActiveTime="PT2M33.0211656S" EditActiveTime="PT3.1106336S">
+      <ModifiedDate>2020-10-11T20:33:17.1604181+02:00</ModifiedDate>
+      <ModifiedBy>Jero</ModifiedBy>
+      <EditedCount>1</EditedCount>
+      <ViewedCount>1</ViewedCount>
+      <Item>C:\Custom\repos\cahquickFE\CahApp\CahBackend\.gitignore</Item>
+      <ItemType>ProjectItem</ItemType>
+      <ProjectName>C:\Custom\repos\cahquickFE\CahApp\CahBackend\CahBackend.csproj</ProjectName>
+      <CreatedDate>2020-10-11T20:33:07.5163016+02:00</CreatedDate>
+      <ViewedBy>Jero</ViewedBy>
+    </DevTrackerDataItem>
     <DevTrackerDataItem ViewActiveTime="PT14.1087117S" EditActiveTime="PT0S">
       <ModifiedDate>0001-01-01T00:00:00</ModifiedDate>
       <EditedCount>0</EditedCount>
@@ -104,11 +169,22 @@
       <CreatedDate>2020-09-24T16:54:21.7915548+02:00</CreatedDate>
       <ViewedBy>Jero</ViewedBy>
     </DevTrackerDataItem>
-    <DevTrackerDataItem ViewActiveTime="PT4.2392586S" EditActiveTime="PT2M30.5152406S">
-      <ModifiedDate>2020-10-11T19:36:03.3612921+02:00</ModifiedDate>
+    <DevTrackerDataItem ViewActiveTime="PT38.8686921S" EditActiveTime="PT51.9819594S">
+      <ModifiedDate>2020-10-11T19:51:55.6566614+02:00</ModifiedDate>
       <ModifiedBy>Jero</ModifiedBy>
       <EditedCount>1</EditedCount>
       <ViewedCount>1</ViewedCount>
+      <Item>C:\Custom\repos\cahquickFE\CahApp\CahBackend\Controllers\ChatController.cs</Item>
+      <ItemType>ProjectItem</ItemType>
+      <ProjectName>C:\Custom\repos\cahquickFE\CahApp\CahBackend\CahBackend.csproj</ProjectName>
+      <CreatedDate>2020-10-11T19:50:17.025478+02:00</CreatedDate>
+      <ViewedBy>Jero</ViewedBy>
+    </DevTrackerDataItem>
+    <DevTrackerDataItem ViewActiveTime="PT1M39.3767489S" EditActiveTime="PT2M35.3626123S">
+      <ModifiedDate>2020-10-11T20:35:10.4608603+02:00</ModifiedDate>
+      <ModifiedBy>Jero</ModifiedBy>
+      <EditedCount>2</EditedCount>
+      <ViewedCount>2</ViewedCount>
       <Item>C:\Custom\repos\cahquickFE\CahApp\CahBackend\Hubs\ChatHub.cs</Item>
       <ItemType>ProjectItem</ItemType>
       <ProjectName>C:\Custom\repos\cahquickFE\CahApp\CahBackend\CahBackend.csproj</ProjectName>
@@ -135,10 +211,10 @@
       <CreatedDate>2020-09-24T17:55:37.3187873+02:00</CreatedDate>
       <ViewedBy>Jero</ViewedBy>
     </DevTrackerDataItem>
-    <DevTrackerDataItem ViewActiveTime="PT17.7440247S" EditActiveTime="PT22.9208343S">
+    <DevTrackerDataItem ViewActiveTime="PT19.0181511S" EditActiveTime="PT22.9208343S">
       <ModifiedDate>0001-01-01T00:00:00</ModifiedDate>
       <EditedCount>1</EditedCount>
-      <ViewedCount>3</ViewedCount>
+      <ViewedCount>4</ViewedCount>
       <Item>Debug Mode</Item>
       <ItemType>DebugModeItem</ItemType>
       <ProjectName />
@@ -275,6 +351,17 @@
       <CreatedDate>2020-09-24T16:07:11.6577299+02:00</CreatedDate>
       <ViewedBy>Jero</ViewedBy>
     </DevTrackerDataItem>
+    <DevTrackerDataItem ViewActiveTime="PT1M12.8842961S" EditActiveTime="PT1.1753741S">
+      <ModifiedDate>2020-10-11T19:49:43.1035025+02:00</ModifiedDate>
+      <ModifiedBy>Jero</ModifiedBy>
+      <EditedCount>1</EditedCount>
+      <ViewedCount>1</ViewedCount>
+      <Item>C:\Custom\repos\cahquickFE\CahApp\CahBackend\ReqDto\MessageDto.cs</Item>
+      <ItemType>ProjectItem</ItemType>
+      <ProjectName>C:\Custom\repos\cahquickFE\CahApp\CahBackend\CahBackend.csproj</ProjectName>
+      <CreatedDate>2020-10-11T19:49:33.3635428+02:00</CreatedDate>
+      <ViewedBy>Jero</ViewedBy>
+    </DevTrackerDataItem>
     <DevTrackerDataItem ViewActiveTime="PT20M27.4692828S" EditActiveTime="PT0S">
       <ModifiedDate>0001-01-01T00:00:00</ModifiedDate>
       <EditedCount>0</EditedCount>
@@ -316,10 +403,10 @@
       <CreatedDate>2020-09-24T17:40:51.1455031+02:00</CreatedDate>
       <ViewedBy>Jero</ViewedBy>
     </DevTrackerDataItem>
-    <DevTrackerDataItem ViewActiveTime="PT11M20.856666S" EditActiveTime="PT0S">
+    <DevTrackerDataItem ViewActiveTime="PT11M29.76733S" EditActiveTime="PT0S">
       <ModifiedDate>0001-01-01T00:00:00</ModifiedDate>
       <EditedCount>0</EditedCount>
-      <ViewedCount>2</ViewedCount>
+      <ViewedCount>3</ViewedCount>
       <Item>C:\Custom\repos\cahquickFE\CahApp\CahBackend\Program.cs</Item>
       <ItemType>ProjectItem</ItemType>
       <ProjectName>C:\Custom\repos\cahquickFE\CahApp\CahBackend\CahBackend.csproj</ProjectName>
@@ -347,11 +434,11 @@
       <CreatedDate>2020-09-24T18:08:53.6732034+02:00</CreatedDate>
       <ViewedBy>Jero</ViewedBy>
     </DevTrackerDataItem>
-    <DevTrackerDataItem ViewActiveTime="PT20M39.958965S" EditActiveTime="PT29M6.5109538S">
-      <ModifiedDate>2020-09-25T04:41:36.8418227+02:00</ModifiedDate>
+    <DevTrackerDataItem ViewActiveTime="PT26M41.6257406S" EditActiveTime="PT33M3.2198532S">
+      <ModifiedDate>2020-10-11T20:11:28.1162633+02:00</ModifiedDate>
       <ModifiedBy>Jero</ModifiedBy>
-      <EditedCount>2</EditedCount>
-      <ViewedCount>3</ViewedCount>
+      <EditedCount>3</EditedCount>
+      <ViewedCount>4</ViewedCount>
       <Item>C:\Custom\repos\cahquickFE\CahApp\CahBackend\Startup.cs</Item>
       <ItemType>ProjectItem</ItemType>
       <ProjectName>C:\Custom\repos\cahquickFE\CahApp\CahBackend\CahBackend.csproj</ProjectName>
@@ -422,6 +509,81 @@
     </DevTrackerDataItem>
   </TotalTimeList>
   <HistoryTimeList>
+    <DevTrackerDataItem ViewActiveTime="PT2M33.0221669S" EditActiveTime="PT3.1106336S">
+      <ModifiedDate>2020-10-11T20:33:17.1604181+02:00</ModifiedDate>
+      <ModifiedBy>Jero</ModifiedBy>
+      <EditedCount>1</EditedCount>
+      <ViewedCount>1</ViewedCount>
+      <Item>C:\Custom\repos\cahquickFE\CahApp\CahBackend\.gitignore</Item>
+      <ItemType>ProjectItem</ItemType>
+      <ProjectName>C:\Custom\repos\cahquickFE\CahApp\CahBackend\CahBackend.csproj</ProjectName>
+      <CreatedDate>2020-10-11T20:33:07.5163016+02:00</CreatedDate>
+      <ViewedBy>Jero</ViewedBy>
+    </DevTrackerDataItem>
+    <DevTrackerDataItem ViewActiveTime="PT1.2741264S" EditActiveTime="PT0S">
+      <ModifiedDate>0001-01-01T00:00:00</ModifiedDate>
+      <EditedCount>0</EditedCount>
+      <ViewedCount>1</ViewedCount>
+      <Item>Debug Mode</Item>
+      <ItemType>DebugModeItem</ItemType>
+      <ProjectName />
+      <CreatedDate>2020-10-11T20:12:09.7289825+02:00</CreatedDate>
+      <ViewedBy>Jero</ViewedBy>
+    </DevTrackerDataItem>
+    <DevTrackerDataItem ViewActiveTime="PT8.910664S" EditActiveTime="PT0S">
+      <ModifiedDate>0001-01-01T00:00:00</ModifiedDate>
+      <EditedCount>0</EditedCount>
+      <ViewedCount>1</ViewedCount>
+      <Item>C:\Custom\repos\cahquickFE\CahApp\CahBackend\Program.cs</Item>
+      <ItemType>ProjectItem</ItemType>
+      <ProjectName>C:\Custom\repos\cahquickFE\CahApp\CahBackend\CahBackend.csproj</ProjectName>
+      <CreatedDate>2020-10-11T20:11:14.0203582+02:00</CreatedDate>
+      <ViewedBy>Jero</ViewedBy>
+    </DevTrackerDataItem>
+    <DevTrackerDataItem ViewActiveTime="PT38.8686921S" EditActiveTime="PT51.9819594S">
+      <ModifiedDate>2020-10-11T19:51:55.6566614+02:00</ModifiedDate>
+      <ModifiedBy>Jero</ModifiedBy>
+      <EditedCount>1</EditedCount>
+      <ViewedCount>1</ViewedCount>
+      <Item>C:\Custom\repos\cahquickFE\CahApp\CahBackend\Controllers\ChatController.cs</Item>
+      <ItemType>ProjectItem</ItemType>
+      <ProjectName>C:\Custom\repos\cahquickFE\CahApp\CahBackend\CahBackend.csproj</ProjectName>
+      <CreatedDate>2020-10-11T19:50:17.025478+02:00</CreatedDate>
+      <ViewedBy>Jero</ViewedBy>
+    </DevTrackerDataItem>
+    <DevTrackerDataItem ViewActiveTime="PT1M12.8842961S" EditActiveTime="PT1.1753741S">
+      <ModifiedDate>2020-10-11T19:49:43.1035025+02:00</ModifiedDate>
+      <ModifiedBy>Jero</ModifiedBy>
+      <EditedCount>1</EditedCount>
+      <ViewedCount>1</ViewedCount>
+      <Item>C:\Custom\repos\cahquickFE\CahApp\CahBackend\ReqDto\MessageDto.cs</Item>
+      <ItemType>ProjectItem</ItemType>
+      <ProjectName>C:\Custom\repos\cahquickFE\CahApp\CahBackend\CahBackend.csproj</ProjectName>
+      <CreatedDate>2020-10-11T19:49:33.3635428+02:00</CreatedDate>
+      <ViewedBy>Jero</ViewedBy>
+    </DevTrackerDataItem>
+    <DevTrackerDataItem ViewActiveTime="PT6M1.6667756S" EditActiveTime="PT3M56.7088994S">
+      <ModifiedDate>2020-10-11T20:11:28.1162633+02:00</ModifiedDate>
+      <ModifiedBy>Jero</ModifiedBy>
+      <EditedCount>1</EditedCount>
+      <ViewedCount>1</ViewedCount>
+      <Item>C:\Custom\repos\cahquickFE\CahApp\CahBackend\Startup.cs</Item>
+      <ItemType>ProjectItem</ItemType>
+      <ProjectName>C:\Custom\repos\cahquickFE\CahApp\CahBackend\CahBackend.csproj</ProjectName>
+      <CreatedDate>2020-10-11T19:40:30.2208812+02:00</CreatedDate>
+      <ViewedBy>Jero</ViewedBy>
+    </DevTrackerDataItem>
+    <DevTrackerDataItem ViewActiveTime="PT1M35.1374903S" EditActiveTime="PT4.8473717S">
+      <ModifiedDate>2020-10-11T20:35:10.4608603+02:00</ModifiedDate>
+      <ModifiedBy>Jero</ModifiedBy>
+      <EditedCount>1</EditedCount>
+      <ViewedCount>1</ViewedCount>
+      <Item>C:\Custom\repos\cahquickFE\CahApp\CahBackend\Hubs\ChatHub.cs</Item>
+      <ItemType>ProjectItem</ItemType>
+      <ProjectName>C:\Custom\repos\cahquickFE\CahApp\CahBackend\CahBackend.csproj</ProjectName>
+      <CreatedDate>2020-10-11T19:40:05.8332638+02:00</CreatedDate>
+      <ViewedBy>Jero</ViewedBy>
+    </DevTrackerDataItem>
     <DevTrackerDataItem ViewActiveTime="PT4.2402591S" EditActiveTime="PT2M30.5152406S">
       <ModifiedDate>2020-10-11T19:36:03.3612921+02:00</ModifiedDate>
       <ModifiedBy>Jero</ModifiedBy>

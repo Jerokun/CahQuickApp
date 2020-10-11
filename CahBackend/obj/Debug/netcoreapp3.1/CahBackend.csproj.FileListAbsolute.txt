@@ -16,3 +16,8 @@ C:\Custom\repos\cahquickFE\CahApp\CahBackend\obj\Debug\netcoreapp3.1\staticwebas
 C:\Custom\repos\cahquickFE\CahApp\CahBackend\obj\Debug\netcoreapp3.1\CahBackend.dll
 C:\Custom\repos\cahquickFE\CahApp\CahBackend\obj\Debug\netcoreapp3.1\CahBackend.pdb
 C:\Custom\repos\cahquickFE\CahApp\CahBackend\obj\Debug\netcoreapp3.1\CahBackend.genruntimeconfig.cache
+C:\Custom\repos\cahquickFE\CahApp\CahBackend\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+C:\Custom\repos\cahquickFE\CahApp\CahBackend\bin\Debug\netcoreapp3.1\System.Net.WebSockets.WebSocketProtocol.dll
+C:\Custom\repos\cahquickFE\CahApp\CahBackend\obj\Debug\netcoreapp3.1\CahBackend.csproj.CoreCompileInputs.cache
+C:\Custom\repos\cahquickFE\CahApp\CahBackend\obj\Debug\netcoreapp3.1\CahBackend.MvcApplicationPartsAssemblyInfo.cache
+C:\Custom\repos\cahquickFE\CahApp\CahBackend\obj\Debug\netcoreapp3.1\CahBackend.csproj.CopyComplete
