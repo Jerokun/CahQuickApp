@@ -14,7 +14,6 @@ namespace CahBackend.Controllers
 {
     [Authorize]
     [AllowAnonymous]
-    [EnableCors]
     [ApiController]
     [Route("gamehub")]
     public class GameHubController : ControllerBase
