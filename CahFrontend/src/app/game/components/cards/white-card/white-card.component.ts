@@ -1,4 +1,5 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { IWhiteCardStatus } from 'src/app/game/hand/hand.component';
 
 @Component({
   selector: 'app-white-card',
@@ -8,14 +9,23 @@ import { Component, OnInit, Input } from '@angular/core';
 export class WhiteCardComponent implements OnInit {
   constructor() {}
 
-  confirmed = false;
-  selected = false;
+  @Input() card: IWhiteCardStatus;
+  @Output() statusUpdate = new EventEmitter<IWhiteCardStatus>();
 
-  @Input() text: string;
+  ngOnInit(): void {}
 
-  ngOnInit() {}
+  select(): void {
+    this.card.selected = true;
+    this.statusUpdate.emit(this.card);
+  }
+
+  cancel(): void {
+    this.card.selected = false;
+    this.statusUpdate.emit(this.card);
+  }
 
   confirm(): void {
-    throw Error('Not yet implemented');
+    this.card.confirmed = true;
+    this.statusUpdate.emit(this.card);
   }
 }

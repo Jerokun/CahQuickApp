@@ -15,39 +15,24 @@ export class GameComponent implements OnInit, OnChanges {
 
   public blackCard: IBlackCard;
   public whiteCards: string[] = [];
-  
-  ngOnChanges() {
+
+  ngOnChanges(): void {
     console.log('changes', this.whiteCards);
   }
 
-  ngOnInit() {
+  ngOnInit(): void {
     this.cardService.getDecks();
     this.blackCard = this.cardService.drawRandomBlackCard();
     this.whiteCards = this.cardService.newHand();
     console.log('this.blackCard:', this.blackCard);
     console.log('this.whiteCards:', this.whiteCards);
+  }
 
+  submitCards(event: any): void {
+    console.log('submitCards()', event);
+
+    if (event.length === this.blackCard.pick) {
+      console.log('SUCCESS! You sent in the right amount of cards');
+    } else { console.error('OOOPS! You sent in the wrong number of cards'); }
   }
 }
-  
-//   ngOnChanges() {
-//     console.log('changes', this.whiteCards);
-//   }
-
-//   ngOnInit() {
-//     this.cardService.getDecks();
-    
-//     this.drawBlackCard();
-
-//     this.whiteCards = this.cardService.newHand();
-//     console.log('this.blackCard:', this.blackCard);
-//     console.log('this.whiteCards:', this.whiteCards);
-//   }
-//   drawBlackCard() {
-//     const _blackCard = this.cardService.drawRandomBlackCard();
-//     _blackCard.text = _blackCard.text.replaceAll("_", "_____");
-//     _blackCard.text = _blackCard.text.replaceAll("<br>", " ");
-//     this.blackCard = _blackCard;
-//   }
-
-// }

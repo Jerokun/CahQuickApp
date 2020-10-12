@@ -28,8 +28,9 @@
       </div>
     </div> -->
 
-
-
   </div>
-  <app-hand [cards]="whiteCards"></app-hand>
-
+  <app-hand 
+    [cards]="whiteCards"
+    [maxPicks]="blackCard.pick"
+    (sendChosenCards)="submitCards($event)"
+    ></app-hand>
