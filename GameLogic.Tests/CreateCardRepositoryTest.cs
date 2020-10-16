@@ -1,9 +1,9 @@
-using GameLogic.DataConverter;
 using System.Linq;
 using Xunit;
 using System;
 using System.Collections.Generic;
 using GameLogic.Models;
+using GameLogic.DataConverter;
 
 namespace GameLogic.Tests
 {

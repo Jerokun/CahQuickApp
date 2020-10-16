@@ -10,16 +10,16 @@ using System.Threading.Tasks;
 
 namespace GameLogic.DataConverter
 {
-    public class PackRepository
+    public static class PackRepository
     {
         public const string JsonPath = @"./Data/cah-cards-full.json";
             
-        public Task<Dictionary<string, Pack>> LoadCardCollection()
+        public static Task<Dictionary<string, Pack>> LoadCardCollection()
         {
             return LoadDecksFromStream(File.OpenRead(JsonPath));
         }
 
-        public async Task<Dictionary<string, Pack>> LoadDecksFromStream(Stream source)
+        public async static Task<Dictionary<string, Pack>> LoadDecksFromStream(Stream source)
         {
             StreamReader reader = new StreamReader(source);
             string json = await reader.ReadToEndAsync();
@@ -45,7 +45,7 @@ namespace GameLogic.DataConverter
             return result;
         }
 
-        private IEnumerable<T> LoadCards<T>(JArray obj, string packName) where T : Card
+        private static IEnumerable<T> LoadCards<T>(JArray obj, string packName) where T : Card
         {
             foreach(JToken i in obj)
             {

@@ -1,2 +1,4 @@
 .vs
 .vscode
+/GameLogic.Tests/bin/Debug/netcoreapp3.1
+/GameLogic.Tests/obj
