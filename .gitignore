@@ -2,3 +2,6 @@
 .vscode
 /GameLogic.Tests/bin/Debug/netcoreapp3.1
 /GameLogic.Tests/obj
+/CahFrontend/bin
+/CahFrontend/obj/Debug/CahFrontend.njsprojAssemblyReference.cache
+/_old/CahFrontend/obj/Release/CahFrontend.njsprojAssemblyReference.cache

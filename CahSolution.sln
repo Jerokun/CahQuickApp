@@ -6,13 +6,12 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CahBackend", "CahBackend\CahBackend.csproj", "{A979BA57-CA07-4DFF-BF4A-F26B0E9DC742}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Backend", "Backend", "{BE539B54-39FA-48C4-B68E-20167680FDCF}"
-	ProjectSection(SolutionItems) = preProject
-		CahBackend\.gitignore = CahBackend\.gitignore
-	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GameLogic", "GameLogic\GameLogic.csproj", "{C6F1B99C-647D-4F57-95D6-6490F2A9BBA7}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GameLogic.Tests", "GameLogic.Tests\GameLogic.Tests.csproj", "{6FC052F9-94D2-43D6-91E0-BDABDF7E1824}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Frontend", "Frontend", "{A220CF48-BDE6-47C3-AC0F-C3D6C52ABFCB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
