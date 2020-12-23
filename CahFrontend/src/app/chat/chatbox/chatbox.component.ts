@@ -20,7 +20,7 @@ export class ChatboxComponent implements OnInit {
         this.addToInbox(receivedObj);
       }); // calls the service method to get the new messages sent
   }
-
+  
   send(): void {
     if (this.msgDto) {
       if (this.msgDto.user.length === 0 || this.msgDto.user.length === 0) {
