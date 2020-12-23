@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import * as _ from 'lodash';
+import { SessionService } from '../services/session.service';
 
 @Component({
   selector: 'app-lobby-page',
@@ -7,7 +8,7 @@ import * as _ from 'lodash';
   styleUrls: ['./lobby-page.component.scss'],
 })
 export class LobbyPageComponent implements OnInit {
-  constructor() {}
+  constructor(private sessionService: SessionService) {}
 
   game = false;
   rules = false;
@@ -19,22 +20,61 @@ export class LobbyPageComponent implements OnInit {
   menu = false;
   pmenu = false;
   isButtonGroupClasses: true;
+  public placeholder: string = 'Your name';
 
+  private userName: string = null;
   public players = ['Windstorm', 'Bombasto', 'Magneta', 'Tornado'];
-  addPlayer(newPlayer: string) {
-    if (newPlayer) {
-      this.players.push(newPlayer);
+
+  public roomcode = Math.random().toString(36).substr(2, 4);
+
+  ngOnInit() {}
+
+  createRoom() {
+    switch (this.userName) {
+      case null:
+        this.buttonError('createRoom');
+        break;
+      case undefined:
+        this.buttonError('createRoom');
+        break;
+
+      default:
+        if (this.userName.length > 0) {
+          this.sessionService.getNewSession(this.private, this.userName);
+          this.room = !this.room;
+        } else {
+          this.buttonError('createRoom');
+        }
+        break;
     }
   }
 
-  public roomcode = Math.random().toString(36).substr(2, 4);
-  // addroomcode(newroomcode: string) {
-  //   if (newroomcode) {
-  //     this.roomcode.push(newroomcode);
-  //   }
-  // }
+  buttonError(button: string) {
+    switch (button) {
+      case 'createRoom':
+        this.placeholder = 'Fill in name!';
+        console.error('Please enter a name');
+        break;
 
-  ngOnInit() {}
+      case 'startGame':
+        // ...
+        break;
+
+      default:
+        console.error(
+          'No valid button has been found, but an error has occured'
+        );
+        break;
+    }
+  }
+
+  addPlayer(newPlayer: string) {
+    if (newPlayer.length > 0) {
+      this.userName = newPlayer;
+    } else {
+      this.userName = null;
+    }
+  }
 
   toggleGame() {
     if (this.game === false) {
@@ -44,47 +84,3 @@ export class LobbyPageComponent implements OnInit {
     }
   }
 }
-
-// import { Component, OnInit, OnChanges } from '@angular/core';
-// import * as _ from 'lodash';
-
-// @Component({
-//   selector: 'app-lobby-page',
-//   templateUrl: './lobby-page.component.html',
-//   styleUrls: ['./lobby-page.component.scss'],
-// })
-
-// export class LobbyPageComponent implements OnInit, OnChanges {
-//   constructor() {}
-
-//   game = false;
-//   isButtonGroupClasses: true;
-//   public roomCode: string[] = [];
-
-//   ngOnChanges() {
-//     console.log('changes', this.roomCode);
-//   }
-
-//   ngOnInit() {
-//     function makeid(length) {
-//       var result           = '';
-//       var characters       = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
-//       var charactersLength = characters.length;
-//       for ( var i = 0; i < length; i++ ) {
-//          result += characters.charAt(Math.floor(Math.random() * charactersLength));
-//       }
-//       return result;
-//     }
-//     this.roomCode = this.result();
-//     console.log('this.roomCode', this.roomCode);
-
-//   }
-
-//   toggleGame() {
-//     if (this.game === false) {
-//       this.game = true;
-//     } else {
-//       this.game = false;
-//     }
-//   }
-// }

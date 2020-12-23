@@ -13,6 +13,8 @@ import { CardDataService } from './services/card-data.service';
 import { ChatboxComponent } from './chat/chatbox/chatbox.component';
 import { FormsModule } from '@angular/forms';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { SessionService } from './services/session.service';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -29,8 +31,9 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     AppRoutingModule,
     FormsModule,
     FontAwesomeModule,
+    HttpClientModule,
   ],
-  providers: [CardService, CardDataService],
+  providers: [CardService, CardDataService, SessionService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

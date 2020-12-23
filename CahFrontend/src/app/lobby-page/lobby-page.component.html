@@ -46,11 +46,10 @@
 
     <div class="flex-row left">
       <div class="flex-item-4">
-        <input #newPlayer (keyup.enter)="addPlayer(newPlayer.value)" placeholder="Your name"
-          (blur)="addPlayer(newPlayer.value); newPlayer.value='' ">
+        <input #newPlayer (focusout)="addPlayer(newPlayer.value)" placeholder="{{placeholder}}">
       </div>
       <div class="flex-item-4">
-        <button class="card-button" (click)="addPlayer(newPlayer.value)"(click)="room = !room">
+        <button class="card-button" (click)="createRoom()" >
             Create room
         </button>
       </div>
