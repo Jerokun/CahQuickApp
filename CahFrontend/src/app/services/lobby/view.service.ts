@@ -37,7 +37,7 @@ export class ViewService {
 
 	public getState(s: string): boolean {
 		const states = this.getStates();
-		console.log('getState', states.find(state => state.key === s).value);
+		console.log('getState ' + s, states.find(state => state.key === s).value);
 		return states.find(state => state.key === s).value;
 	}
 
