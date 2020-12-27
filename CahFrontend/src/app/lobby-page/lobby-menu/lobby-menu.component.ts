@@ -1,5 +1,6 @@
 import { Component, Input, OnInit, Output } from '@angular/core';
 import { EventEmitter } from 'events';
+import { ViewService } from 'src/app/services/lobby/view.service';
 
 @Component({
   selector: 'app-lobby-menu',
@@ -17,7 +18,7 @@ export class LobbyMenuComponent implements OnInit {
   }
 
   onStartButtonClicked() {
-    this.viewService.start = true;
+    //this.viewService.start = true;
   }
   onRulesButtonClicked() {}
 
