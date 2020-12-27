@@ -1,14 +1,14 @@
-<div class="start" [ngClass]="this.viewService.getState('start') ? 'showstart' : 'start'">
+<div class="join" [ngClass]="this.viewService.getState('join') ? 'showjoin' : 'join'">
     <i
       class="far fa-times-circle close"
-      [ngClass]="this.viewService.getState('start') ? 'showclose' : 'close'"
-      (click)="this.viewService.setState('start', true)">
+      [ngClass]="this.viewService.getState('join') ? 'showclose' : 'close'"
+      (click)="this.viewService.setState('join', false)">
     ></i>
 
     <div class="title">
       Join a Game...
       <div class="subtitle">
-        Send the room code to your friends to start the party!
+        Enter your name and ask for the room code to start the party!
       </div>
     </div>
 
@@ -21,9 +21,9 @@
         />
       </div>
       <div class="flex-item-4">
-        <button class="card-button" (click)="this.viewService.setState('join', true)">(click)="createRoom()">Create room</button>
+        <button class="card-button" (click)="this.viewService.setState('join', true)">(click)="createRoom()">Join game</button>
       </div>
     </div>
 
-    
+
   </div>
