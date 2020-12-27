@@ -1,8 +1,6 @@
 import { KeyValue } from '@angular/common';
 import { Injectable } from '@angular/core';
-import { start } from 'repl';
 import { BehaviorSubject } from 'rxjs';
-import * as _ from 'lodash';
 
 @Injectable({
 	providedIn: 'root',
