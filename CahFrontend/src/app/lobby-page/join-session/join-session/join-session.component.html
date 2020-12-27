@@ -4,14 +4,14 @@
       [ngClass]="this.viewService.getState('start') ? 'showclose' : 'close'"
       (click)="this.viewService.setState('start', true)">
     ></i>
-  
+
     <div class="title">
       Join a Game...
       <div class="subtitle">
         Send the room code to your friends to start the party!
       </div>
     </div>
-  
+
     <div class="flex-row left">
       <div class="flex-item-4">
         <input
@@ -24,7 +24,6 @@
         <button class="card-button" (click)="this.viewService.setState('join', true)">(click)="createRoom()">Create room</button>
       </div>
     </div>
-  
 
+    
   </div>
-  
