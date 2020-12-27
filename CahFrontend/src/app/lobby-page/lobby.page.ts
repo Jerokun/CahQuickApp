@@ -1,3 +1,4 @@
+import { KeyValue } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import * as _ from 'lodash';
 import { SessionService } from '../services/game/session.service';
@@ -9,19 +10,13 @@ import { ViewService } from '../services/lobby/view.service';
   styleUrls: ['./lobby-page.component.scss'],
 })
 export class LobbyPageComponent implements OnInit {
-  constructor(private sessionService: SessionService, private viewService: ViewService) {}
-
-  game = false;
-  rules = false;
-  start = false;
-  join = false;
-  room = false;
-  sure = false;
-  private = true;
-  menu = false;
-  pmenu = false;
+  
   isButtonGroupClasses: true;
-  public placeholder: string = 'Your name';
+  public placeholder: string = 'Your name'
+
+  public currentView: Array<KeyValue<string, boolean>>;
+  
+  constructor(private sessionService: SessionService, private viewService: ViewService) {}
 
   private userName: string = null;
   public players = ['Windstorm', 'Bombasto', 'Magneta', 'Tornado'];
@@ -29,6 +24,7 @@ export class LobbyPageComponent implements OnInit {
   public roomcode = Math.random().toString(36).substr(2, 4);
 
   ngOnInit() {
+    this.viewService.viewStatesObservable.subscribe(e => this.currentView = e);
   }
 
   createRoom() {
@@ -42,8 +38,8 @@ export class LobbyPageComponent implements OnInit {
 
       default:
         if (this.userName.length > 0) {
-          this.sessionService.getNewSession(this.private, this.userName);
-          this.room = !this.room;
+          // this.sessionService.getNewSession(this.private, this.userName);
+          this.viewService.setState( { key: 'game', value: true } );
         } else {
           this.buttonError('createRoom');
         }
@@ -75,14 +71,6 @@ export class LobbyPageComponent implements OnInit {
       this.userName = newPlayer;
     } else {
       this.userName = null;
-    }
-  }
-
-  toggleGame() {
-    if (this.game === false) {
-      this.game = true;
-    } else {
-      this.game = false;
     }
   }
 }

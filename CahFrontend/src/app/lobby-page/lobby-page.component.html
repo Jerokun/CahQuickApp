@@ -1,13 +1,10 @@
 
-<div *ngIf="game === false" class="blackbg">
-  <app-lobby-menu 
-  *ngIf="showLobbyMenu"
-  [start]="start"
-  (startChange)="buttonClicked($event)"
+<div *ngIf="getViewValue()" class="blackbg">
+  <app-lobby-menu
   ></app-lobby-menu>
 
-  <div class="start" [ngClass]="start ? 'showstart' : 'start'">
-    <i class="far fa-times-circle close" [ngClass]="start ? 'showclose' : 'close'" (click)="start = !start"></i>
+  <div class="start" [ngClass]="this.viewService.pageSubject.getValue().toString ? 'showstart' : 'start'">
+    <i class="far fa-times-circle close" [ngClass]="this.viewService.pageSubject.getValue().toString ? 'showclose' : 'close'" (click)="this.viewService.toggle()"></i>
  
     <div class="title">
       Creating Game...
@@ -29,7 +26,7 @@
 
     <div class="flex-row left">
       <ul>
-        <li [ngClass]="private ? 'check' : 'li'" (click)="private = !private">Private Room</li>
+        <li [ngClass]="private ? 'check' : 'li'" (click)="this.viewService.toggle('private')">Private Room</li>
       </ul>
     </div>
   </div>
@@ -77,7 +74,7 @@
 
 </div>
 
-<div *ngIf="game === true" class="container100">
+<div *ngIf="this.game === true" class="container100">
 
   <div class="transpbg" [ngClass]="menu ? 'showtranspbg' : 'transpbg'" (click)="menu = !menu"></div>
 
