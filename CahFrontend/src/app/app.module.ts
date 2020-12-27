@@ -17,6 +17,12 @@ import { SessionService } from './services/game/session.service';
 import { HttpClientModule } from '@angular/common/http';
 import { LobbyMenuComponent } from './lobby-page/lobby-menu/lobby-menu.component';
 import { ViewService } from './services/lobby/view.service';
+import { GameRulesComponent } from './lobby-page/game-rules/game-rules/game-rules.component';
+import { JoinSessionComponent } from './lobby-page/join-session/join-session/join-session.component';
+import { NewSessionComponent } from './lobby-page/new-session/new-session/new-session.component';
+import { RoomComponent } from './lobby-page/room/room/room.component';
+import { InGameMenuComponent } from './lobby-page/in-game-menu/in-game-menu/in-game-menu.component';
+import { QuitMenuComponent } from './lobby-page/quit-menu/quit-menu/quit-menu.component';
 
 @NgModule({
   declarations: [
@@ -28,6 +34,12 @@ import { ViewService } from './services/lobby/view.service';
     HandComponent,
     ChatboxComponent,
     LobbyMenuComponent,
+    GameRulesComponent,
+    JoinSessionComponent,
+    NewSessionComponent,
+    RoomComponent,
+    InGameMenuComponent,
+    QuitMenuComponent,
   ],
   imports: [
     BrowserModule,

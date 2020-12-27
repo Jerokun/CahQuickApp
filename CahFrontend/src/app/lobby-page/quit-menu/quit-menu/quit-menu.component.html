@@ -1,0 +1,31 @@
+<div class="sure" [ngClass]="sure ? 'showsure' : 'sure'">
+  <i
+    class="far fa-times-circle close"
+    [ngClass]="sure ? 'showclose' : 'close'"
+    (click)="sure = !sure"
+  ></i>
+
+  <div class="title">
+    Are You Sure?
+    <div class="subtitle">
+      You can always re-join the game using the room code.
+    </div>
+  </div>
+
+  <div class="flex-row left">
+    <div class="flex-item-4">
+      <button
+        class="card-button"
+        (click)="sure = !sure"
+        (click)="menu = !menu"
+        (click)="pmenu = !pmenu"
+        (click)="toggleGame()"
+      >
+        Quit
+      </button>
+    </div>
+    <div class="flex-item-4">
+      <button class="card-button" (click)="sure = !sure">Stay</button>
+    </div>
+  </div>
+</div>
