@@ -1,0 +1,51 @@
+<div *ngIf="game === true" class="container100">
+  <div
+    class="transpbg"
+    [ngClass]="menu ? 'showtranspbg' : 'transpbg'"
+    (click)="menu = !menu"
+  ></div>
+
+  <div class="togglemenu">
+    <i
+      [ngClass]="menu ? 'far fa-times-circle' : 'fas fa-bars'"
+      (click)="menu = !menu"
+    ></i>
+  </div>
+
+  <div class="togglepmenu">
+    <i
+      [ngClass]="pmenu ? 'far fa-times-circle' : 'fas fa-users'"
+      (click)="pmenu = !pmenu"
+    ></i>
+  </div>
+
+  <div class="menu" [ngClass]="menu ? 'showmenu' : 'menu'">
+    <div class="flex-row left">
+      <h2>Room code:</h2>
+    </div>
+    <div class="flex-row left">
+      <div class="flex-item-10">
+        <div class="card-button roomcode">{{ roomcode }}</div>
+      </div>
+      <div class="flex-item-10 right">
+        <button class="card-button">Copy</button>
+      </div>
+
+      <div class="flex-item-4">
+        <button class="card-button" (click)="rules = !rules">Game Rules</button>
+      </div>
+
+      <div class="flex-item-4">
+        <button class="card-button" (click)="sure = !sure">Quit</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="pmenu" [ngClass]="pmenu ? 'showpmenu' : 'pmenu'">
+    <ul>
+      <li *ngFor="let player of players">{{ player }}</li>
+    </ul>
+  </div>
+
+  <div *ngIf="game" class="game"></div>
+</div>
