@@ -8,6 +8,7 @@ import * as _ from 'lodash';
 	providedIn: 'root',
 })
 export class ViewService {
+
 	private viewStates: Array<KeyValue<string, boolean>> = [
 		{ key: 'start', value: false },
 		{ key: 'game', value: false },
@@ -25,8 +26,6 @@ export class ViewService {
 
 	public viewStatesObservable = this.viewStatesSubject.asObservable();
 
-	public showMenu() {}
-
 	constructor() {}
 
 	public setState(key: string, value: boolean): void {
@@ -36,13 +35,14 @@ export class ViewService {
 		console.log('after setState', this.viewStatesSubject.getValue());
 	}
 
-	public getState(state: string): boolean {
-		console.log('getState', _.findIndex(this.getStates, state).value);
-		return _.findIndex(this.getStates, state).value;
+	public getState(s: string): boolean {
+		const states = this.getStates();
+		console.log('getState', states.find(state => state.key === s).value);
+		return states.find(state => state.key === s).value;
 	}
 
 	public getStates(): Array<KeyValue<string, boolean>> {
-		console.log('getStates', this.viewStatesSubject.getValue());
+		// console.log('getStates', this.viewStatesSubject.getValue());
 		return this.viewStatesSubject.getValue();
 	}
 
