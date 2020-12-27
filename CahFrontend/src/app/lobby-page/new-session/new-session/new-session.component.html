@@ -2,7 +2,7 @@
   <i
     class="far fa-times-circle close"
     [ngClass]="start ? 'showclose' : 'close'"
-    (click)="start = !start"
+    (click)="this.onButtonClicked('start', true)"
   ></i>
 
   <div class="title">
@@ -21,13 +21,13 @@
       />
     </div>
     <div class="flex-item-4">
-      <button class="card-button" (click)="createRoom()">Create room</button>
+      <button class="card-button" (click)="this.onButtonClicked('room', true)" (click)="createRoom()">Create room</button>
     </div>
   </div>
 
   <div class="flex-row left">
     <ul>
-      <li [ngClass]="private ? 'check' : 'li'" (click)="private = !private">
+      <li [ngClass]="private ? 'check' : 'li'" (click)="this.viewService.>
         Private Room
       </li>
     </ul>

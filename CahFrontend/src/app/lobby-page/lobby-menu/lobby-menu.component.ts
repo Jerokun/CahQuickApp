@@ -1,6 +1,7 @@
+import { KeyValue } from '@angular/common';
 import { Component, Input, OnInit, Output } from '@angular/core';
 import { EventEmitter } from 'events';
-import { ViewService, ViewStates } from 'src/app/services/lobby/view.service';
+import { ViewService } from 'src/app/services/lobby/view.service';
 
 @Component({
   selector: 'app-lobby-menu',
@@ -12,12 +13,6 @@ export class LobbyMenuComponent implements OnInit {
   constructor(private viewService: ViewService) { }
 
   ngOnInit(): void {
-  }
-
-  onButtonClicked(viewState: ViewStates) {
-    if (viewState === ViewStates.start) {
-      this.viewService.setState(viewState)
-    }
   }
 
   onRulesButtonClicked() {}

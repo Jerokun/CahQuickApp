@@ -16,7 +16,7 @@ export class LobbyPageComponent implements OnInit {
 
   public currentView: Array<KeyValue<string, boolean>>;
   
-  constructor(private sessionService: SessionService, private viewService: ViewService) {}
+  constructor(private sessionService: SessionService, public viewService: ViewService) {}
 
   private userName: string = null;
   public players = ['Windstorm', 'Bombasto', 'Magneta', 'Tornado'];
@@ -38,8 +38,8 @@ export class LobbyPageComponent implements OnInit {
 
       default:
         if (this.userName.length > 0) {
-          // this.sessionService.getNewSession(this.private, this.userName);
-          this.viewService.setState( { key: 'game', value: true } );
+          this.sessionService.getNewSession(this.viewService.getState('private'), this.userName);
+          this.viewService.setState('room', true);
         } else {
           this.buttonError('createRoom');
         }

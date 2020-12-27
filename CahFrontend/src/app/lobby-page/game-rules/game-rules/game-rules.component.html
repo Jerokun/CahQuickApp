@@ -2,7 +2,7 @@
   <i
     class="far fa-times-circle close"
     [ngClass]="rules ? 'showclose' : 'close'"
-    (click)="rules = !rules"
+    (click)="this.viewService.setState('rules', true)"
   ></i>
   <div class="title">Cards Against Humanity Rules</div>
   <h2>Basic Rules</h2>

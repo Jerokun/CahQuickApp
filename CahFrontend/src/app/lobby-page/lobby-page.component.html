@@ -1,4 +1,4 @@
-<div *ngIf="getViewValue()" class="blackbg">
+<div *ngIf="!this.viewService.getState('game').value" class="blackbg">
   <app-lobby-menu></app-lobby-menu>
   <app-new-session></app-new-session>
   <app-join-session></app-join-session>

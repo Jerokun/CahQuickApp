@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ViewService } from 'src/app/services/lobby/view.service';
 
 @Component({
   selector: 'app-new-session',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NewSessionComponent implements OnInit {
 
-  constructor() { }
+  constructor(private viewService: ViewService) { }
 
   ngOnInit(): void {
   }

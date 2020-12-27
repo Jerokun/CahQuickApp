@@ -2,6 +2,7 @@ import { KeyValue } from '@angular/common';
 import { Injectable } from '@angular/core';
 import { start } from 'repl';
 import { BehaviorSubject } from 'rxjs';
+import * as _ from 'lodash';
 
 @Injectable({
   providedIn: 'root',
@@ -30,23 +31,23 @@ export class ViewService {
 
   constructor() {}
 
-  setState(value: KeyValue<string, boolean>) {
-    let viewStates = this.viewStates;
-
-    console.log('before', viewStates);
-
-    viewStates.map((state) => {
-      if (state.value === value.value) {
-        value.value;
-      }
-    });
-    console.log('after', viewStates);
-    this.viewStates = viewStates
-    this.viewStatesSubject.next(viewStates);
+  setState(key: string, value: boolean) {
+    const newStates = this.getStates().map(
+      k => k.key !== key ? k : {...k, age: value}
+    );
+    return this.viewStatesSubject.next(newStates);
   }
 
-  public getState() {
+  public getStates() {
     console.log('getvalue', this.viewStatesSubject.getValue());
     return this.viewStatesSubject.getValue();
+  }
+
+  public toggleState(key: string) {
+    return this.setState('private', !this.getState('private').value);
+  }
+
+  public getState(state: string): KeyValue<string, boolean> {
+    return _.findIndex(this.getStates, state);
   }
 }

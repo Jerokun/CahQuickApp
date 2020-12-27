@@ -1,13 +1,15 @@
-<div *ngIf="game === true" class="container100">
+<div class="container100">
   <div
     class="transpbg"
-    [ngClass]="menu ? 'showtranspbg' : 'transpbg'"
+    [ngClass]="menu ? 'showtranspbg' : 'transpbg'"\
+    (click)="menuToggle()
     (click)="menu = !menu"
   ></div>
 
   <div class="togglemenu">
     <i
       [ngClass]="menu ? 'far fa-times-circle' : 'fas fa-bars'"
+      (click)="menuToggle()
       (click)="menu = !menu"
     ></i>
   </div>
@@ -15,6 +17,7 @@
   <div class="togglepmenu">
     <i
       [ngClass]="pmenu ? 'far fa-times-circle' : 'fas fa-users'"
+      (click)="pmenuToggle()
       (click)="pmenu = !pmenu"
     ></i>
   </div>
