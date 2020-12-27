@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { CardService } from './card.service';
-import { IDeck } from '../game/components/cards/IDeck';
-import { IBlackCard } from '../game/components/cards/black-card/IBlackCard';
+import { IDeck } from '../../game/components/cards/IDeck';
+import { IBlackCard } from '../../game/components/cards/black-card/IBlackCard';
 import { CardDataService } from './card-data.service';
 
 import _, { Dictionary } from 'lodash';

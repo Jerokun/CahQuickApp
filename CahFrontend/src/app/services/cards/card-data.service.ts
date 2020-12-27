@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
-import { IDeck } from '../game/components/cards/IDeck';
-import { IBlackCard } from '../game/components/cards/black-card/IBlackCard';
-import { ICardCollection } from '../game/components/cards/ICardCollection';
-import * as jsonData from '../services/data.json';
+import { IDeck } from '../../game/components/cards/IDeck';
+import { IBlackCard } from '../../game/components/cards/black-card/IBlackCard';
+import { ICardCollection } from '../../game/components/cards/ICardCollection';
+import * as jsonData from '../data.json';
 
 @Injectable({
   providedIn: 'root'

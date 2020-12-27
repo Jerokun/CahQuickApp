@@ -1,5 +1,5 @@
 import { Component, OnInit, OnChanges } from '@angular/core';
-import { CardService } from '../services/card.service';
+import { CardService } from '../services/cards/card.service';
 import { IBlackCard } from './components/cards/black-card/IBlackCard';
 
 @Component({

@@ -8,13 +8,15 @@ import { BlackCardComponent } from './game/components/cards/black-card/black-car
 import { WhiteCardComponent } from './game/components/cards/white-card/white-card.component';
 import { GameComponent } from './game/game.component';
 import { HandComponent } from './game/hand/hand.component';
-import { CardService } from './services/card.service';
-import { CardDataService } from './services/card-data.service';
+import { CardService } from './services/cards/card.service';
+import { CardDataService } from './services/cards/card-data.service';
 import { ChatboxComponent } from './chat/chatbox/chatbox.component';
 import { FormsModule } from '@angular/forms';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { SessionService } from './services/session.service';
+import { SessionService } from './services/game/session.service';
 import { HttpClientModule } from '@angular/common/http';
+import { LobbyMenuComponent } from './lobby-page/lobby-menu/lobby-menu.component';
+import { ViewService } from './services/lobby/view.service';
 
 @NgModule({
   declarations: [
@@ -25,6 +27,7 @@ import { HttpClientModule } from '@angular/common/http';
     GameComponent,
     HandComponent,
     ChatboxComponent,
+    LobbyMenuComponent,
   ],
   imports: [
     BrowserModule,
@@ -33,7 +36,7 @@ import { HttpClientModule } from '@angular/common/http';
     FontAwesomeModule,
     HttpClientModule,
   ],
-  providers: [CardService, CardDataService, SessionService],
-  bootstrap: [AppComponent]
+  providers: [CardService, CardDataService, SessionService, ViewService],
+  bootstrap: [AppComponent],
 })
 export class AppModule { }

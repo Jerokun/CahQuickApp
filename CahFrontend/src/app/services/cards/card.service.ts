@@ -1,7 +1,7 @@
 import { Injectable, OnInit } from '@angular/core';
-import { ICardCollection } from '../game/components/cards/ICardCollection';
-import { IDeck } from '../game/components/cards/IDeck';
-import { IBlackCard } from '../game/components/cards/black-card/IBlackCard';
+import { ICardCollection } from '../../game/components/cards/ICardCollection';
+import { IDeck } from '../../game/components/cards/IDeck';
+import { IBlackCard } from '../../game/components/cards/black-card/IBlackCard';
 import * as _ from 'lodash';
 import { DeckGeneratorService } from './deck-generator.service';
 

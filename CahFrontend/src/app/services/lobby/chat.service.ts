@@ -1,7 +1,7 @@
 import { Injectable, OnInit } from '@angular/core';
 import * as signalR from '@microsoft/signalr'; // import signalR
 import { HttpClient } from '@angular/common/http';
-import { MessageDto } from '../dto/MessageDto';
+import { MessageDto } from '../../dto/MessageDto';
 import { Observable, Subject } from 'rxjs';
 
 @Injectable({

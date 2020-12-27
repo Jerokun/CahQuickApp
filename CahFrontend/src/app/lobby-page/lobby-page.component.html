@@ -1,38 +1,10 @@
+
 <div *ngIf="game === false" class="blackbg">
-  <div class="lobby">
-
-    <div class="lobby-title">
-      <div class="title">Humanity Against Cards
-        <div class="subtitle">
-          A horrible game for party people.
-        </div>
-      </div>
-    </div>
-
-    <div class="flex-row center">
-      <div class="flex-item-4">
-        <button class="card-button" (click)="start = !start">
-          Start game
-        </button>
-      </div>
-      <div class="flex-item-4">
-        <button class="card-button" (click)="start = !start">
-          Join game
-        </button>
-      </div>
-      <div class="flex-item-4">
-        <button class="card-button" (click)="toggleGame()">
-          Random game
-        </button>
-      </div>
-      <div class="flex-item-4">
-        <button class="card-button" (click)="rules = !rules">
-          Game Rules
-        </button>
-      </div>
-    </div>
-
-  </div>
+  <app-lobby-menu 
+  *ngIf="showLobbyMenu"
+  [start]="start"
+  (startChange)="buttonClicked($event)"
+  ></app-lobby-menu>
 
   <div class="start" [ngClass]="start ? 'showstart' : 'start'">
     <i class="far fa-times-circle close" [ngClass]="start ? 'showclose' : 'close'" (click)="start = !start"></i>

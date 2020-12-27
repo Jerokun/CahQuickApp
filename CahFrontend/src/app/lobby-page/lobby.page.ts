@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import * as _ from 'lodash';
-import { SessionService } from '../services/session.service';
+import { SessionService } from '../services/game/session.service';
+import { ViewService } from '../services/lobby/view.service';
 
 @Component({
   selector: 'app-lobby-page',
@@ -8,7 +9,7 @@ import { SessionService } from '../services/session.service';
   styleUrls: ['./lobby-page.component.scss'],
 })
 export class LobbyPageComponent implements OnInit {
-  constructor(private sessionService: SessionService) {}
+  constructor(private sessionService: SessionService, private viewService: ViewService) {}
 
   game = false;
   rules = false;
@@ -27,7 +28,8 @@ export class LobbyPageComponent implements OnInit {
 
   public roomcode = Math.random().toString(36).substr(2, 4);
 
-  ngOnInit() {}
+  ngOnInit() {
+  }
 
   createRoom() {
     switch (this.userName) {
