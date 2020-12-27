@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { QuitMenuComponent } from './quit-menu.component';
+import { QuitAndVerifyComponent } from './quit-menu.component';
 
 describe('QuitMenuComponent', () => {
-  let component: QuitMenuComponent;
-  let fixture: ComponentFixture<QuitMenuComponent>;
+  let component: QuitAndVerifyComponent;
+  let fixture: ComponentFixture<QuitAndVerifyComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ QuitMenuComponent ]
+      declarations: [ QuitAndVerifyComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(QuitMenuComponent);
+    fixture = TestBed.createComponent(QuitAndVerifyComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

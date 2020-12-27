@@ -22,33 +22,27 @@ import { JoinSessionComponent } from './lobby-page/join-session/join-session/joi
 import { NewSessionComponent } from './lobby-page/new-session/new-session/new-session.component';
 import { RoomComponent } from './lobby-page/room/room/room.component';
 import { InGameMenuComponent } from './lobby-page/in-game-menu/in-game-menu/in-game-menu.component';
-import { QuitMenuComponent } from './lobby-page/quit-menu/quit-menu/quit-menu.component';
+import { QuitAndVerifyComponent } from './lobby-page/quit-menu/quit-menu/quit-menu.component';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    BlackCardComponent,
-    LobbyPageComponent,
-    WhiteCardComponent,
-    GameComponent,
-    HandComponent,
-    ChatboxComponent,
-    LobbyMenuComponent,
-    GameRulesComponent,
-    JoinSessionComponent,
-    NewSessionComponent,
-    RoomComponent,
-    InGameMenuComponent,
-    QuitMenuComponent,
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    FormsModule,
-    FontAwesomeModule,
-    HttpClientModule,
-  ],
-  providers: [CardService, CardDataService, SessionService, ViewService],
-  bootstrap: [AppComponent],
+	declarations: [
+		AppComponent,
+		BlackCardComponent,
+		LobbyPageComponent,
+		WhiteCardComponent,
+		GameComponent,
+		HandComponent,
+		ChatboxComponent,
+		LobbyMenuComponent,
+		GameRulesComponent,
+		JoinSessionComponent,
+		NewSessionComponent,
+		RoomComponent,
+		InGameMenuComponent,
+		QuitAndVerifyComponent,
+	],
+	imports: [BrowserModule, AppRoutingModule, FormsModule, FontAwesomeModule, HttpClientModule],
+	providers: [CardService, CardDataService, SessionService, ViewService],
+	bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

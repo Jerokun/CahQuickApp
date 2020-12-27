@@ -1,14 +1,14 @@
-<div class="sure" [ngClass]="sure ? 'showsure' : 'sure'">
+<div class="sure" [ngClass]="this.viewService.getState('sure') ? 'showsure' : 'sure'">
   <i
     class="far fa-times-circle close"
-    [ngClass]="sure ? 'showclose' : 'close'"
-    (click)="this.onButtonClicked('sure', false)">
+    [ngClass]="this.viewService.getState('sure') ? 'showclose' : 'close'"
+    (click)="this.viewService.setState('sure', false)">
   ></i>
 
   <div class="title">
-    Are You Sure?
+    {{ this.promptTitle }}
     <div class="subtitle">
-      You can always re-join the game using the room code.
+      {{ this.promptText }}
     </div>
   </div>
 
@@ -16,16 +16,13 @@
     <div class="flex-item-4">
       <button
         class="card-button"
-        (click)="this.onButtonClicked('sure', true)"
-        (click)="menu = !menu"
-        (click)="pmenu = !pmenu"
-        (click)="toggleGame()"
+        (click)="this.viewService.setState('sure', true)"
       >
-        Quit
+        {{ this.buttonTextVerify }}
       </button>
     </div>
     <div class="flex-item-4">
-      <button class="card-button" (click)="this.onButtonClicked('sure', false)">Stay</button>
+      <button class="card-button" (click)="this.viewService.setState('sure', false)">{{ this.buttonTextCancel }}</button>
     </div>
   </div>
 </div>

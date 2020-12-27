@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { ViewService } from '../lobby/view.service';
 
 export interface Lobby {
   id: string;
@@ -16,16 +17,68 @@ export interface Player {
   providedIn: 'root',
 })
 export class SessionService {
-  
+
   private _userName : string;
-  public get userName() : string {
-    return this._userName;
-  }
-  public set userName(v : string) {
-    this._userName = v;
+  private _roomCode : string;
+  public roomcode = Math.random().toString(36).substr(2, 4);
+  public placeholder: string = 'Your name';
+  public players = ['Windstorm', 'Bombasto', 'Magneta', 'Tornado'];
+  
+  constructor(private http: HttpClient, private viewService: ViewService) {}
+
+  addPlayer(newPlayer: string) {
+		if (newPlayer.length > 0) {
+			this.userName = newPlayer;
+		} else {
+			this.userName = null;
+		}
+
+		this.viewService.setState('start', false);
+		this.viewService.setState('room', false);
+		this.viewService.toggleState('game');
   }
   
-  constructor(private http: HttpClient) {}
+  createRoom() {
+		switch (this.userName) {
+			case null:
+				this.buttonError('createRoom');
+				break;
+			case undefined:
+				this.buttonError('createRoom');
+				break;
+
+			default:
+				if (this.userName.length > 0) {
+					this.getNewSession(
+						this.viewService.getState('private'),
+						this.userName
+					);
+					this.viewService.setState('room', true);
+				} else {
+					this.buttonError('createRoom');
+				}
+				break;
+		}
+	}
+
+	buttonError(button: string) {
+		switch (button) {
+			case 'createRoom':
+				this.placeholder = 'Fill in name!';
+				console.error('Please enter a name');
+				break;
+
+			case 'startGame':
+				// ...
+				break;
+
+			default:
+				console.error(
+					'No valid button has been found, but an error has occured'
+				);
+				break;
+		}
+	}
 
   controllerUrl = 'api/SessionController';
 
@@ -43,5 +96,19 @@ export class SessionService {
       .set('roomCode', roomCode);
 
     return this.http.get<any>(this.controllerUrl + '/getNewSession', { params });
+  }
+
+  public get roomCode() : string {
+    return this._roomCode;
+  }
+  public set roomCode(v : string) {
+    this._roomCode = v;
+  }
+  
+  public get userName() : string {
+    return this._userName;
+  }
+  public set userName(v : string) {
+    this._userName = v;
   }
 }

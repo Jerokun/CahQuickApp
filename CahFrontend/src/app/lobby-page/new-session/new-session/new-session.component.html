@@ -1,8 +1,8 @@
-<div class="start" [ngClass]="start ? 'showstart' : 'start'">
+<div class="start"  [ngClass]="this.viewService.getState('start') ? 'showstart' : 'start'">
   <i
     class="far fa-times-circle close"
-    [ngClass]="start ? 'showclose' : 'close'"
-    (click)="this.onButtonClicked('start', true)"
+    [ngClass]="this.viewService.getState('start') ?'showclose' : 'close'"
+    (click)="this.viewService.setState('start',true)"
   ></i>
 
   <div class="title">
@@ -14,22 +14,27 @@
 
   <div class="flex-row left">
     <div class="flex-item-4">
+
       <input
         #newPlayer
-        (focusout)="addPlayer(newPlayer.value)"
-        placeholder="{{ placeholder }}"
-      />
-    </div>
+        (focusout)="this.sessionService.addPlayer(newPlayer.value)"
+        placeholder="{{ this.sessionService.placeholder }}"
+      ></div>
+
     <div class="flex-item-4">
-      <button class="card-button" (click)="this.onButtonClicked('room', true)" (click)="createRoom()">Create room</button>
+      <button class="card-button" (click)="this.viewService.setState('room', true)" (click)="this.sessionService.createRoom()">Create room</button>
     </div>
   </div>
 
   <div class="flex-row left">
     <ul>
-      <li [ngClass]="private ? 'check' : 'li'" (click)="this.viewService.>
+      <li [ngClass]="this.viewService.getState('sure') ? 'check' : 'li'"  (click)="this.viewService.toggleState('private', false)">
         Private Room
       </li>
     </ul>
   </div>
 </div>
+
+
+
+

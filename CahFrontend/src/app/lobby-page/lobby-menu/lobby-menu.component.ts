@@ -4,17 +4,14 @@ import { EventEmitter } from 'events';
 import { ViewService } from 'src/app/services/lobby/view.service';
 
 @Component({
-  selector: 'app-lobby-menu',
-  templateUrl: './lobby-menu.component.html',
-  styleUrls: ['./lobby-menu.component.scss']
+	selector: 'app-lobby-menu',
+	templateUrl: './lobby-menu.component.html',
+	styleUrls: ['./lobby-menu.component.scss'],
 })
 export class LobbyMenuComponent implements OnInit {
+	constructor(public viewService: ViewService) {}
 
-  constructor(private viewService: ViewService) { }
+	ngOnInit(): void {}
 
-  ngOnInit(): void {
-  }
-
-  onRulesButtonClicked() {}
-
+	onRulesButtonClicked(): void {}
 }

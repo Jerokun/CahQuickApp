@@ -1,7 +1,7 @@
-<div class="rules scroll" [ngClass]="rules ? 'showrules' : 'rules'">
+<div class="rules scroll" [ngClass]="this.viewService.getState('rules') ? 'showrules' : 'rules'">
   <i
     class="far fa-times-circle close"
-    [ngClass]="rules ? 'showclose' : 'close'"
+    [ngClass]="this.viewService.getState('close') ? 'showclose' : 'close'"
     (click)="this.viewService.setState('rules', true)"
   ></i>
   <div class="title">Cards Against Humanity Rules</div>
