@@ -28,7 +28,7 @@
 
   <div class="flex-row left">
     <ul>
-      <li [ngClass]="this.viewService.getState('sure') ? 'check' : 'li'"  (click)="this.viewService.toggleState('private', false)">
+      <li [ngClass]="this.viewService.getState('sure') ? 'check' : 'li'"  (click)="this.viewService.toggleState('private')">
         Private Room
       </li>
     </ul>
