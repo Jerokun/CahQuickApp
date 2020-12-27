@@ -7,7 +7,7 @@ import { BehaviorSubject } from 'rxjs';
 })
 export class ViewService {
 
-	private viewStates: Array<KeyValue<string, boolean>> = [
+	private readonly viewStates: Array<KeyValue<string, boolean>> = [
 		{ key: 'start', value: false },
 		{ key: 'game', value: false },
 		{ key: 'rules', value: false },
@@ -31,6 +31,10 @@ export class ViewService {
 		const newStates = this.getStates().map((k) => (k.key !== key ? k : { ...k, value }));
 		this.viewStatesSubject.next(newStates);
 		console.log('after setState', this.viewStatesSubject.getValue());
+	}
+
+	public resetStates(): void {
+		this.viewStatesSubject.next(this.viewStates);
 	}
 
 	public getState(s: string): boolean {
