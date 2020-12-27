@@ -29,21 +29,24 @@ export class ViewService {
 
 	constructor() {}
 
-	setState(key: string, value: boolean) {
-		const newStates = this.getStates().map((k) => (k.key !== key ? k : { ...k, age: value }));
-		return this.viewStatesSubject.next(newStates);
-	}
-
-	public getStates() {
-		console.log('getvalue', this.viewStatesSubject.getValue());
-		return this.viewStatesSubject.getValue();
-	}
-
-	public toggleState(key: string) {
-		return this.setState('private', !this.getState('private'));
+	public setState(key: string, value: boolean): void {
+		console.log('before setState', this.viewStatesSubject.getValue());
+		const newStates = this.getStates().map((k) => (k.key !== key ? k : { ...k, value }));
+		this.viewStatesSubject.next(newStates);
+		console.log('after setState', this.viewStatesSubject.getValue());
 	}
 
 	public getState(state: string): boolean {
+		console.log('getState', _.findIndex(this.getStates, state).value);
 		return _.findIndex(this.getStates, state).value;
+	}
+
+	public getStates(): Array<KeyValue<string, boolean>> {
+		console.log('getStates', this.viewStatesSubject.getValue());
+		return this.viewStatesSubject.getValue();
+	}
+
+	public toggleState(key: string): void {
+		return this.setState(key, !this.getState(key));
 	}
 }
