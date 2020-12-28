@@ -15,10 +15,11 @@ export class ViewService {
 		{ key: 'join', value: false },
 		{ key: 'room', value: false },
 		{ key: 'sure', value: false },
-		{ key: 'private', value: true },
+		{ key: 'isprivate', value: true },
 		{ key: 'menu', value: false },
     { key: 'pmenu', value: false },
     { key: 'hand', value: false },
+    { key: 'istogglehand', value: false },
 	];
 
 	private viewStatesSubject = new BehaviorSubject<Array<KeyValue<string, boolean>>>(this.viewStates);

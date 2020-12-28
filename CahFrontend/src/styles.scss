@@ -308,10 +308,6 @@ input {
   .greybg{
     background-color: rgba(0, 0, 0, 0.2);
   }
-  .committed{
-  
-  }
-
 
 
 .white-card {
@@ -389,7 +385,7 @@ input {
   color: #000;
   position: absolute;
 }
-.hand {
+.hand, .togglemodehand {
   margin: 0 auto;
   padding: 5px;
   position: fixed;
@@ -447,9 +443,15 @@ input {
 .togglepmenu i {
   line-height: 4rem;
 }
-.togglehand{
-    bottom: 0;
+.togglehandbtn{
+    bottom: -4rem;
     width: 100%;
+}
+.showtogglehandbtn{
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
 }
 .menu {
   box-sizing: border-box;
@@ -501,17 +503,21 @@ input {
   color: maroon;
 }
 
+.normalhand{
+  position: relative;
+  opacity: 1;
+}
+
 @media (min-width: 800px) {
 
-.hand{
-    position: relative;
-    opacity: 1;
-}
-    .togglehand{
-    display: none;
-}
+// .hand{
 
-}
+// }
+//     .togglehand{
+//     display: none;
+// }
+
+// }
 
 @media (max-width: 1200px) {
   .flex-item-10 {
