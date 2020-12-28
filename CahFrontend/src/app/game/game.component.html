@@ -73,8 +73,7 @@
           <div class="flex-item-4">
             <button
               class="card-button"
-              (click)="this.viewService.setState('rules', true)"
-            >
+              (click)="this.viewService.setState('rules', true)">
               Game Rules
             </button>
           </div>
@@ -86,6 +85,13 @@
             >
               Quit
             </button>
+          </div>
+          <div class="flex-row left">
+            <ul>
+              <li [ngClass]="this.viewService.getState('istogglehand') ? 'check' : 'li'"  (click)="this.viewService.toggleState('istogglehand')">
+                Toggle button to show/hide cards in hand
+              </li>
+            </ul>
           </div>
         </div>
       </div>

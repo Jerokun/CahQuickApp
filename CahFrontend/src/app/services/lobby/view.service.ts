@@ -19,6 +19,7 @@ export class ViewService {
 		{ key: 'menu', value: false },
     { key: 'pmenu', value: false },
     { key: 'hand', value: false },
+    { key: 'istogglehand', value: false },
 	];
 
 	private viewStatesSubject = new BehaviorSubject<Array<KeyValue<string, boolean>>>(this.viewStates);

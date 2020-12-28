@@ -308,10 +308,6 @@ input {
   .greybg{
     background-color: rgba(0, 0, 0, 0.2);
   }
-  .committed{
-  
-  }
-
 
 
 .white-card {
@@ -389,7 +385,7 @@ input {
   color: #000;
   position: absolute;
 }
-.hand {
+.hand, .togglemodehand {
   margin: 0 auto;
   padding: 5px;
   position: fixed;
@@ -448,8 +444,11 @@ input {
   line-height: 4rem;
 }
 .togglehand{
-    bottom: 0;
+    bottom: -4rem;
     width: 100%;
+}
+.showtogglehand{
+  bottom: 0;
 }
 .menu {
   box-sizing: border-box;
