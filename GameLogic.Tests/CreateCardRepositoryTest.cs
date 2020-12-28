@@ -16,7 +16,7 @@ namespace GameLogic.Tests
             var packname = "Hilarious!";
 
             //Act
-            Dictionary<string, Pack> cardCollection = PackRepository.LoadCardCollection().Result;
+            Dictionary<string, Pack> cardCollection = PackRepository.LoadCardCollection();
             IEnumerable<WhiteCard> whiteCardsInPack = cardCollection[packname].WhiteCards;
             bool doesThisCardExistInPackEmpty = whiteCardsInPack.Any(card => card.Text == "");
 
@@ -32,7 +32,7 @@ namespace GameLogic.Tests
             string packname = "Hilarious!";
 
             //Act
-            Dictionary<string, Pack> cardCollection = PackRepository.LoadCardCollection().Result;
+            Dictionary<string, Pack> cardCollection = PackRepository.LoadCardCollection();
             IEnumerable<WhiteCard> whiteCardsInPack = cardCollection[packname].WhiteCards;
             bool doesThisCardExistInPackOral = whiteCardsInPack.Any(card => card.Text == "Oral sex that tastes like urine.");
 

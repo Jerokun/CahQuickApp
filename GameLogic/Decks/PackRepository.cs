@@ -1,4 +1,5 @@
-﻿using GameLogic.Models;
+﻿using GameLogic.Interfaces;
+using GameLogic.Models;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using System;
@@ -10,13 +11,16 @@ using System.Threading.Tasks;
 
 namespace GameLogic.DataConverter
 {
-    public static class PackRepository
+    public class PackRepository
     {
         public const string JsonPath = @"./Data/cah-cards-full.json";
-            
-        public static Task<Dictionary<string, Pack>> LoadCardCollection()
+        public Dictionary<string, Pack> Collection = LoadCardCollection();
+
+
+        public static Dictionary<string, Pack> LoadCardCollection()
         {
-            return LoadDecksFromStream(File.OpenRead(JsonPath));
+            return (LoadDecksFromStream(File.OpenRead(JsonPath))).Result;
+           
         }
 
         public async static Task<Dictionary<string, Pack>> LoadDecksFromStream(Stream source)

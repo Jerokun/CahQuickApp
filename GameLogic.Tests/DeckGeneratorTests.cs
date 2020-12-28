@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using Xunit;
 using GameLogic.Decks;
+using GameLogic.Models;
 
 namespace GameLogic.Tests
 {
@@ -17,9 +18,10 @@ namespace GameLogic.Tests
                 "Hilarious!",
                 "Cows Against Hamburgers - Patty Pack #1",
             };
+            var dGen = new DeckGenerator();
 
             //Act
-            Pack deck = DeckGenerator.GetDeck(null);
+            Deck deck = dGen.deck;
 
             //Assert
             Assert.NotNull(deck);
