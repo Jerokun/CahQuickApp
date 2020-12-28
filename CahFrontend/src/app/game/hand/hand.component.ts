@@ -6,6 +6,8 @@ import {
   Output,
   EventEmitter,
 } from '@angular/core';
+import { SessionService } from 'src/app/services/game/session.service';
+import { ViewService } from 'src/app/services/lobby/view.service';
 
 export interface IWhiteCardStatus {
   text: string;
@@ -28,7 +30,7 @@ export class HandComponent implements OnInit, OnChanges {
   chosenCards: string[] = [];
   whiteCards: IWhiteCardStatus[] = [];
 
-  constructor() {}
+  constructor(public viewService: ViewService, public sessionService: SessionService) { }
 
   hand = true;
 
