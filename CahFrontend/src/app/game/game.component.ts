@@ -1,5 +1,7 @@
 import { Component, OnInit, OnChanges } from '@angular/core';
 import { CardService } from '../services/cards/card.service';
+import { SessionService } from '../services/game/session.service';
+import { ViewService } from '../services/lobby/view.service';
 import { IBlackCard } from './components/cards/black-card/IBlackCard';
 
 @Component({
@@ -9,7 +11,7 @@ import { IBlackCard } from './components/cards/black-card/IBlackCard';
   providers: [CardService],
 })
 export class GameComponent implements OnInit, OnChanges {
-  constructor(private cardService: CardService) {}
+  constructor(private cardService: CardService, public viewService: ViewService, public sessionService: SessionService) {}
 
   stackcards = false;
 
