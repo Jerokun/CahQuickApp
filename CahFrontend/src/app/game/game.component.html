@@ -29,8 +29,73 @@
     </div> -->
 
   </div>
-  <app-hand 
+  <app-hand
     [cards]="whiteCards"
     [maxPicks]="blackCard.pick"
     (sendChosenCards)="submitCards($event)"
     ></app-hand>
+
+    <div class="togglemenu">
+      <i
+        [ngClass]="this.viewService.getState('menu') ? 'far fa-times-circle' : 'fas fa-bars'"
+        (click)="this.viewService.toggleState('menu')"
+      ></i>
+    </div>
+
+    <div class="togglepmenu">
+      <i
+        [ngClass]="this.viewService.getState('pmenu') ? 'far fa-times-circle' : 'fas fa-users'"
+        (click)="this.viewService.toggleState('pmenu')"
+      ></i>
+    </div>
+
+    <div class="container100">
+      <div
+        class="transpbg"
+        [ngClass]="this.viewService.getState('menu') ? 'showtranspbg' : 'transpbg'"
+        (click)="this.viewService.toggleState('menu')"
+      ></div>
+
+
+
+      <div class="menu" [ngClass]="this.viewService.getState('menu') ? 'showmenu' : 'menu'">
+        <div class="flex-row left">
+          <h2>Room code:</h2>
+        </div>
+        <div class="flex-row left">
+          <div class="flex-item-10">
+            <div class="card-button roomcode">{{ this.sessionService.roomCode }}</div>
+          </div>
+          <div class="flex-item-10 right">
+            <button class="card-button">Copy</button>
+          </div>
+
+          <div class="flex-item-4">
+            <button
+              class="card-button"
+              (click)="this.viewService.setState('rules', true)"
+            >
+              Game Rules
+            </button>
+          </div>
+
+          <div class="flex-item-4">
+            <button
+              class="card-button"
+              (click)="this.viewService.setState('sure', true)"
+            >
+              Quit
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div [ngClass]="this.viewService.getState('pmenu') ? 'showpmenu' : 'pmenu'">
+        <ul>
+          <li *ngFor="let player of this.sessionService.players">{{ player }}</li>
+        </ul>
+      </div>
+
+      <div *ngIf="this.viewService.getState('game')" class="game"></div>
+    </div>
+
