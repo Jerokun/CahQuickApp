@@ -4,8 +4,9 @@ using System.Text;
 
 namespace GameLogic.Models
 {
-    class Deck
+    public class Deck
     {
-
+        public List<BlackCard> BlackCards { get; set; }
+        public List<WhiteCard> WhiteCards { get; set; }
     }
 }
