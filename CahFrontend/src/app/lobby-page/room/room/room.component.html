@@ -15,10 +15,11 @@
 	</div>
 	<div class="flex-row left">
 		<div class="flex-item-10">
-			<div class="card-button roomcode">"this.sessionService.roomCode"</div>
+      <input type="text" class="card-button roomcode"value="{{ this.sessionService.roomCode }}" #roomcode>
+			<!-- <div class="card-button roomcode">"{{ this.sessionService.roomCode }}"</div> -->
 		</div>
 		<div class="flex-item-10 right">
-			<button class="card-button">Copy</button>
+      <!-- <button class="card-button" (click)="this.sessionService.copyInputMessage(roomcode)" value="Copy" >Copy</button> -->
 		</div>
 	</div>
 	<div class="flex-row left">
