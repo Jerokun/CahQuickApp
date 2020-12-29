@@ -5,13 +5,16 @@ import { ViewService } from '../lobby/view.service';
 
 export interface Lobby {
 	id: string;
-	players: Player[];
+  players: Player[];
+  // scores: Score[];
 }
 
 export interface Player {
 	id: string;
 	name: string;
 }
+
+
 
 @Injectable({
 	providedIn: 'root',
@@ -21,7 +24,8 @@ export class SessionService {
 	private _roomCode: string;
 	public roomcode = Math.random().toString(36).substr(2, 4);
 	public placeholder: string = 'Your name';
-	public players = ['Windstorm', 'Bombasto', 'Magneta', 'Tornado'];
+  public players = ['Windstorm', 'Bombasto', 'Magneta', 'Tornado'];
+  public scores = ['7', '5', '3', '2'];
 
 	constructor(private http: HttpClient, private viewService: ViewService) {}
 
@@ -73,7 +77,7 @@ export class SessionService {
 				break;
 		}
   }
-  
+
 /* To copy Text from Textbox */
 copyInputMessage(inputElement){
   inputElement.select();

@@ -97,8 +97,11 @@
       </div>
 
       <div [ngClass]="this.viewService.getState('pmenu') ? 'showpmenu' : 'pmenu'">
-        <ul>
-          <li *ngFor="let player of this.sessionService.players">{{ player }}</li>
+        <ul class="playersul">
+          <li class="playersli" *ngFor="let player of this.sessionService.players">{{ player }}</li>
+        </ul>
+        <ul class="scoresul">
+          <li class="scoresli"   *ngFor="let scores of this.sessionService.players">{{ scores }}</li>
         </ul>
       </div>
 
