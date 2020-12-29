@@ -49,14 +49,13 @@
       ></i>
     </div>
 
+
     <div class="container100">
       <div
         class="transpbg"
         [ngClass]="this.viewService.getState('menu') ? 'showtranspbg' : 'transpbg'"
         (click)="this.viewService.toggleState('menu')"
       ></div>
-
-
 
       <div class="menu" [ngClass]="this.viewService.getState('menu') ? 'showmenu' : 'menu'">
         <div class="flex-row left">
@@ -107,4 +106,5 @@
 
       <div *ngIf="this.viewService.getState('game')" class="game"></div>
     </div>
+
 
