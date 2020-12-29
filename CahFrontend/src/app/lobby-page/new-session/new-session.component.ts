@@ -17,6 +17,7 @@ export class NewSessionComponent implements OnInit {
 	ngOnInit(): void {}
 
 	updateSelected(event: string[]): void {
+		console.log('newSession page has received an update from checkbox-list', event);
 		this.selected = event;
 	}
 }
