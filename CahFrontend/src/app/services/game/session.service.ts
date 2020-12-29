@@ -6,7 +6,7 @@ import { url } from 'inspector';
 
 export interface Lobby {
 	id: string;
-  players: Player[];
+	players: Player[];
 }
 
 export interface Player {
@@ -14,22 +14,30 @@ export interface Player {
 	name: string;
 }
 
-
+export interface PostNewRoom {
+	private: boolean;
+	username: string;
+	packSelection: string[];
+}
 
 @Injectable({
 	providedIn: 'root',
 })
 export class SessionService {
-	private _userName: string;
-	private _roomCode: string;
-	public roomcode = Math.random().toString(36).substr(2, 4);
-	public placeholder: string = 'Your name';
-  public players = ['Windstorm', 'Bombasto', 'Magneta', 'Tornado'];
-  public scores = ['7', '5', '3', '2'];
-
 	constructor(private http: HttpClient, private viewService: ViewService) {}
 
-	addPlayer(newPlayer: string) {
+	private _userName: string;
+	private _roomCode: string;
+
+	public roomcode = Math.random().toString(36).substr(2, 4);
+	public placeholder: string = 'Your name';
+	public players = ['Windstorm', 'Bombasto', 'Magneta', 'Tornado'];
+	public scores = ['7', '5', '3', '2'];
+	public packSelection: string[] = [];
+
+	private controllerUrl = 'api/SessionController';
+
+	addPlayer(newPlayer: string): void {
 		if (newPlayer.length > 0) {
 			this.userName = newPlayer;
 		} else {
@@ -41,7 +49,7 @@ export class SessionService {
 		this.viewService.toggleState('game');
 	}
 
-	createRoom() {
+	createRoom(): void {
 		switch (this.userName) {
 			case null:
 				this.buttonError('createRoom');
@@ -52,7 +60,11 @@ export class SessionService {
 
 			default:
 				if (this.userName.length > 0) {
-					this.getNewRoom(this.viewService.getState('private'), this.userName);
+					this.postNewRoom({
+						private: this.viewService.getState('private'),
+						username: this.userName,
+						packSelection: this.packSelection,
+					});
 					this.viewService.setState('room', true);
 				} else {
 					this.buttonError('createRoom');
@@ -61,7 +73,7 @@ export class SessionService {
 		}
 	}
 
-	buttonError(button: string) {
+	buttonError(button: string): void {
 		switch (button) {
 			case 'createRoom':
 				this.placeholder = 'Fill in name!';
@@ -76,25 +88,22 @@ export class SessionService {
 				console.error('No valid button has been found, but an error has occured');
 				break;
 		}
-  }
-
-/* To copy Text from Textbox */
-copyInputMessage(inputElement){
-  inputElement.select();
-  document.execCommand('copy');
-  inputElement.setSelectionRange(0, 0);
-}
-
-  controllerUrl = 'api/SessionController';
-
-  getDecklist(): Observable<any> {
-		return this.http.get<any>(this.controllerUrl + '/getDecklist');
 	}
 
-	getNewRoom(priv: boolean, name: string): Observable<any> {
-		const params = new HttpParams().set('userName', name).set('isPrivate', priv.toString());
+	/* To copy Text from Textbox */
+	copyInputMessage(inputElement): void {
+		inputElement.select();
+		document.execCommand('copy');
+		inputElement.setSelectionRange(0, 0);
+	}
 
-		return this.http.get<any>(this.controllerUrl + '/getNewSession', { params });
+	getPackList(): string[] {
+		let fakeResponse: string[] = ['Pack 1', 'Pack 2', 'Pack 3', 'Pack 4', 'Pack 5'];
+		return fakeResponse;
+	}
+
+	postNewRoom(data: PostNewRoom): Observable<any> {
+		return this.http.post<any>(this.controllerUrl + '/getNewSession', { body: data });
 	}
 
 	getJoinSession(name: string, roomCode: string): Observable<any> {
@@ -106,6 +115,7 @@ copyInputMessage(inputElement){
 	public get roomCode(): string {
 		return this._roomCode;
 	}
+
 	public set roomCode(v: string) {
 		this._roomCode = v;
 	}
@@ -113,6 +123,7 @@ copyInputMessage(inputElement){
 	public get userName(): string {
 		return this._userName;
 	}
+
 	public set userName(v: string) {
 		this._userName = v;
 	}
