@@ -22,11 +22,11 @@ export class CheckboxListComponent implements OnInit {
 	public updateCurrentSelection(event: string): void {
 		let currentSelection = this.currentSelection;
 
-		console.log('SLDKJFSLDKJF', !_.find(currentSelection, event));
-
 		if (_.find(currentSelection, event) === false) {
+			console.log('Could not find name, adding to the list');
 			currentSelection.push(event);
 		} else {
+			console.log('Name found, removing from the list');
 			currentSelection = _.remove(currentSelection, event);
 		}
 
