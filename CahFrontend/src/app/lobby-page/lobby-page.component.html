@@ -4,7 +4,7 @@
 	<app-join-session *ngIf="false"></app-join-session>
 	<app-room *ngIf="this.viewService.getState('room')"></app-room>
 	<app-game-rules *ngIf="this.viewService.getState('rules')"></app-game-rules>
-	<app-in-game-menu *ngIf="this.viewService.getState('menu')"></app-in-game-menu>
 </div>
 <app-game *ngIf="this.viewService.getState('game')"></app-game>
+<app-in-game-menu *ngIf="this.viewService.getState('menu')"></app-in-game-menu>
 <app-quit-menu *ngIf="this.viewService.getState('sure')"></app-quit-menu>
