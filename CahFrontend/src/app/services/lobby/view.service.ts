@@ -19,6 +19,8 @@ export class ViewService {
 		{ key: 'pmenu', value: false },
 		{ key: 'hand', value: false },
 		{ key: 'istogglehand', value: false },
+		{ key: 'togglemodehand', value: false },
+		{ key: 'close', value: false },
 	];
 
 	private viewStatesSubject = new BehaviorSubject<Array<KeyValue<string, boolean>>>(this.viewStates);
@@ -41,7 +43,12 @@ export class ViewService {
 	public getState(s: string): boolean {
 		const states = this.getStates();
 		// console.log('getState ' + s, states.find(state => state.key === s).value);
-		return states.find((state) => state.key === s).value;
+		try {
+			return states.find((state) => state.key === s).value;
+		} catch (e) {
+			console.error(e);
+			console.log('getState value provided', s);
+		}
 	}
 
 	public getStates(): Array<KeyValue<string, boolean>> {
