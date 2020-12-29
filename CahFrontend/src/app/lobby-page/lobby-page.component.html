@@ -6,7 +6,7 @@
 	</div>
 
 	<div class="join" [ngClass]="this.viewService.getState('join') ? 'showjoin' : 'join'">
-		<app-join-session @fadein *ngIf="false"></app-join-session>
+		<app-join-session *ngIf="this.viewService.getState('join')"></app-join-session>
 	</div>
 
 	<div class="room" [ngClass]="this.viewService.getState('room') ? 'showroom' : 'room'">
