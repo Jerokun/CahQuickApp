@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container desktop">
   <div class="flex-row left padding">
     <app-black-card [text]="blackCard.text" [pick]="blackCard.pick" class="flex-item-10"></app-black-card>
 
@@ -95,7 +95,7 @@
         </div>
       </div>
 
-      <div [ngClass]="this.viewService.getState('pmenu') ? 'showpmenu' : 'pmenu'">
+      <div class="pmenu" [ngClass]="this.viewService.getState('pmenu') ? 'showpmenu' : 'pmenu'">
         <ul class="playersul">
           <li class="playersli" *ngFor="let player of this.sessionService.players">{{ player }}</li>
         </ul>
