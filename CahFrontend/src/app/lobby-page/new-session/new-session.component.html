@@ -40,20 +40,10 @@
 
   <div class="flex-row left">
 
-    <ul>
-      <li [ngClass]="this.viewService.getState('isprivate') ? 'check' : 'li'" (click)="this.viewService.toggleState('isprivate')">Deck 1</li>
-      <li [ngClass]="this.viewService.getState('isprivate') ? 'check' : 'li'" (click)="this.viewService.toggleState('isprivate')">Deck 2</li>
-      <li [ngClass]="this.viewService.getState('isprivate') ? 'check' : 'li'" (click)="this.viewService.toggleState('isprivate')">Deck 3</li>
-    </ul>
-
     <app-checkbox-list
     [data]="this.list"
     (selectionChange)="updateSelected($event)"
     ></app-checkbox-list>
-
-    <div *ngFor="let item of this.selected">
-      {{ item }}
-    </div>
     
   </div>
 

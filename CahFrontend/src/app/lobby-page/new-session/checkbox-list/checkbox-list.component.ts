@@ -42,6 +42,6 @@ export class CheckboxListComponent implements OnInit {
 
 	public checkIfSelected(name: string): boolean {
 		console.log('checkIfSelected', _.find(this.currentSelection, name));
-		return _.find(this.currentSelection, name);
+		return (_.includes(this.currentSelection, name));
 	}
 }
