@@ -1,5 +1,4 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import { ViewService } from 'src/app/services/lobby/view.service';
 import * as _ from 'lodash';
 
 @Component({
