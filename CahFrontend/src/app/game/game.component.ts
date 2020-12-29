@@ -38,3 +38,4 @@ export class GameComponent implements OnInit, OnChanges {
     } else { console.error('OOOPS! You sent in the wrong number of cards'); }
   }
 }
+

@@ -115,6 +115,10 @@ li.players:before {
   width: 1.3em;
   cursor: default !important;
 }
+
+
+
+
 .fa,
 i {
   display: inline-block;
@@ -467,6 +471,29 @@ input {
   top: 0;
   opacity: 1;
 }
+
+.pmenu{
+  height: 100%;
+  width: 400px;
+}
+
+ul.playersul{
+  width: 400px;
+  height: 100%;
+  background: black;
+
+ }
+ li.playersli{
+
+ }
+ ul.scoresul{
+
+ }
+ li.scoresli{
+
+ }
+
+
 .togglehand,
 .togglemenu,
 .togglepmenu {
