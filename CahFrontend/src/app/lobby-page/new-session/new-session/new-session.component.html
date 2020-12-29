@@ -33,6 +33,25 @@
       </li>
     </ul>
   </div>
+
+  <div class="subtitle">
+    Select card decks to include
+  </div>
+
+  <div class="flex-row left">
+    <ul>
+      <li [ngClass]="this.viewService.getState('isprivate') ? 'check' : 'li'"  (click)="this.viewService.toggleState('isprivate')">
+        Deck 1
+      </li>
+      <li [ngClass]="this.viewService.getState('isprivate') ? 'check' : 'li'"  (click)="this.viewService.toggleState('isprivate')">
+        Deck 2
+      </li>
+      <li [ngClass]="this.viewService.getState('isprivate') ? 'check' : 'li'"  (click)="this.viewService.toggleState('isprivate')">
+        Deck 3
+      </li>
+    </ul>
+  </div>
+
 </div>
 
 
