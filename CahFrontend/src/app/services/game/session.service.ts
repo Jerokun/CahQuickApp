@@ -29,7 +29,6 @@ export class SessionService {
 	private _userName: string;
 	private _roomCode: string = Math.random().toString(36).substr(2, 4);
 
-	public roomcode = Math.random().toString(36).substr(2, 4);
 	public placeholder: string = 'Your name';
 	public players = ['Windstorm', 'Bombasto', 'Magneta', 'Tornado'];
 	public scores = ['7', '5', '3', '2'];
