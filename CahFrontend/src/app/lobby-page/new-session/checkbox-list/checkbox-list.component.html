@@ -1,4 +1,5 @@
-<ul [ngClass]="this.viewService.getState('isprivate') ? 'check' : 'li'">
-    <li *ngFor="let name of data" (click)="this.updateCurrentSelection(name)">{{ name }}</li>
+<ul>
+	<li *ngFor="let name of this.data" [ngClass]="this.checkIfSelected(name) ? 'check' : 'li'" (click)="this.updateCurrentSelection(name)">
+		{{ name }}
+	</li>
 </ul>
-
