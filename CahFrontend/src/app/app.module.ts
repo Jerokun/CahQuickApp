@@ -19,10 +19,11 @@ import { LobbyMenuComponent } from './lobby-page/lobby-menu/lobby-menu.component
 import { ViewService } from './services/lobby/view.service';
 import { GameRulesComponent } from './lobby-page/game-rules/game-rules/game-rules.component';
 import { JoinSessionComponent } from './lobby-page/join-session/join-session/join-session.component';
-import { NewSessionComponent } from './lobby-page/new-session/new-session/new-session.component';
+import { NewSessionComponent } from './lobby-page/new-session/new-session.component';
 import { RoomComponent } from './lobby-page/room/room/room.component';
 import { InGameMenuComponent } from './lobby-page/in-game-menu/in-game-menu/in-game-menu.component';
 import { QuitAndVerifyComponent } from './lobby-page/quit-menu/quit-menu/quit-menu.component';
+import { CheckboxListComponent } from './lobby-page/new-session/checkbox-list/checkbox-list.component';
 
 @NgModule({
 	declarations: [
@@ -40,6 +41,7 @@ import { QuitAndVerifyComponent } from './lobby-page/quit-menu/quit-menu/quit-me
 		RoomComponent,
 		InGameMenuComponent,
 		QuitAndVerifyComponent,
+		CheckboxListComponent,
 	],
 	imports: [BrowserModule, AppRoutingModule, FormsModule, FontAwesomeModule, HttpClientModule],
 	providers: [CardService, CardDataService, SessionService, ViewService],
