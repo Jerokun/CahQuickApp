@@ -8,26 +8,30 @@ import * as _ from 'lodash';
 	styleUrls: ['./checkbox-list.component.scss'],
 })
 export class CheckboxListComponent implements OnInit {
-	@Input() public data: string[];
+	@Input() public data: string[] = [];
 	@Output() private selectionChange = new EventEmitter<string[]>();
 
-	currentSelection: string[];
+	private currentSelection: string[] = [];
 
-	constructor(public viewService: ViewService) {}
+	constructor() {}
 
-	ngOnInit(): void {
-		this.currentSelection = this.data;
-	}
+	ngOnInit(): void {}
 
-	public updateCurrentSelection(event: string): void {
+	public updateCurrentSelection(name: string): void {
 		let currentSelection = this.currentSelection;
 
-		if (_.find(currentSelection, event) === false) {
-			console.log('Could not find name, adding to the list');
-			currentSelection.push(event);
+		if (!_.includes(currentSelection, name)) {
+			currentSelection.push(name);
+			console.log('Could not find name, adding to the list', currentSelection);
 		} else {
-			console.log('Name found, removing from the list');
-			currentSelection = _.remove(currentSelection, event);
+			let newList: string[] = [];
+			currentSelection.forEach((v) => {
+				if (v !== name) {
+					newList.push(v);
+				}
+			});
+			currentSelection = newList;
+			console.log('Name found, removing from the list', currentSelection);
 		}
 
 		this.currentSelection = currentSelection;
@@ -35,6 +39,7 @@ export class CheckboxListComponent implements OnInit {
 	}
 
 	public checkIfSelected(name: string): boolean {
+		console.log('checkIfSelected', _.find(this.currentSelection, name));
 		return _.find(this.currentSelection, name);
 	}
 }
