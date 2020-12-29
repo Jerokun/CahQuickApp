@@ -1,4 +1,4 @@
-<div class="sure" [ngClass]="this.viewService.getState('sure') ? 'showsure' : 'sure'">
+
   <i
     class="far fa-times-circle close"
     [ngClass]="this.viewService.getState('sure') ? 'showclose' : 'close'"
@@ -25,4 +25,3 @@
       <button class="card-button" (click)="this.viewService.setState('sure', false)">{{ this.buttonTextCancel }}</button>
     </div>
   </div>
-</div>
