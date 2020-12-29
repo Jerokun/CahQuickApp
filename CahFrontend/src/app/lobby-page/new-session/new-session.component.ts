@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { SessionService } from 'src/app/services/game/session.service';
 import { ViewService } from 'src/app/services/lobby/view.service';
 
@@ -8,6 +8,8 @@ import { ViewService } from 'src/app/services/lobby/view.service';
 	styleUrls: ['./new-session.component.scss'],
 })
 export class NewSessionComponent implements OnInit {
+	list = ['a', 'b', 'c'];
+
 	constructor(public viewService: ViewService, public sessionService: SessionService) {}
 
 	ngOnInit(): void {}

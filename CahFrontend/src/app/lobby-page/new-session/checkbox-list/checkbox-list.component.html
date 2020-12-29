@@ -1,0 +1,5 @@
+<ul>
+    <li *ngFor="let name of data" [ngClass]="this.viewService.getState('isprivate') ? 'check' : 'li'" (click)="this.viewService.toggleState('isprivate')">{{ name }}</li>
+	<li [ngClass]="this.viewService.getState('isprivate') ? 'check' : 'li'" (click)="this.viewService.toggleState('isprivate')">Deck 2</li>
+	<li [ngClass]="this.viewService.getState('isprivate') ? 'check' : 'li'" (click)="this.viewService.toggleState('isprivate')">Deck 3</li>
+</ul>
