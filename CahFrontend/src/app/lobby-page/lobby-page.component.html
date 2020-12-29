@@ -22,4 +22,8 @@
 
 <app-game *ngIf="this.viewService.getState('game')"></app-game>
 <app-in-game-menu *ngIf="this.viewService.getState('menu')"></app-in-game-menu>
+<div class="sure" [ngClass]="this.viewService.getState('sure') ? 'showsure' : 'sure'">
+
 <app-quit-menu *ngIf="this.viewService.getState('sure')"></app-quit-menu>
+
+</div>
