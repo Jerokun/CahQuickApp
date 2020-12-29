@@ -2,11 +2,11 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { ViewService } from '../lobby/view.service';
+import { url } from 'inspector';
 
 export interface Lobby {
 	id: string;
   players: Player[];
-  // scores: Score[];
 }
 
 export interface Player {
@@ -52,7 +52,7 @@ export class SessionService {
 
 			default:
 				if (this.userName.length > 0) {
-					this.getNewSession(this.viewService.getState('private'), this.userName);
+					this.getNewRoom(this.viewService.getState('private'), this.userName);
 					this.viewService.setState('room', true);
 				} else {
 					this.buttonError('createRoom');
@@ -85,9 +85,13 @@ copyInputMessage(inputElement){
   inputElement.setSelectionRange(0, 0);
 }
 
-	controllerUrl = 'api/SessionController';
+  controllerUrl = 'api/SessionController';
 
-	getNewSession(priv: boolean, name: string): Observable<any> {
+  getDecklist(): Observable<any> {
+		return this.http.get<any>(this.controllerUrl + '/getDecklist');
+	}
+
+	getNewRoom(priv: boolean, name: string): Observable<any> {
 		const params = new HttpParams().set('userName', name).set('isPrivate', priv.toString());
 
 		return this.http.get<any>(this.controllerUrl + '/getNewSession', { params });

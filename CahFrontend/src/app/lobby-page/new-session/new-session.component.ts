@@ -14,7 +14,9 @@ export class NewSessionComponent implements OnInit {
 
 	constructor(public viewService: ViewService, public sessionService: SessionService) {}
 
-	ngOnInit(): void {}
+	ngOnInit(): void {
+    // this.sessionService.getDecklist().subscribe(t => this.list = t);
+  }
 
 	updateSelected(event: string[]): void {
 		console.log('newSession page has received an update from checkbox-list', event);
