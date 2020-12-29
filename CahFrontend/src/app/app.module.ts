@@ -1,3 +1,4 @@
+import { CommonModule } from '@angular/common';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
@@ -24,6 +25,7 @@ import { RoomComponent } from './lobby-page/room/room/room.component';
 import { InGameMenuComponent } from './lobby-page/in-game-menu/in-game-menu/in-game-menu.component';
 import { QuitAndVerifyComponent } from './lobby-page/quit-menu/quit-menu/quit-menu.component';
 import { CheckboxListComponent } from './lobby-page/new-session/checkbox-list/checkbox-list.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
 	declarations: [
@@ -43,7 +45,7 @@ import { CheckboxListComponent } from './lobby-page/new-session/checkbox-list/ch
 		QuitAndVerifyComponent,
 		CheckboxListComponent,
 	],
-	imports: [BrowserModule, AppRoutingModule, FormsModule, FontAwesomeModule, HttpClientModule],
+	imports: [CommonModule, BrowserModule, AppRoutingModule, FormsModule, FontAwesomeModule, HttpClientModule, BrowserAnimationsModule],
 	providers: [CardService, CardDataService, SessionService, ViewService],
 	bootstrap: [AppComponent],
 })

@@ -16,19 +16,25 @@ export class CheckboxListComponent implements OnInit {
 	constructor(public viewService: ViewService) {}
 
 	ngOnInit(): void {
-		try {
-			this.currentSelection = this.data;
-		} catch (e) {
-			console.error(e);
-			this.currentSelection = [null];
-		}
+		this.currentSelection = this.data;
 	}
 
 	public updateCurrentSelection(event: string): void {
 		let currentSelection = this.currentSelection;
 
-		if (_.find(currentSelection, event)) {
-			this.selectionChange.emit(currentSelection);
+		console.log('SLDKJFSLDKJF', !_.find(currentSelection, event));
+
+		if (_.find(currentSelection, event) === false) {
+			currentSelection.push(event);
+		} else {
+			currentSelection = _.remove(currentSelection, event);
 		}
+
+		this.currentSelection = currentSelection;
+		this.selectionChange.emit(currentSelection);
+	}
+
+	public checkIfSelected(name: string): boolean {
+		return _.find(this.currentSelection, name);
 	}
 }

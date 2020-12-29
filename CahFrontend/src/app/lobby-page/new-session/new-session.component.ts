@@ -9,9 +9,14 @@ import { ViewService } from 'src/app/services/lobby/view.service';
 })
 export class NewSessionComponent implements OnInit {
 
-	list = ['a', 'b', 'c'];
+	list = ['Deck 1', 'Deck 2', 'Deck 3'];
+	selected: string[];
 
 	constructor(public viewService: ViewService, public sessionService: SessionService) {}
 
 	ngOnInit(): void {}
+
+	updateSelected(event: string[]): void {
+		this.selected = event;
+	}
 }

@@ -6,7 +6,6 @@ import { BehaviorSubject } from 'rxjs';
 	providedIn: 'root',
 })
 export class ViewService {
-
 	private readonly viewStates: Array<KeyValue<string, boolean>> = [
 		{ key: 'start', value: false },
 		{ key: 'game', value: false },
@@ -17,9 +16,9 @@ export class ViewService {
 		{ key: 'sure', value: false },
 		{ key: 'isprivate', value: true },
 		{ key: 'menu', value: false },
-    { key: 'pmenu', value: false },
-    { key: 'hand', value: false },
-    { key: 'istogglehand', value: false },
+		{ key: 'pmenu', value: false },
+		{ key: 'hand', value: false },
+		{ key: 'istogglehand', value: false },
 	];
 
 	private viewStatesSubject = new BehaviorSubject<Array<KeyValue<string, boolean>>>(this.viewStates);
@@ -29,10 +28,10 @@ export class ViewService {
 	constructor() {}
 
 	public setState(key: string, value: boolean): void {
-		console.log('before setState', this.viewStatesSubject.getValue());
+		// console.log('before setState', this.viewStatesSubject.getValue());
 		const newStates = this.getStates().map((k) => (k.key !== key ? k : { ...k, value }));
 		this.viewStatesSubject.next(newStates);
-		console.log('after setState', this.viewStatesSubject.getValue());
+		// console.log('after setState', this.viewStatesSubject.getValue());
 	}
 
 	public resetStates(): void {
@@ -41,8 +40,8 @@ export class ViewService {
 
 	public getState(s: string): boolean {
 		const states = this.getStates();
-		console.log('getState ' + s, states.find(state => state.key === s).value);
-		return states.find(state => state.key === s).value;
+		// console.log('getState ' + s, states.find(state => state.key === s).value);
+		return states.find((state) => state.key === s).value;
 	}
 
 	public getStates(): Array<KeyValue<string, boolean>> {

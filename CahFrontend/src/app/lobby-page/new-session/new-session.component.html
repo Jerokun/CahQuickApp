@@ -48,7 +48,12 @@
 
     <app-checkbox-list
     [data]="this.list"
+    (selectionChange)="updateSelected($event)"
     ></app-checkbox-list>
+
+    <div *ngFor="let item of this.selected">
+      {{ item }}
+    </div>
     
   </div>
 
