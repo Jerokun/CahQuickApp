@@ -27,7 +27,7 @@ export class SessionService {
 	constructor(private http: HttpClient, private viewService: ViewService) {}
 
 	private _userName: string;
-	private _roomCode: string;
+	private _roomCode: string = Math.random().toString(36).substr(2, 4);
 
 	public roomcode = Math.random().toString(36).substr(2, 4);
 	public placeholder: string = 'Your name';
@@ -114,10 +114,6 @@ export class SessionService {
 
 	public get roomCode(): string {
 		return this._roomCode;
-	}
-
-	public set roomCode(v: string) {
-		this._roomCode = v;
 	}
 
 	public get userName(): string {
