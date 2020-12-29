@@ -15,14 +15,16 @@ export class CheckboxListComponent implements OnInit {
 
 	constructor() {}
 
-	ngOnInit(): void {}
+	ngOnInit(): void {
+		this.currentSelection = this.data;
+	}
 
 	public updateCurrentSelection(name: string): void {
 		let currentSelection = this.currentSelection;
 
 		if (!_.includes(currentSelection, name)) {
 			currentSelection.push(name);
-			console.log('Could not find name, adding to the list', currentSelection);
+			// console.log('Could not find name, adding to the list', currentSelection);
 		} else {
 			let newList: string[] = [];
 			currentSelection.forEach((v) => {
@@ -31,7 +33,7 @@ export class CheckboxListComponent implements OnInit {
 				}
 			});
 			currentSelection = newList;
-			console.log('Name found, removing from the list', currentSelection);
+			// console.log('Name found, removing from the list', currentSelection);
 		}
 
 		this.currentSelection = currentSelection;
