@@ -12,17 +12,13 @@ namespace CahBackend.Controllers
     [ApiController]
     public class SessionController : ControllerBase
     {
-        [HttpPost]
-        public ActionResult<Lobby> CreateSessionPost([FromBody] Boolean IsPrivate, string UserName)
+        [HttpGet]
+        public ActionResult<Lobby> CreateSessionPost([FromBody] Boolean IsPrivate, string UserName, string[] PackNames)
         {
-            if (UserName != null)
-            {
-                return null;
-            }
-
             return Unauthorized();
         }
 
+        [HttpGet]
         public ActionResult JoinSessionGet([FromBody] Object obj)
         {
 /*            {
