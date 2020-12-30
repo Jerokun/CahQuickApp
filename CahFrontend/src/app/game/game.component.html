@@ -36,14 +36,22 @@
 
 	<div class="togglepmenu">
 		<i [ngClass]="this.viewService.getState('pmenu') ? 'far fa-times-circle' : 'fas fa-users'" (click)="this.viewService.toggleState('pmenu')"></i>
-	</div>
+  </div>
+
+  <div class="togglechat">
+    <i [ngClass]="this.viewService.getState('chat') ? 'far fa-times-circle' : 'fas fa-comments'" (click)="this.viewService.toggleState('chat')"></i>
+  </div>
+
+  <div class="togglevoice">
+    <i [ngClass]="this.viewService.getState('voice') ? 'far fa-times-circle' : 'fab fa-discord'" (click)="this.viewService.toggleState('voice')"></i>
+  </div>
 
 	<div class="pmenu" [ngClass]="this.viewService.getState('pmenu') ? 'showpmenu' : 'pmenu'">
 		<ul class="playersul">
 			<li class="playersli" *ngFor="let player of this.sessionService.players">{{ player }}</li>
 		</ul>
 		<ul class="scoresul">
-			<li class="scoresli" *ngFor="let scores of this.sessionService.players">{{ scores }}</li>
+			<li class="scoresli" *ngFor="let scores of this.sessionService.scores">{{ scores }}</li>
 		</ul>
 	</div>
 
