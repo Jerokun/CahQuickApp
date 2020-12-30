@@ -14,7 +14,7 @@ namespace GameLogic.DataConverter
     public class PackRepository
     {
         public const string JsonPath = @"./Data/cah-cards-full.json";
-        public Dictionary<string, Pack> Collection = LoadCardCollection();
+        public readonly Dictionary<string, Pack> Collection = LoadCardCollection();
 
 
         public static Dictionary<string, Pack> LoadCardCollection()

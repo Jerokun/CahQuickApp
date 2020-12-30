@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-16"?>
-<DevTrackerData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" SolutionTotalEditTime="PT4H9M30.6995681S" SolutionTotalViewTime="PT3H7M26.9245678S" SolutionTotalDebugTime="PT19.0181511S">
+<DevTrackerData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" SolutionTotalEditTime="PT5H57M51.8637443S" SolutionTotalViewTime="PT3H59M56.2970841S" SolutionTotalDebugTime="PT19.0181511S">
   <FileVersion>
     <Major>1</Major>
     <Minor>0</Minor>
@@ -18,85 +18,24 @@
   </ProjectsCreatedDateList>
   <SessionTimeList />
   <LastSessionTimeList>
-    <DevTrackerDataItem ViewActiveTime="PT6.9216828S" EditActiveTime="PT0S">
-      <ModifiedDate>0001-01-01T00:00:00</ModifiedDate>
-      <EditedCount>0</EditedCount>
-      <ViewedCount>1</ViewedCount>
-      <Item>C:\Custom\repos\cahquickFE\CahApp\GameLogic\Models\Card.cs</Item>
-      <ItemType>ProjectItem</ItemType>
-      <ProjectName>C:\Custom\repos\cahquickFE\CahApp\GameLogic\GameLogic.csproj</ProjectName>
-      <CreatedDate>2020-12-23T15:25:50.4257046+01:00</CreatedDate>
-      <ViewedBy>Jero</ViewedBy>
-    </DevTrackerDataItem>
-    <DevTrackerDataItem ViewActiveTime="PT1M21.9960438S" EditActiveTime="PT0S">
-      <ModifiedDate>0001-01-01T00:00:00</ModifiedDate>
-      <EditedCount>0</EditedCount>
-      <ViewedCount>1</ViewedCount>
-      <Item>C:\Custom\repos\cahquickFE\CahApp\CahFrontend\src\app\chat\chatbox\chatbox.component.ts</Item>
-      <ItemType>ProjectItem</ItemType>
-      <ProjectName />
-      <CreatedDate>2020-12-23T15:22:50.8580552+01:00</CreatedDate>
-      <ViewedBy>Jero</ViewedBy>
-    </DevTrackerDataItem>
-    <DevTrackerDataItem ViewActiveTime="PT54.8096576S" EditActiveTime="PT0S">
-      <ModifiedDate>0001-01-01T00:00:00</ModifiedDate>
-      <EditedCount>0</EditedCount>
-      <ViewedCount>1</ViewedCount>
-      <Item>C:\Custom\repos\cahquickFE\CahApp\GameLogic.Tests\CreateCardRepositoryTest.cs</Item>
-      <ItemType>ProjectItem</ItemType>
-      <ProjectName>C:\Custom\repos\cahquickFE\CahApp\GameLogic.Tests\GameLogic.Tests.csproj</ProjectName>
-      <CreatedDate>2020-12-23T15:24:34.3140937+01:00</CreatedDate>
-      <ViewedBy>Jero</ViewedBy>
-    </DevTrackerDataItem>
-    <DevTrackerDataItem ViewActiveTime="PT3M32.8315397S" EditActiveTime="PT3M31.628015S">
-      <ModifiedDate>2020-12-23T15:40:26.0072734+01:00</ModifiedDate>
-      <ModifiedBy>Jero</ModifiedBy>
-      <EditedCount>1</EditedCount>
-      <ViewedCount>1</ViewedCount>
-      <Item>C:\Custom\repos\cahquickFE\CahApp\CahBackend\Controllers\DeckController.cs</Item>
-      <ItemType>ProjectItem</ItemType>
-      <ProjectName>C:\Custom\repos\cahquickFE\CahApp\CahBackend\CahBackend.csproj</ProjectName>
-      <CreatedDate>2020-12-23T15:26:10.5987879+01:00</CreatedDate>
-      <ViewedBy>Jero</ViewedBy>
-    </DevTrackerDataItem>
-    <DevTrackerDataItem ViewActiveTime="PT28.9123513S" EditActiveTime="PT0S">
+    <DevTrackerDataItem ViewActiveTime="PT5M56.4274524S" EditActiveTime="PT0S">
       <ModifiedDate>0001-01-01T00:00:00</ModifiedDate>
       <EditedCount>0</EditedCount>
       <ViewedCount>1</ViewedCount>
       <Item>C:\Custom\repos\cahquickFE\CahApp\GameLogic.Tests\DeckGeneratorTests.cs</Item>
       <ItemType>ProjectItem</ItemType>
       <ProjectName>C:\Custom\repos\cahquickFE\CahApp\GameLogic.Tests\GameLogic.Tests.csproj</ProjectName>
-      <CreatedDate>2020-12-23T15:24:33.4850723+01:00</CreatedDate>
+      <CreatedDate>2020-12-29T17:22:56.7373747+01:00</CreatedDate>
       <ViewedBy>Jero</ViewedBy>
     </DevTrackerDataItem>
-    <DevTrackerDataItem ViewActiveTime="PT0.8430204S" EditActiveTime="PT0S">
+    <DevTrackerDataItem ViewActiveTime="PT11.9259313S" EditActiveTime="PT0S">
       <ModifiedDate>0001-01-01T00:00:00</ModifiedDate>
       <EditedCount>0</EditedCount>
       <ViewedCount>1</ViewedCount>
-      <Item>C:\Custom\repos\cahquickFE\CahApp\GameLogic\Models\Pack.cs</Item>
+      <Item>C:\Custom\repos\cahquickFE\CahApp\GameLogic\Decks\PackRepository.cs</Item>
       <ItemType>ProjectItem</ItemType>
       <ProjectName>C:\Custom\repos\cahquickFE\CahApp\GameLogic\GameLogic.csproj</ProjectName>
-      <CreatedDate>2020-12-23T15:25:53.5403204+01:00</CreatedDate>
-      <ViewedBy>Jero</ViewedBy>
-    </DevTrackerDataItem>
-    <DevTrackerDataItem ViewActiveTime="PT4.1430373S" EditActiveTime="PT0S">
-      <ModifiedDate>0001-01-01T00:00:00</ModifiedDate>
-      <EditedCount>0</EditedCount>
-      <ViewedCount>1</ViewedCount>
-      <Item>C:\Custom\repos\cahquickFE\CahApp\GameLogic.Tests\UnitTest1.cs</Item>
-      <ItemType>ProjectItem</ItemType>
-      <ProjectName>C:\Custom\repos\cahquickFE\CahApp\GameLogic.Tests\GameLogic.Tests.csproj</ProjectName>
-      <CreatedDate>2020-12-23T15:24:29.3410322+01:00</CreatedDate>
-      <ViewedBy>Jero</ViewedBy>
-    </DevTrackerDataItem>
-    <DevTrackerDataItem ViewActiveTime="PT6.7881938S" EditActiveTime="PT0S">
-      <ModifiedDate>0001-01-01T00:00:00</ModifiedDate>
-      <EditedCount>0</EditedCount>
-      <ViewedCount>1</ViewedCount>
-      <Item>C:\Custom\repos\cahquickFE\CahApp\GameLogic\Models\WhiteCard.cs</Item>
-      <ItemType>ProjectItem</ItemType>
-      <ProjectName>C:\Custom\repos\cahquickFE\CahApp\GameLogic\GameLogic.csproj</ProjectName>
-      <CreatedDate>2020-12-23T15:25:51.532423+01:00</CreatedDate>
+      <CreatedDate>2020-12-29T17:20:29.1882635+01:00</CreatedDate>
       <ViewedBy>Jero</ViewedBy>
     </DevTrackerDataItem>
   </LastSessionTimeList>
@@ -153,6 +92,16 @@
       <CreatedDate>2020-09-24T16:54:35.1809171+02:00</CreatedDate>
       <ViewedBy>Jero</ViewedBy>
     </DevTrackerDataItem>
+    <DevTrackerDataItem ViewActiveTime="PT8.3210929S" EditActiveTime="PT0S">
+      <ModifiedDate>0001-01-01T00:00:00</ModifiedDate>
+      <EditedCount>0</EditedCount>
+      <ViewedCount>1</ViewedCount>
+      <Item>C:\Custom\repos\cahquickFE\CahApp\GameLogic\Models\Cards\BlackCard.cs</Item>
+      <ItemType>ProjectItem</ItemType>
+      <ProjectName>C:\Custom\repos\cahquickFE\CahApp\GameLogic\GameLogic.csproj</ProjectName>
+      <CreatedDate>2020-12-28T01:04:14.1600644+01:00</CreatedDate>
+      <ViewedBy>Jero</ViewedBy>
+    </DevTrackerDataItem>
     <DevTrackerDataItem ViewActiveTime="PT3M27.8357567S" EditActiveTime="PT0S">
       <ModifiedDate>0001-01-01T00:00:00</ModifiedDate>
       <EditedCount>0</EditedCount>
@@ -181,6 +130,16 @@
       <ItemType>ProjectItem</ItemType>
       <ProjectName>C:\Custom\repos\cahquickFE\CahApp\GameLogic\GameLogic.csproj</ProjectName>
       <CreatedDate>2020-12-23T15:25:50.4257046+01:00</CreatedDate>
+      <ViewedBy>Jero</ViewedBy>
+    </DevTrackerDataItem>
+    <DevTrackerDataItem ViewActiveTime="PT6.8670495S" EditActiveTime="PT0S">
+      <ModifiedDate>0001-01-01T00:00:00</ModifiedDate>
+      <EditedCount>0</EditedCount>
+      <ViewedCount>1</ViewedCount>
+      <Item>C:\Custom\repos\cahquickFE\CahApp\GameLogic\Models\Cards\Card.cs</Item>
+      <ItemType>ProjectItem</ItemType>
+      <ProjectName>C:\Custom\repos\cahquickFE\CahApp\GameLogic\GameLogic.csproj</ProjectName>
+      <CreatedDate>2020-12-28T01:04:13.2136983+01:00</CreatedDate>
       <ViewedBy>Jero</ViewedBy>
     </DevTrackerDataItem>
     <DevTrackerDataItem ViewActiveTime="PT2M7.786218S" EditActiveTime="PT1M10.9612146S">
@@ -237,11 +196,21 @@
       <CreatedDate>2020-10-11T19:33:16.0294916+02:00</CreatedDate>
       <ViewedBy>Jero</ViewedBy>
     </DevTrackerDataItem>
-    <DevTrackerDataItem ViewActiveTime="PT3M0.3897645S" EditActiveTime="PT11M37.6736589S">
-      <ModifiedDate>2020-10-17T01:15:53.7569696+02:00</ModifiedDate>
+    <DevTrackerDataItem ViewActiveTime="PT4.2448016S" EditActiveTime="PT0S">
+      <ModifiedDate>0001-01-01T00:00:00</ModifiedDate>
+      <EditedCount>0</EditedCount>
+      <ViewedCount>1</ViewedCount>
+      <Item>C:\Custom\repos\cahquickFE\CahApp\GameLogic\Deck\CreateCardRepository.cs</Item>
+      <ItemType>ProjectItem</ItemType>
+      <ProjectName>C:\Custom\repos\cahquickFE\CahApp\GameLogic\GameLogic.csproj</ProjectName>
+      <CreatedDate>2020-12-28T01:52:07.5650198+01:00</CreatedDate>
+      <ViewedBy>Jero</ViewedBy>
+    </DevTrackerDataItem>
+    <DevTrackerDataItem ViewActiveTime="PT5M0.1234919S" EditActiveTime="PT11M41.6451886S">
+      <ModifiedDate>2020-12-28T03:01:04.6629531+01:00</ModifiedDate>
       <ModifiedBy>Jero</ModifiedBy>
-      <EditedCount>1</EditedCount>
-      <ViewedCount>2</ViewedCount>
+      <EditedCount>2</EditedCount>
+      <ViewedCount>3</ViewedCount>
       <Item>C:\Custom\repos\cahquickFE\CahApp\GameLogic.Tests\CreateCardRepositoryTest.cs</Item>
       <ItemType>ProjectItem</ItemType>
       <ProjectName>C:\Custom\repos\cahquickFE\CahApp\GameLogic.Tests\GameLogic.Tests.csproj</ProjectName>
@@ -300,11 +269,22 @@
       <CreatedDate>2020-09-24T19:48:43.2434367+02:00</CreatedDate>
       <ViewedBy>Jero</ViewedBy>
     </DevTrackerDataItem>
-    <DevTrackerDataItem ViewActiveTime="PT4M2.5901205S" EditActiveTime="PT3M31.628015S">
+    <DevTrackerDataItem ViewActiveTime="PT52.2741605S" EditActiveTime="PT2M11.9406105S">
+      <ModifiedDate>2020-12-28T01:04:36.1821497+01:00</ModifiedDate>
+      <ModifiedBy>Jero</ModifiedBy>
+      <EditedCount>1</EditedCount>
+      <ViewedCount>1</ViewedCount>
+      <Item>C:\Custom\repos\cahquickFE\CahApp\GameLogic\Models\Cards\Deck.cs</Item>
+      <ItemType>ProjectItem</ItemType>
+      <ProjectName>C:\Custom\repos\cahquickFE\CahApp\GameLogic\GameLogic.csproj</ProjectName>
+      <CreatedDate>2020-12-28T01:01:17.5205542+01:00</CreatedDate>
+      <ViewedBy>Jero</ViewedBy>
+    </DevTrackerDataItem>
+    <DevTrackerDataItem ViewActiveTime="PT4M3.332279S" EditActiveTime="PT3M31.628015S">
       <ModifiedDate>2020-12-23T15:40:26.0072734+01:00</ModifiedDate>
       <ModifiedBy>Jero</ModifiedBy>
       <EditedCount>1</EditedCount>
-      <ViewedCount>2</ViewedCount>
+      <ViewedCount>3</ViewedCount>
       <Item>C:\Custom\repos\cahquickFE\CahApp\CahBackend\Controllers\DeckController.cs</Item>
       <ItemType>ProjectItem</ItemType>
       <ProjectName>C:\Custom\repos\cahquickFE\CahApp\CahBackend\CahBackend.csproj</ProjectName>
@@ -322,14 +302,46 @@
       <CreatedDate>2020-09-24T20:25:55.8557094+02:00</CreatedDate>
       <ViewedBy>Jero</ViewedBy>
     </DevTrackerDataItem>
-    <DevTrackerDataItem ViewActiveTime="PT1M2.0377114S" EditActiveTime="PT0S">
+    <DevTrackerDataItem ViewActiveTime="PT27M42.1706731S" EditActiveTime="PT1H1M49.5455636S">
+      <ModifiedDate>2020-12-28T03:46:23.4521007+01:00</ModifiedDate>
+      <ModifiedBy>Jero</ModifiedBy>
+      <EditedCount>1</EditedCount>
+      <ViewedCount>1</ViewedCount>
+      <Item>C:\Custom\repos\cahquickFE\CahApp\GameLogic\Decks\DeckGenerator.cs</Item>
+      <ItemType>ProjectItem</ItemType>
+      <ProjectName>C:\Custom\repos\cahquickFE\CahApp\GameLogic\GameLogic.csproj</ProjectName>
+      <CreatedDate>2020-12-27T18:19:49.3391442+01:00</CreatedDate>
+      <ViewedBy>Jero</ViewedBy>
+    </DevTrackerDataItem>
+    <DevTrackerDataItem ViewActiveTime="PT1.3413653S" EditActiveTime="PT0S">
       <ModifiedDate>0001-01-01T00:00:00</ModifiedDate>
       <EditedCount>0</EditedCount>
-      <ViewedCount>2</ViewedCount>
+      <ViewedCount>1</ViewedCount>
+      <Item>C:\Custom\repos\cahquickFE\CahApp\GameLogic\Deck\DeckGenerator.cs</Item>
+      <ItemType>ProjectItem</ItemType>
+      <ProjectName>C:\Custom\repos\cahquickFE\CahApp\GameLogic\GameLogic.csproj</ProjectName>
+      <CreatedDate>2020-12-28T01:52:06.2226538+01:00</CreatedDate>
+      <ViewedBy>Jero</ViewedBy>
+    </DevTrackerDataItem>
+    <DevTrackerDataItem ViewActiveTime="PT16M5.2304826S" EditActiveTime="PT10M2.6163564S">
+      <ModifiedDate>2020-12-28T03:28:29.7124065+01:00</ModifiedDate>
+      <ModifiedBy>Jero</ModifiedBy>
+      <EditedCount>1</EditedCount>
+      <ViewedCount>4</ViewedCount>
       <Item>C:\Custom\repos\cahquickFE\CahApp\GameLogic.Tests\DeckGeneratorTests.cs</Item>
       <ItemType>ProjectItem</ItemType>
       <ProjectName>C:\Custom\repos\cahquickFE\CahApp\GameLogic.Tests\GameLogic.Tests.csproj</ProjectName>
       <CreatedDate>2020-10-17T00:57:34.2658137+02:00</CreatedDate>
+      <ViewedBy>Jero</ViewedBy>
+    </DevTrackerDataItem>
+    <DevTrackerDataItem ViewActiveTime="PT2.8130592S" EditActiveTime="PT0S">
+      <ModifiedDate>0001-01-01T00:00:00</ModifiedDate>
+      <EditedCount>0</EditedCount>
+      <ViewedCount>1</ViewedCount>
+      <Item>Dictionary.cs</Item>
+      <ItemType>ProjectItem</ItemType>
+      <ProjectName />
+      <CreatedDate>2020-12-28T02:28:40.4734622+01:00</CreatedDate>
       <ViewedBy>Jero</ViewedBy>
     </DevTrackerDataItem>
     <DevTrackerDataItem ViewActiveTime="PT2M13.022581S" EditActiveTime="PT3M2.3029936S">
@@ -439,6 +451,27 @@
       <CreatedDate>2020-09-24T21:04:39.7978007+02:00</CreatedDate>
       <ViewedBy>Jero</ViewedBy>
     </DevTrackerDataItem>
+    <DevTrackerDataItem ViewActiveTime="PT18.1522678S" EditActiveTime="PT0.9927485S">
+      <ModifiedDate>0001-01-01T00:00:00</ModifiedDate>
+      <EditedCount>1</EditedCount>
+      <ViewedCount>1</ViewedCount>
+      <Item>C:\Custom\repos\cahquickFE\CahApp\GameLogic\Interfaces\Interface1.cs</Item>
+      <ItemType>ProjectItem</ItemType>
+      <ProjectName>C:\Custom\repos\cahquickFE\CahApp\GameLogic\GameLogic.csproj</ProjectName>
+      <CreatedDate>2020-12-28T01:35:05.3818856+01:00</CreatedDate>
+      <ViewedBy>Jero</ViewedBy>
+    </DevTrackerDataItem>
+    <DevTrackerDataItem ViewActiveTime="PT7.7145721S" EditActiveTime="PT3M26.3147204S">
+      <ModifiedDate>2020-12-28T03:00:40.3352044+01:00</ModifiedDate>
+      <ModifiedBy>Jero</ModifiedBy>
+      <EditedCount>1</EditedCount>
+      <ViewedCount>1</ViewedCount>
+      <Item>C:\Custom\repos\cahquickFE\CahApp\GameLogic\Interfaces\IPackRepository.cs</Item>
+      <ItemType>ProjectItem</ItemType>
+      <ProjectName>C:\Custom\repos\cahquickFE\CahApp\GameLogic\GameLogic.csproj</ProjectName>
+      <CreatedDate>2020-12-28T01:35:24.5299071+01:00</CreatedDate>
+      <ViewedBy>Jero</ViewedBy>
+    </DevTrackerDataItem>
     <DevTrackerDataItem ViewActiveTime="PT28.3844702S" EditActiveTime="PT0S">
       <ModifiedDate>0001-01-01T00:00:00</ModifiedDate>
       <EditedCount>0</EditedCount>
@@ -480,6 +513,16 @@
       <CreatedDate>2020-12-23T15:25:53.5403204+01:00</CreatedDate>
       <ViewedBy>Jero</ViewedBy>
     </DevTrackerDataItem>
+    <DevTrackerDataItem ViewActiveTime="PT9.7836152S" EditActiveTime="PT0S">
+      <ModifiedDate>0001-01-01T00:00:00</ModifiedDate>
+      <EditedCount>0</EditedCount>
+      <ViewedCount>1</ViewedCount>
+      <Item>C:\Custom\repos\cahquickFE\CahApp\GameLogic\Models\Cards\Pack.cs</Item>
+      <ItemType>ProjectItem</ItemType>
+      <ProjectName>C:\Custom\repos\cahquickFE\CahApp\GameLogic\GameLogic.csproj</ProjectName>
+      <CreatedDate>2020-12-28T02:56:13.7350485+01:00</CreatedDate>
+      <ViewedBy>Jero</ViewedBy>
+    </DevTrackerDataItem>
     <DevTrackerDataItem ViewActiveTime="PT0.8047111S" EditActiveTime="PT0S">
       <ModifiedDate>0001-01-01T00:00:00</ModifiedDate>
       <EditedCount>0</EditedCount>
@@ -500,11 +543,11 @@
       <CreatedDate>2020-09-24T16:17:02.3199473+02:00</CreatedDate>
       <ViewedBy>Jero</ViewedBy>
     </DevTrackerDataItem>
-    <DevTrackerDataItem ViewActiveTime="PT4M2.8558411S" EditActiveTime="PT1M57.6185476S">
-      <ModifiedDate>2020-10-17T01:15:53.7433735+02:00</ModifiedDate>
+    <DevTrackerDataItem ViewActiveTime="PT9M41.2742936S" EditActiveTime="PT32M43.4011947S">
+      <ModifiedDate>2020-12-28T03:46:23.4631035+01:00</ModifiedDate>
       <ModifiedBy>Jero</ModifiedBy>
-      <EditedCount>1</EditedCount>
-      <ViewedCount>1</ViewedCount>
+      <EditedCount>2</EditedCount>
+      <ViewedCount>3</ViewedCount>
       <Item>C:\Custom\repos\cahquickFE\CahApp\GameLogic\Decks\PackRepository.cs</Item>
       <ItemType>ProjectItem</ItemType>
       <ProjectName>C:\Custom\repos\cahquickFE\CahApp\GameLogic\GameLogic.csproj</ProjectName>
@@ -531,6 +574,16 @@
       <ItemType>ProjectItem</ItemType>
       <ProjectName>C:\Custom\repos\cahquickFE\CahApp\CahBackend\CahBackend.csproj</ProjectName>
       <CreatedDate>2020-09-24T17:52:50.6023014+02:00</CreatedDate>
+      <ViewedBy>Jero</ViewedBy>
+    </DevTrackerDataItem>
+    <DevTrackerDataItem ViewActiveTime="PT10.0526123S" EditActiveTime="PT0S">
+      <ModifiedDate>0001-01-01T00:00:00</ModifiedDate>
+      <EditedCount>0</EditedCount>
+      <ViewedCount>1</ViewedCount>
+      <Item>C:\Custom\repos\cahquickFE\CahApp\CahBackend\Controllers\SessionController.cs</Item>
+      <ItemType>ProjectItem</ItemType>
+      <ProjectName>C:\Custom\repos\cahquickFE\CahApp\CahBackend\CahBackend.csproj</ProjectName>
+      <CreatedDate>2020-12-28T03:20:16.7216222+01:00</CreatedDate>
       <ViewedBy>Jero</ViewedBy>
     </DevTrackerDataItem>
     <DevTrackerDataItem ViewActiveTime="PT23.5022684S" EditActiveTime="PT0S">
@@ -647,8 +700,204 @@
       <CreatedDate>2020-10-17T01:04:18.677119+02:00</CreatedDate>
       <ViewedBy>Jero</ViewedBy>
     </DevTrackerDataItem>
+    <DevTrackerDataItem ViewActiveTime="PT3.5501387S" EditActiveTime="PT0S">
+      <ModifiedDate>0001-01-01T00:00:00</ModifiedDate>
+      <EditedCount>0</EditedCount>
+      <ViewedCount>1</ViewedCount>
+      <Item>C:\Custom\repos\cahquickFE\CahApp\GameLogic\Models\Cards\WhiteCard.cs</Item>
+      <ItemType>ProjectItem</ItemType>
+      <ProjectName>C:\Custom\repos\cahquickFE\CahApp\GameLogic\GameLogic.csproj</ProjectName>
+      <CreatedDate>2020-12-28T01:03:02.384418+01:00</CreatedDate>
+      <ViewedBy>Jero</ViewedBy>
+    </DevTrackerDataItem>
   </TotalTimeList>
   <HistoryTimeList>
+    <DevTrackerDataItem ViewActiveTime="PT5M56.4234509S" EditActiveTime="PT0S">
+      <ModifiedDate>0001-01-01T00:00:00</ModifiedDate>
+      <EditedCount>0</EditedCount>
+      <ViewedCount>1</ViewedCount>
+      <Item>C:\Custom\repos\cahquickFE\CahApp\GameLogic.Tests\DeckGeneratorTests.cs</Item>
+      <ItemType>ProjectItem</ItemType>
+      <ProjectName>C:\Custom\repos\cahquickFE\CahApp\GameLogic.Tests\GameLogic.Tests.csproj</ProjectName>
+      <CreatedDate>2020-12-29T17:22:56.7373747+01:00</CreatedDate>
+      <ViewedBy>Jero</ViewedBy>
+    </DevTrackerDataItem>
+    <DevTrackerDataItem ViewActiveTime="PT11.9259313S" EditActiveTime="PT0S">
+      <ModifiedDate>0001-01-01T00:00:00</ModifiedDate>
+      <EditedCount>0</EditedCount>
+      <ViewedCount>1</ViewedCount>
+      <Item>C:\Custom\repos\cahquickFE\CahApp\GameLogic\Decks\PackRepository.cs</Item>
+      <ItemType>ProjectItem</ItemType>
+      <ProjectName>C:\Custom\repos\cahquickFE\CahApp\GameLogic\GameLogic.csproj</ProjectName>
+      <CreatedDate>2020-12-29T17:20:29.1882635+01:00</CreatedDate>
+      <ViewedBy>Jero</ViewedBy>
+    </DevTrackerDataItem>
+    <DevTrackerDataItem ViewActiveTime="PT0.7421585S" EditActiveTime="PT0S">
+      <ModifiedDate>0001-01-01T00:00:00</ModifiedDate>
+      <EditedCount>0</EditedCount>
+      <ViewedCount>1</ViewedCount>
+      <Item>C:\Custom\repos\cahquickFE\CahApp\CahBackend\Controllers\DeckController.cs</Item>
+      <ItemType>ProjectItem</ItemType>
+      <ProjectName>C:\Custom\repos\cahquickFE\CahApp\CahBackend\CahBackend.csproj</ProjectName>
+      <CreatedDate>2020-12-28T03:21:08.6245449+01:00</CreatedDate>
+      <ViewedBy>Jero</ViewedBy>
+    </DevTrackerDataItem>
+    <DevTrackerDataItem ViewActiveTime="PT10.0526123S" EditActiveTime="PT0S">
+      <ModifiedDate>0001-01-01T00:00:00</ModifiedDate>
+      <EditedCount>0</EditedCount>
+      <ViewedCount>1</ViewedCount>
+      <Item>C:\Custom\repos\cahquickFE\CahApp\CahBackend\Controllers\SessionController.cs</Item>
+      <ItemType>ProjectItem</ItemType>
+      <ProjectName>C:\Custom\repos\cahquickFE\CahApp\CahBackend\CahBackend.csproj</ProjectName>
+      <CreatedDate>2020-12-28T03:20:16.7216222+01:00</CreatedDate>
+      <ViewedBy>Jero</ViewedBy>
+    </DevTrackerDataItem>
+    <DevTrackerDataItem ViewActiveTime="PT9.7836152S" EditActiveTime="PT0S">
+      <ModifiedDate>0001-01-01T00:00:00</ModifiedDate>
+      <EditedCount>0</EditedCount>
+      <ViewedCount>1</ViewedCount>
+      <Item>C:\Custom\repos\cahquickFE\CahApp\GameLogic\Models\Cards\Pack.cs</Item>
+      <ItemType>ProjectItem</ItemType>
+      <ProjectName>C:\Custom\repos\cahquickFE\CahApp\GameLogic\GameLogic.csproj</ProjectName>
+      <CreatedDate>2020-12-28T02:56:13.7350485+01:00</CreatedDate>
+      <ViewedBy>Jero</ViewedBy>
+    </DevTrackerDataItem>
+    <DevTrackerDataItem ViewActiveTime="PT2.8130592S" EditActiveTime="PT0S">
+      <ModifiedDate>0001-01-01T00:00:00</ModifiedDate>
+      <EditedCount>0</EditedCount>
+      <ViewedCount>1</ViewedCount>
+      <Item>Dictionary.cs</Item>
+      <ItemType>ProjectItem</ItemType>
+      <ProjectName />
+      <CreatedDate>2020-12-28T02:28:40.4734622+01:00</CreatedDate>
+      <ViewedBy>Jero</ViewedBy>
+    </DevTrackerDataItem>
+    <DevTrackerDataItem ViewActiveTime="PT4.2448016S" EditActiveTime="PT0S">
+      <ModifiedDate>0001-01-01T00:00:00</ModifiedDate>
+      <EditedCount>0</EditedCount>
+      <ViewedCount>1</ViewedCount>
+      <Item>C:\Custom\repos\cahquickFE\CahApp\GameLogic\Deck\CreateCardRepository.cs</Item>
+      <ItemType>ProjectItem</ItemType>
+      <ProjectName>C:\Custom\repos\cahquickFE\CahApp\GameLogic\GameLogic.csproj</ProjectName>
+      <CreatedDate>2020-12-28T01:52:07.5650198+01:00</CreatedDate>
+      <ViewedBy>Jero</ViewedBy>
+    </DevTrackerDataItem>
+    <DevTrackerDataItem ViewActiveTime="PT1.3413653S" EditActiveTime="PT0S">
+      <ModifiedDate>0001-01-01T00:00:00</ModifiedDate>
+      <EditedCount>0</EditedCount>
+      <ViewedCount>1</ViewedCount>
+      <Item>C:\Custom\repos\cahquickFE\CahApp\GameLogic\Deck\DeckGenerator.cs</Item>
+      <ItemType>ProjectItem</ItemType>
+      <ProjectName>C:\Custom\repos\cahquickFE\CahApp\GameLogic\GameLogic.csproj</ProjectName>
+      <CreatedDate>2020-12-28T01:52:06.2226538+01:00</CreatedDate>
+      <ViewedBy>Jero</ViewedBy>
+    </DevTrackerDataItem>
+    <DevTrackerDataItem ViewActiveTime="PT7.7145721S" EditActiveTime="PT3M26.3147204S">
+      <ModifiedDate>2020-12-28T03:00:40.3352044+01:00</ModifiedDate>
+      <ModifiedBy>Jero</ModifiedBy>
+      <EditedCount>1</EditedCount>
+      <ViewedCount>1</ViewedCount>
+      <Item>C:\Custom\repos\cahquickFE\CahApp\GameLogic\Interfaces\IPackRepository.cs</Item>
+      <ItemType>ProjectItem</ItemType>
+      <ProjectName>C:\Custom\repos\cahquickFE\CahApp\GameLogic\GameLogic.csproj</ProjectName>
+      <CreatedDate>2020-12-28T01:35:24.5299071+01:00</CreatedDate>
+      <ViewedBy>Jero</ViewedBy>
+    </DevTrackerDataItem>
+    <DevTrackerDataItem ViewActiveTime="PT18.1522678S" EditActiveTime="PT0.9927485S">
+      <ModifiedDate>0001-01-01T00:00:00</ModifiedDate>
+      <EditedCount>1</EditedCount>
+      <ViewedCount>1</ViewedCount>
+      <Item>C:\Custom\repos\cahquickFE\CahApp\GameLogic\Interfaces\Interface1.cs</Item>
+      <ItemType>ProjectItem</ItemType>
+      <ProjectName>C:\Custom\repos\cahquickFE\CahApp\GameLogic\GameLogic.csproj</ProjectName>
+      <CreatedDate>2020-12-28T01:35:05.3818856+01:00</CreatedDate>
+      <ViewedBy>Jero</ViewedBy>
+    </DevTrackerDataItem>
+    <DevTrackerDataItem ViewActiveTime="PT8.3210929S" EditActiveTime="PT0S">
+      <ModifiedDate>0001-01-01T00:00:00</ModifiedDate>
+      <EditedCount>0</EditedCount>
+      <ViewedCount>1</ViewedCount>
+      <Item>C:\Custom\repos\cahquickFE\CahApp\GameLogic\Models\Cards\BlackCard.cs</Item>
+      <ItemType>ProjectItem</ItemType>
+      <ProjectName>C:\Custom\repos\cahquickFE\CahApp\GameLogic\GameLogic.csproj</ProjectName>
+      <CreatedDate>2020-12-28T01:04:14.1600644+01:00</CreatedDate>
+      <ViewedBy>Jero</ViewedBy>
+    </DevTrackerDataItem>
+    <DevTrackerDataItem ViewActiveTime="PT6.8670495S" EditActiveTime="PT0S">
+      <ModifiedDate>0001-01-01T00:00:00</ModifiedDate>
+      <EditedCount>0</EditedCount>
+      <ViewedCount>1</ViewedCount>
+      <Item>C:\Custom\repos\cahquickFE\CahApp\GameLogic\Models\Cards\Card.cs</Item>
+      <ItemType>ProjectItem</ItemType>
+      <ProjectName>C:\Custom\repos\cahquickFE\CahApp\GameLogic\GameLogic.csproj</ProjectName>
+      <CreatedDate>2020-12-28T01:04:13.2136983+01:00</CreatedDate>
+      <ViewedBy>Jero</ViewedBy>
+    </DevTrackerDataItem>
+    <DevTrackerDataItem ViewActiveTime="PT3.5501387S" EditActiveTime="PT0S">
+      <ModifiedDate>0001-01-01T00:00:00</ModifiedDate>
+      <EditedCount>0</EditedCount>
+      <ViewedCount>1</ViewedCount>
+      <Item>C:\Custom\repos\cahquickFE\CahApp\GameLogic\Models\Cards\WhiteCard.cs</Item>
+      <ItemType>ProjectItem</ItemType>
+      <ProjectName>C:\Custom\repos\cahquickFE\CahApp\GameLogic\GameLogic.csproj</ProjectName>
+      <CreatedDate>2020-12-28T01:03:02.384418+01:00</CreatedDate>
+      <ViewedBy>Jero</ViewedBy>
+    </DevTrackerDataItem>
+    <DevTrackerDataItem ViewActiveTime="PT52.2741605S" EditActiveTime="PT2M11.9406105S">
+      <ModifiedDate>2020-12-28T01:04:36.1821497+01:00</ModifiedDate>
+      <ModifiedBy>Jero</ModifiedBy>
+      <EditedCount>1</EditedCount>
+      <ViewedCount>1</ViewedCount>
+      <Item>C:\Custom\repos\cahquickFE\CahApp\GameLogic\Models\Cards\Deck.cs</Item>
+      <ItemType>ProjectItem</ItemType>
+      <ProjectName>C:\Custom\repos\cahquickFE\CahApp\GameLogic\GameLogic.csproj</ProjectName>
+      <CreatedDate>2020-12-28T01:01:17.5205542+01:00</CreatedDate>
+      <ViewedBy>Jero</ViewedBy>
+    </DevTrackerDataItem>
+    <DevTrackerDataItem ViewActiveTime="PT5M26.4935208S" EditActiveTime="PT30M45.7826471S">
+      <ModifiedDate>2020-12-28T03:46:23.4631035+01:00</ModifiedDate>
+      <ModifiedBy>Jero</ModifiedBy>
+      <EditedCount>1</EditedCount>
+      <ViewedCount>1</ViewedCount>
+      <Item>C:\Custom\repos\cahquickFE\CahApp\GameLogic\Decks\PackRepository.cs</Item>
+      <ItemType>ProjectItem</ItemType>
+      <ProjectName>C:\Custom\repos\cahquickFE\CahApp\GameLogic\GameLogic.csproj</ProjectName>
+      <CreatedDate>2020-12-28T00:58:43.6358101+01:00</CreatedDate>
+      <ViewedBy>Jero</ViewedBy>
+    </DevTrackerDataItem>
+    <DevTrackerDataItem ViewActiveTime="PT1M59.7337274S" EditActiveTime="PT3.9715297S">
+      <ModifiedDate>2020-12-28T03:01:04.6629531+01:00</ModifiedDate>
+      <ModifiedBy>Jero</ModifiedBy>
+      <EditedCount>1</EditedCount>
+      <ViewedCount>1</ViewedCount>
+      <Item>C:\Custom\repos\cahquickFE\CahApp\GameLogic.Tests\CreateCardRepositoryTest.cs</Item>
+      <ItemType>ProjectItem</ItemType>
+      <ProjectName>C:\Custom\repos\cahquickFE\CahApp\GameLogic.Tests\GameLogic.Tests.csproj</ProjectName>
+      <CreatedDate>2020-12-28T00:56:18.4689239+01:00</CreatedDate>
+      <ViewedBy>Jero</ViewedBy>
+    </DevTrackerDataItem>
+    <DevTrackerDataItem ViewActiveTime="PT9M6.7703195S" EditActiveTime="PT10M2.6163564S">
+      <ModifiedDate>2020-12-28T03:28:29.7124065+01:00</ModifiedDate>
+      <ModifiedBy>Jero</ModifiedBy>
+      <EditedCount>1</EditedCount>
+      <ViewedCount>1</ViewedCount>
+      <Item>C:\Custom\repos\cahquickFE\CahApp\GameLogic.Tests\DeckGeneratorTests.cs</Item>
+      <ItemType>ProjectItem</ItemType>
+      <ProjectName>C:\Custom\repos\cahquickFE\CahApp\GameLogic.Tests\GameLogic.Tests.csproj</ProjectName>
+      <CreatedDate>2020-12-28T00:54:54.4936451+01:00</CreatedDate>
+      <ViewedBy>Jero</ViewedBy>
+    </DevTrackerDataItem>
+    <DevTrackerDataItem ViewActiveTime="PT27M42.1706731S" EditActiveTime="PT1H1M49.5455636S">
+      <ModifiedDate>2020-12-28T03:46:23.4521007+01:00</ModifiedDate>
+      <ModifiedBy>Jero</ModifiedBy>
+      <EditedCount>1</EditedCount>
+      <ViewedCount>1</ViewedCount>
+      <Item>C:\Custom\repos\cahquickFE\CahApp\GameLogic\Decks\DeckGenerator.cs</Item>
+      <ItemType>ProjectItem</ItemType>
+      <ProjectName>C:\Custom\repos\cahquickFE\CahApp\GameLogic\GameLogic.csproj</ProjectName>
+      <CreatedDate>2020-12-27T18:19:49.3391442+01:00</CreatedDate>
+      <ViewedBy>Jero</ViewedBy>
+    </DevTrackerDataItem>
     <DevTrackerDataItem ViewActiveTime="PT3M32.8265395S" EditActiveTime="PT3M31.628015S">
       <ModifiedDate>2020-12-23T15:40:26.0072734+01:00</ModifiedDate>
       <ModifiedBy>Jero</ModifiedBy>

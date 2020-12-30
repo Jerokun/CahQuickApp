@@ -1,37 +1,40 @@
-﻿using System;
+﻿using GameLogic.DataConverter;
 using GameLogic.Models;
 using System.Collections.Generic;
-using System.Text;
-using GameLogic.DataConverter;
-using System.Threading.Tasks;
+using System.Linq;
 
 namespace GameLogic.Decks
 {
     public class DeckGenerator
     {
-        public PackRepository _packRepo = new PackRepository();
-        public Deck deck;
+        public readonly Dictionary<string, Pack> cardCollection = PackRepository.LoadCardCollection();
 
-        public Deck GetDeck(string[] packnames)
+        public Deck GetDeck(IEnumerable<string> packNames)
         {
-            Deck _result = new Deck();
-            var collection = _packRepo.Collection;
+            Deck deck = new Deck();
+            deck.BlackCards = new List<BlackCard>();
+            deck.WhiteCards = new List<WhiteCard>();
 
-            foreach (var name in packnames)
+            foreach (string p in packNames)
             {
-                var pack = collection.TryGetValue(name, out Pack value);
+                Pack _pack = GetPack(p);
+                IEnumerable<BlackCard> b = deck.BlackCards.Union(_pack.BlackCards);
+                IEnumerable<WhiteCard> w = deck.WhiteCards.Union(_pack.WhiteCards);
 
-                foreach (var bcard in value.BlackCards)
-                {
-                    _result.BlackCards.Add(bcard);
-                }
-                foreach (var wcard in value.WhiteCards)
-                {
-                    _result.WhiteCards.Add(wcard);
-                }
+                deck.BlackCards = b;
+                deck.WhiteCards = w;
             }
+            return deck;
+        }
 
-            return deck = _result;
+        public Pack GetPack(string packName)
+        {
+            return cardCollection[packName];
+        }
+
+        public IEnumerable<string> GetPackNames()
+        {
+            return cardCollection.Keys;
         }
     }
 }

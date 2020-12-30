@@ -25,10 +25,10 @@ namespace CahBackend.Controllers
 
         public ActionResult JoinSessionGet([FromBody] Object obj)
         {
-            {
+/*            {
                 return null;
             }
-
+*/
             return Unauthorized();
         }
     }
