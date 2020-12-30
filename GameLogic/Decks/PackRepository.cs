@@ -13,9 +13,8 @@ namespace GameLogic.DataConverter
 {
     public class PackRepository
     {
-        public const string JsonPath = @"./Data/cah-cards-full.json";
-        public readonly Dictionary<string, Pack> Collection = LoadCardCollection();
-
+        private const string JsonPath = @"./Data/cah-cards-full.json";
+        private readonly Dictionary<string, Pack> Collection = LoadCardCollection();
 
         public static Dictionary<string, Pack> LoadCardCollection()
         {
@@ -23,7 +22,7 @@ namespace GameLogic.DataConverter
            
         }
 
-        public async static Task<Dictionary<string, Pack>> LoadDecksFromStream(Stream source)
+        private async static Task<Dictionary<string, Pack>> LoadDecksFromStream(Stream source)
         {
             StreamReader reader = new StreamReader(source);
             string json = await reader.ReadToEndAsync();
