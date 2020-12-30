@@ -7,5 +7,10 @@ namespace GameLogic.Models
     public class BlackCard : Card
     {
         public int Pick { get; set; }
+
+        public static implicit operator BlackCard(string v)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

@@ -5,8 +5,9 @@ using System.Text;
 
 namespace GameLogic.Interfaces
 {
-    interface IPackRepository<PackRepository>
+    interface IDeckGenerator<DeckGenerator>
     {
-        public Dictionary<string, Pack> LoadCardCollection();
+        public string[] GetPackNames();
+        public Deck GetDeck(string[] packNames);
     }
 }

@@ -6,7 +6,7 @@ namespace GameLogic.Models
 {
     public class Deck
     {
-        public List<BlackCard> BlackCards { get; set; }
-        public List<WhiteCard> WhiteCards { get; set; }
+        public IEnumerable<BlackCard> BlackCards { get; set; }
+        public IEnumerable<WhiteCard> WhiteCards { get; set; }
     }
 }
