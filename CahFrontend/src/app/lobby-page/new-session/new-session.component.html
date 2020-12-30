@@ -1,4 +1,4 @@
-<div class="start"  [ngClass]="this.viewService.getState('start') ? 'showstart' : 'start'">
+
   <i
     class="far fa-times-circle close"
     [ngClass]="this.viewService.getState('start') ?'showclose' : 'close'"
@@ -34,9 +34,9 @@
     </ul>
   </div>
 
-  <div class="subtitle">
-    Select card decks to include
-  </div>
+  <h2>
+    Select card decks to include:
+  </h2>
 
   <div class="flex-row left">
 
@@ -44,7 +44,7 @@
     [data]="this.list"
     (selectionChange)="updateSelected($event)"
     ></app-checkbox-list>
-    
+
   </div>
 
-</div>
+  

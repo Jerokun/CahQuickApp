@@ -290,6 +290,9 @@ input {
   overflow-y: hidden;
   opacity: 0;
 }
+.start, .room{
+  overflow-y: scroll;
+}
 .room {
   top: 0;
   left: 100%;
@@ -475,7 +478,9 @@ input {
 
 .togglehand,
 .togglemenu,
-.togglepmenu {
+.togglepmenu,
+.togglechat,
+.togglevoice {
   position: fixed;
   right: 0;
   z-index: 6;
@@ -485,15 +490,25 @@ input {
   text-align: center;
 }
 .togglemenu {
-  bottom: 0;
+  top: 0;
   z-index: 7;
 }
 .togglepmenu {
   top: 4rem;
 }
+.togglevoice{
+  top: 8rem;
+}
+.togglechat{
+  top: 12rem;
+}
+
 .togglehand i,
 .togglemenu i,
-.togglepmenu i {
+.togglepmenu i,
+.togglevoice i,
+.togglechat i
+ {
   line-height: 4rem;
 }
 .togglehandbtn{
@@ -556,7 +571,7 @@ input {
   width: 50%;
 }
 
-li.players:before {
+li.players::before {
   content: "\f508" !important;
   font-family: "Font Awesome 5 Free";
   display: inline-block;
@@ -565,7 +580,20 @@ li.players:before {
   cursor: default !important;
 }
 
-.pmenu li.players:before {
+li.players::after{
+  content: "\f235" !important;
+  font-family: "Font Awesome 5 Free";
+  display: inline-block;
+  margin-left: 1em;
+  width: 1.3em;
+  cursor: pointer !important;
+}
+li.players::after:hover{
+  color: tomato !important;
+  cursor: pointer !important;
+}
+
+.pmenu li.players::before {
   content: "\f508" !important;
   font-family: "Font Awesome 5 Free";
   display: inline-block;
