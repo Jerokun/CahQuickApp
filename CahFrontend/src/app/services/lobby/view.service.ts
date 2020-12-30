@@ -20,7 +20,10 @@ export class ViewService {
 		{ key: 'hand', value: false },
 		{ key: 'istogglehand', value: false },
 		{ key: 'togglemodehand', value: false },
-		{ key: 'close', value: false },
+    { key: 'close', value: false },
+    { key: 'chat', value: false },
+    { key: 'voice', value: false },
+
 	];
 
 	private viewStatesSubject = new BehaviorSubject<Array<KeyValue<string, boolean>>>(this.viewStates);
