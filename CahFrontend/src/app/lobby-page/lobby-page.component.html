@@ -19,7 +19,7 @@
 </div>
 
 <app-game *ngIf="this.viewService.getState('game')"></app-game>
-<app-in-game-menu *ngIf="this.viewService.getState('menu')"></app-in-game-menu>
+<app-in-game-menu *ngIf="this.viewService.getState('game')"></app-in-game-menu>
 
 <div class="rules scroll" [ngClass]="this.viewService.getState('rules') ? 'showrules' : 'rules'">
 	<app-game-rules *ngIf="this.viewService.getState('rules')"></app-game-rules>
