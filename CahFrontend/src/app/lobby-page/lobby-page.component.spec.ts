@@ -1,25 +1,26 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
 import { LobbyPageComponent } from './lobby.page';
 
 describe('LobbyPageComponent', () => {
-  let component: LobbyPageComponent;
-  let fixture: ComponentFixture<LobbyPageComponent>;
+	let component: LobbyPageComponent;
+	let fixture: ComponentFixture<LobbyPageComponent>;
 
-  beforeEach(async(() => {
-    TestBed.configureTestingModule({
-      declarations: [ LobbyPageComponent ]
-    })
-    .compileComponents();
-  }));
+	beforeEach(
+		waitForAsync(() => {
+			TestBed.configureTestingModule({
+				declarations: [LobbyPageComponent],
+			}).compileComponents();
+		})
+	);
 
-  beforeEach(() => {
-    fixture = TestBed.createComponent(LobbyPageComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
-  });
+	beforeEach(() => {
+		fixture = TestBed.createComponent(LobbyPageComponent);
+		component = fixture.componentInstance;
+		fixture.detectChanges();
+	});
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
-  });
+	it('should create', () => {
+		expect(component).toBeTruthy();
+	});
 });

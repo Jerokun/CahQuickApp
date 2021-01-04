@@ -8,7 +8,7 @@ import { ViewService } from 'src/app/services/lobby/view.service';
 	styleUrls: ['./room.component.scss'],
 })
 export class RoomComponent implements OnInit {
-  list: string[] = [];
+	list: string[] = [];
 	selected: string[];
 	constructor(public viewService: ViewService, public sessionService: SessionService) {}
 

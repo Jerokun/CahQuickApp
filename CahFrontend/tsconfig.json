@@ -3,6 +3,7 @@
   "compileOnSave": false,
   "compilerOptions": {
     "baseUrl": "./",
+    "types": ["intern", "jest", "lodash", "angular", "node", "jasmine"],
     "outDir": "./dist/out-tsc",
     "sourceMap": true,
     "declaration": false,
@@ -11,10 +12,10 @@
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "importHelpers": true,
-    "target": "es2015",
-    "module": "es2020",
+    "target": "esnext",
+    "module": "esnext",
     "lib": [
-      "es2018",
+      "esnext",
       "dom"
     ]
   },
