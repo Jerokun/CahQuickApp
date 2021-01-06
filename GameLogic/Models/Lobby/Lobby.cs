@@ -12,22 +12,12 @@ namespace GameLogic.Models.Lobby
         public IEnumerable<string> PackNames { get; set; }
         public bool IsPrivate { get; set; }
 
-        public Lobby(List<Player> players, IEnumerable<string> packNames, bool isPrivate)
+        public Lobby()
         {
-            Id = Guid.NewGuid();
-            Players = players;
-            PackNames = packNames;
-            IsPrivate = isPrivate;
-        }
-
-        public IEnumerable<Player> AddPlayer(IEnumerable<Player> players, Player player)
-        {
-            throw new NotImplementedException("");
-        }
-
-        public IEnumerable<Player> RemovePlayer(IEnumerable<Player> players, Player player)
-        {
-            throw new NotImplementedException("");
+            Players.Add(new Player("MrHost")
+            {
+                IsHost = true
+            });
         }
     }
 }

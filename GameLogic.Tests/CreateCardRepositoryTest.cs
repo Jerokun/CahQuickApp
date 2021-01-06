@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using GameLogic.Models;
 using GameLogic.DataConverter;
+using GameLogic.Models.Cards;
 
 namespace GameLogic.Tests
 {

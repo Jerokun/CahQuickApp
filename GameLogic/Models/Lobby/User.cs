@@ -6,5 +6,10 @@ namespace GameLogic.Models.Lobby
     {
         public Guid Id { get; set; }
         public string Name { get; set; }
+
+        public User()
+        {
+            Name = new Guid().ToString();
+        }
     }
 }

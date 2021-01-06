@@ -4,6 +4,7 @@ using GameLogic.Models.Lobby;
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace GameLogic.Models.Game
 {
@@ -13,21 +14,9 @@ namespace GameLogic.Models.Game
         public Deck Deck { get; set; }
         public Lobby.Lobby Lobby { get; set; }
 
-        public MainGame(Player player)
+        public void StartGame()
         {
-            if (player is null)
-            {
-                throw new ArgumentNullException(nameof(player));
-            }
-
-            Lobby.Players.Add(player);
-            Lobby.SetPartyLeader(player);
+            throw new NotImplementedException();
         }
-
-        public void StartGame(IEnumerable<Player> players)
-        {
-
-        }
-
     }
 }

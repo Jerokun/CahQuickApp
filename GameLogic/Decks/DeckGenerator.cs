@@ -1,5 +1,6 @@
 ﻿using GameLogic.DataConverter;
 using GameLogic.Models;
+using GameLogic.Models.Cards;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -24,6 +25,8 @@ namespace GameLogic.Decks
                 deck.BlackCards = b;
                 deck.WhiteCards = w;
             }
+
+            deck.Shuffle();
             return deck;
         }
 

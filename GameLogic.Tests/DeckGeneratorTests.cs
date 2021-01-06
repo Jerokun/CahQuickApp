@@ -60,5 +60,24 @@ namespace GameLogic.Tests
             //Assert
             Assert.Contains(name, packNames);
         }
+
+        [Fact]
+        public void GetDeckShuffleDoesNotCreateIdenticalObject()
+        {
+            //Arrange
+            string[] packnames =
+            {
+                "Hilarious!",
+                "Cows Against Hamburgers - Patty Pack #1",
+            };
+            var dGen = new DeckGenerator();
+
+            //Act
+            Deck firstDeck = dGen.GetDeck(packnames);
+            Deck secondDeck = dGen.GetDeck(packnames);
+
+            //Assert
+            Assert.True(firstDeck != secondDeck);
+        }
     }
 }
