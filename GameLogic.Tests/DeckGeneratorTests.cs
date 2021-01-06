@@ -5,6 +5,7 @@ using Xunit;
 using GameLogic.Decks;
 using GameLogic.Models;
 using System.Linq;
+using GameLogic.Models.Cards;
 
 namespace GameLogic.Tests
 {

@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace GameLogic.Models
+namespace GameLogic.Models.Lobby
 {
     public abstract class User
     {

@@ -1,17 +1,18 @@
-﻿using System;
+﻿using GameLogic.Models.Game;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace GameLogic.Models
+namespace GameLogic.Models.Lobby
 {
     public class Lobby
     {
         public Guid Id { get; set; }
-        public IEnumerable<Player> Players { get; set; }
+        public List<Player> Players { get; set; }
         public IEnumerable<string> PackNames { get; set; }
         public bool IsPrivate { get; set; }
 
-        public Lobby(IEnumerable<Player> players, IEnumerable<string> packNames, bool isPrivate)
+        public Lobby(List<Player> players, IEnumerable<string> packNames, bool isPrivate)
         {
             Id = Guid.NewGuid();
             Players = players;

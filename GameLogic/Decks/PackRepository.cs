@@ -1,5 +1,6 @@
 ﻿using GameLogic.Interfaces;
 using GameLogic.Models;
+using GameLogic.Models.Cards;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using System;

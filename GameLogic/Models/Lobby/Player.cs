@@ -1,8 +1,9 @@
-﻿using System;
+﻿using GameLogic.Models.Cards;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace GameLogic.Models
+namespace GameLogic.Models.Lobby
 {
     public class Player : User
     {
@@ -14,6 +15,5 @@ namespace GameLogic.Models
         public IEnumerable<WhiteCard> HistoryWhiteCards { get; set; }
         public IEnumerable<BlackCard> BlackCards { get; set; }
         public IEnumerable<WhiteCard> WhiteCards { get; set; }
-
     }
 }

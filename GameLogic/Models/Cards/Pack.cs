@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using GameLogic.Models;
 
-namespace GameLogic.Models
+namespace GameLogic.Models.Cards
 {
     public class Pack
     {

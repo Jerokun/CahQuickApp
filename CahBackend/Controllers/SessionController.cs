@@ -1,4 +1,5 @@
 ﻿using GameLogic.Models;
+using GameLogic.Models.Lobby;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System;

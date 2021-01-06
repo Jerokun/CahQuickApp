@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace GameLogic.Models
+namespace GameLogic.Models.Cards
 {
     public class BlackCard : Card
     {

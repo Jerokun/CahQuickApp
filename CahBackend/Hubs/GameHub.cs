@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.SignalR;
+﻿using GameLogic.Models.Game;
+using Microsoft.AspNetCore.SignalR;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,9 +9,9 @@ namespace CahBackend.Hubs
 {
     public class GameHub : Hub
     {
-        public Task SendMessage1(string user, string message)
+        public Task SendMessage1(string user, GameState gameState)
         {
-            return Clients.All.SendAsync("ReceiveOne", user, message);
+            return Clients.All.SendAsync("ReceiveOne", user, gameState);
         }
     }
 }
