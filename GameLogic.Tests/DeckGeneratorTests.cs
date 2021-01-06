@@ -79,5 +79,28 @@ namespace GameLogic.Tests
             //Assert
             Assert.True(firstDeck != secondDeck);
         }
+
+        [Fact]
+        public void DeckShuffleChangesList()
+        {
+            //Arrange
+            string[] packnames =
+            {
+                "Hilarious!",
+                "Cows Against Hamburgers - Patty Pack #1",
+            };
+            var dGen = new DeckGenerator();
+
+            //Act
+            Deck firstDeck = dGen.GetDeck(packnames);
+            Deck backup = firstDeck;
+            backup.Shuffle();
+
+            var card1 = firstDeck.BlackCards.First();
+            var card2 = backup.BlackCards.First();
+
+            //Assert
+            Assert.True(card1 != card2);
+        }
     }
 }
