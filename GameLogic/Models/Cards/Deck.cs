@@ -15,11 +15,5 @@ namespace GameLogic.Models.Cards
         public Deck()
         {
         }
-
-        public void Shuffle()
-        {
-            BlackCards.OrderBy(i => Guid.NewGuid());
-            WhiteCards.OrderBy(i => Guid.NewGuid());
-        }
     }
 }

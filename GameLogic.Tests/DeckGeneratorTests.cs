@@ -81,7 +81,7 @@ namespace GameLogic.Tests
         }
 
         [Fact]
-        public void DeckShuffleChangesList()
+        public void GetDeckShuffleChangesFirstCardOfDecks()
         {
             //Arrange
             string[] packnames =
@@ -93,14 +93,13 @@ namespace GameLogic.Tests
 
             //Act
             Deck firstDeck = dGen.GetDeck(packnames);
-            Deck backup = firstDeck;
-            backup.Shuffle();
+            Deck secondDeck = dGen.GetDeck(packnames);
 
             var card1 = firstDeck.BlackCards.First();
-            var card2 = backup.BlackCards.First();
+            var card2 = secondDeck.BlackCards.First();
 
             //Assert
-            Assert.True(card1 != card2);
+            Assert.False(card1.Text == card2.Text);
         }
     }
 }
